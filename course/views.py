@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Column, Course, Lesson
+from .models import Column, Course, Chapter
 import markdown
 
 
@@ -26,31 +26,38 @@ def course_detail(request, course_slug):
     course = Course.objects.filter(slug=course_slug)
     if course:
         course = course[0]
-    lessons = Lesson.objects.filter(course=course)
-    return render(request, 'course/course.html', {'course': course, 'lessons': lessons})
+    chapters = Chapter.objects.filter(course=course)
+    return render(request, 'course/course.html', {'course': course, 'chapters': chapters})
 
 
-def lesson_detail(request, lesson_slug):
-    lesson = Lesson.objects.filter(slug=lesson_slug)
-    if lesson:
-        lesson = lesson[0]
-    lessons = Lesson.objects.filter(course=lesson.course)
+def chapter_detail(request, chapter_slug):
+    chapter = Chapter.objects.filter(slug=chapter_slug)
+    if chapter:
+        chapter = chapter[0]
+    chapters = Chapter.objects.filter(course=chapter.course)
 
-    lesson.content = markdown.markdown(lesson.content, extensions=['markdown.extensions.extra',
+    # 浏览量 + 1
+    chapter.views += 1
+
+    chapter.content = markdown.markdown(chapter.content, extensions=['markdown.extensions.extra',
                                                                      'markdown.extensions.codehilite',
                                                                      'markdown.extensions.toc', ])
-    return render(request, 'course/lesson.html', {'lesson': lesson, 'lessons': lessons})
+    return render(request, 'course/chapter.html', {'chapter': chapter, 'chapters': chapters})
 
 
-def lesson_detail2(request, course_slug, lesson_slug):
+def chapter_detail2(request, course_slug, chapter_slug):
     course = Course.objects.filter(slug=course_slug)
     if course:
         course = course[0]
-    lesson = Lesson.objects.filter(course=course, slug=lesson_slug)
-    if lesson:
-        lesson = lesson[0]
-    lessons = Lesson.objects.filter(course=course)
-    lesson.content = markdown.markdown(lesson.content, extensions=['markdown.extensions.extra',
+    chapter = Chapter.objects.filter(course=course, slug=chapter_slug)
+    if chapter:
+        chapter = chapter[0]
+
+    # 浏览量 + 1
+    chapter.views += 1
+    chapter.save()
+    chapters = Chapter.objects.filter(course=course)
+    chapter.content = markdown.markdown(chapter.content, extensions=['markdown.extensions.extra',
                                                                      'markdown.extensions.codehilite',
                                                                      'markdown.extensions.toc', ])
-    return render(request, 'course/lesson.html', {'lesson': lesson, 'lessons': lessons})
+    return render(request, 'course/chapter.html', {'chapter': chapter, 'chapters': chapters})

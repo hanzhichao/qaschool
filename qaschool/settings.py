@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'qaschool.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db2.sqlite3'),
     }
 }
 
@@ -111,7 +111,7 @@ TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
-USE_L10N = True
+# USE_L10N = True
 
 USE_TZ = True
 
@@ -126,3 +126,7 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+USE_L10N = False
+DATETIME_FORMAT = 'Y年m月d日 H:i:s'
+DATE_FORMAT = 'Y年m月d日'

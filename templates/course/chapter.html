@@ -2,7 +2,7 @@
 {% block main %}
     <div class="container" name="main">
         <div class="col-md-3" name="left">
-            <div class="bs-callout bs-callout-info" style="padding: 10px 10px;"><h4>全部内容</h4></div>
+            <div class="bs-callout bs-callout-info" style="padding: 10px 10px;"><h4><a href="/">全部教程</a></h4></div>
             <div class="list-group">
                 {% for chapter in chapters %}
                 <a href="{{ chapter.get_absolute_url }}" class="list-group-item">{{ chapter.title }}</a>
@@ -10,8 +10,7 @@
             </div>
         </div>
         <div class="col-md-9" name="right">
-            <h1>{{ course.name }}</h1>
-            <p>{{ course.intro }}</p>
+            {{ chapter.content|safe }}
         </div>
     </div>
 {% endblock %}
