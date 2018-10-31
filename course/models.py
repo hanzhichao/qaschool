@@ -11,6 +11,7 @@ class Column(models.Model):
     slug = models.CharField('栏目网址', max_length=256, db_index=True, unique=True)
     intro = models.TextField('栏目简介', default='', blank=True, null=True)
     visible = models.BooleanField("显示", default=True)
+    show_in_nav = models.BooleanField("导航显示", default=False)
     created_time = models.DateTimeField('创建时间', auto_now_add=True, null=True)
     last_modified_time = models.DateTimeField('修改时间', auto_now=True)
     # thumbnail = models.ImageField('缩略图', blank=True, null=True)
@@ -87,4 +88,4 @@ class Chapter(models.Model):
         ordering = ['-last_modified_time']
 
     def get_absolute_url(self):
-        return reverse('chapter2', args=(self.course.slug, self.slug,))
+        return reverse('chapter', args=(self.course.slug, self.slug,))

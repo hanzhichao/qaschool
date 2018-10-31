@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/docs.min.css">
+    <link rel="stylesheet" href="/static/css/github.css">
+    <title></title>
+</head>
+<body>
+<div class="navbar navbar-default" name="header">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">QA school</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">首页<span class="sr-only">(current)</span></a></li>
+
+        
+            
+        <li class="dropdown">
+          <a href="/course/performance_test" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">性能测试</a>
+          <ul class="dropdown-menu">
+            
+                
+                    <li><a href="/course/course/jmeter">JMeter</a></li>
+                
+            
+                
+            
+
+
+
+
+
+
+          </ul>
+        </li>
+            
+        
+            
+        <li class="dropdown">
+          <a href="/course/test_base" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">测试基础</a>
+          <ul class="dropdown-menu">
+            
+                
+            
+                
+                    <li><a href="/course/course/mysql_base">数据库基础</a></li>
+                
+            
+
+
+
+
+
+
+          </ul>
+        </li>
+            
+        
+      </ul>
+
+
+
+
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/admin/">登录</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</div>
+
+
+    <div class="container" name="main">
+        <div class="col-md-3" name="left">
+            <div class="bs-callout bs-callout-info" style="padding: 10px 10px;"><h4><a href="/">全部教程</a></h4></div>
+            <div class="list-group">
+                
+                <a href="/course/jmeter/jmeter01" class="list-group-item">JMeter简介</a>
+                
+                <a href="/course/jmeter/jmeter02" class="list-group-item">JMeter基本元件</a>
+                
+            </div>
+        </div>
+        <div class="col-md-9" name="right">
+            <h2 id="jmeter">JMeter的作用</h2>
+<ol>
+<li>能够对HTTP和FTP服务器进行压力和性能测试， 也可以对任何数据库进行同样的测试（通过JDBC）。</li>
+<li>完全的可移植性和100% 纯java。</li>
+<li>完全 Swing 和轻量组件支持（预编译的JAR使用 javax.swing.*)包。</li>
+<li>完全多线程 框架允许通过多个线程并发取样和 通过单独的线程组对不同的功能同时取样。</li>
+<li>精心的GUI设计允许快速操作和更精确的计时。</li>
+<li>缓存和离线分析/回放测试结果。</li>
+</ol>
+<h2 id="jmeter_1">JMeter的高可扩展性</h2>
+<ol>
+<li>可链接的取样器允许无限制的测试能力。</li>
+<li>各种负载统计表和可链接的计时器可供选择。</li>
+<li>数据分析和可视化插件提供了很好的可扩展性以及个性化。</li>
+<li>具有提供动态输入到测试的功能（包括Javascript）。</li>
+<li>支持脚本编程的取样器（在1.9.2及以上版本支持BeanShell）。</li>
+</ol>
+<p>在设计阶段，JMeter能够充当HTTP PROXY（代理）来记录IE/NETSCAPE的HTTP请求，也可以记录apache等WebServer的log文件来重现HTTP流量。当这些HTTP客户端请求被记录以后，测试运行时可以方便的设置重复次数和并发度（线程数）来产生巨大的流量。JMeter还提供可视化组件以及报表工具把量服务器在不同压力下的性能展现出来。
+相比其他HTTP测试工具,JMeter最主要的特点在于扩展性强。JMeter能够自动扫描其lib/ext子目录下.jar文件中的插件，并且将其装载到内存，让用户通过不同的菜单调用。</p>
+        </div>
+    </div>
+
+<div class="container" name="footer"> </div>
+
+
+</body>
+
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/bootstrap-hover-dropdown.min.js"></script>
+</html>
