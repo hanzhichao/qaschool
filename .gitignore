@@ -2,3 +2,5 @@ uploads/*
 .idea/*
 */__pycache__/*
 *.pyc
+.gitignore
+.idea

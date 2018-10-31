@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+{% block title %}首页{% endblock %}
+{% block keywards %}测试教程, 性能测试, 自动化测试, 测试管理{% endblock %}
+{% block description %}QA学院,系统的软件测试文本教程，包含性能测试,自动化测试,测试管理等{% endblock %}
 {% block main %}
     <div class="container" name="main">
         <div class="col-md-3" name="left">
@@ -19,7 +22,7 @@
                             <div class="panel panel-info">
                                 <div class="panel-heading">
                                     <h4><a href="{{ course.get_absolute_url }}">{{ course.name }}</a></h4>
-                                    <p>性能测试进阶教程, 包含Jmeter, LoadRunner等</p>
+                                    <p>{{ course.intro }}</p>
                                 </div>
                             </div>
                         </div>

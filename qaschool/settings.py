@@ -119,4 +119,4 @@ USE_L10N = False
 DATETIME_FORMAT = 'Y年m月d日 H:i:s'
 DATE_FORMAT = 'Y年m月d日'
 
-STATIC_PAGES = True
+STATIC_PAGES = False

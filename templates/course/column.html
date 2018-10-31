@@ -1,27 +1,30 @@
 {% extends "base.html" %}
+{% block title %}栏目：{{ colunm.name }}{% endblock %}
+{% block keywards %}{{ colunm.keywords }}{% endblock %}
+{% block description %}{{ column.abstract }}{% endblock %}
 {% block main %}
     <div class="container" name="main">
         <div class="col-md-3" name="left">
             <div class="bs-callout bs-callout-info" style="padding: 10px 10px;"><h4><a href="/">全部教程</a></h4></div>
             <div class="list-group">
-{#                {% for column in columns %}#}
+                {% for column in columns %}
                 <a href="{{ column.get_absolute_url }}" class="list-group-item">{{ column.name }}</a>
-{#                {% endfor %}#}
+                {% endfor %}
             </div>
         </div>
         <div class="col-md-9" name="right">
             <div class="bs-callout bs-callout-danger" style="padding: 10px 10px;"><h4>{{ column.name }}</h4></div>
             <div class="row">
-{#            {% for course in courses %}#}
+            {% for course in cur_courses %}
                     <div class="col-md-4">
                         <div class="panel panel-info">
                             <div class="panel-heading">
                                 <h4><a href="{{ course.get_absolute_url }}">{{ course.name }}</a></h4>
-                                <p>性能测试进阶教程, 包含Jmeter, LoadRunner等</p>
+                                <p>{{ course.intro }}</p>
                             </div>
                         </div>
                     </div>
-{#            {% endfor %}#}
+            {% endfor %}
             </div>
         </div>
     </div>

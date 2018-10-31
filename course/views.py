@@ -4,8 +4,8 @@ from .models import Column, Course, Chapter
 import markdown
 from qaschool.settings import *
 
-columns = Column.objects.all()
-courses = Course.objects.all()
+columns = Column.objects.filter(visible=True).order_by('sn')
+courses = Course.objects.filter(visible=True).order_by('sn')
 
 
 def index(request):
@@ -16,35 +16,35 @@ def column_detail(request, column_slug):
     column = Column.objects.filter(slug=column_slug)
     if column:
         column = column[0]
-    cur_courses = Course.objects.filter(column=column)
+    cur_courses = Course.objects.filter(column=column, visible=True).order_by('sn')
     return render(request, 'course/column.html', {'column': column, 'cur_courses': cur_courses, 'columns': columns, 'courses': courses})
 
 
 def course_detail(request, course_slug):
-    course = Course.objects.filter(slug=course_slug)
+    course = Course.objects.filter(slug=course_slug, visible=True)
     if course:
         course = course[0]
-    chapter_one = Chapter.objects.filter(course=course).order_by('sn').first()
+    chapter_one = Chapter.objects.filter(course=course, status='p').order_by('sn').first()
 
     if chapter_one:
         return chapter_detail(request, course.slug, chapter_one.slug)
 
-    chapters = Chapter.objects.filter(course=course).order_by('sn')
+    chapters = Chapter.objects.filter(course=course, status='p').order_by('sn')
     return render(request, 'course/course.html', {'course': course, 'chapters': chapters, 'columns': columns, 'courses': courses})
 
 
 def chapter_detail(request, course_slug, chapter_slug):
-    course = Course.objects.filter(slug=course_slug)
+    course = Course.objects.filter(slug=course_slug, visible=True)
     if course:
         course = course[0]
-    chapter = Chapter.objects.filter(course=course, slug=chapter_slug)
+    chapter = Chapter.objects.filter(course=course, slug=chapter_slug, status='p')
     if chapter:
         chapter = chapter[0]
 
     # 浏览量 + 1
     chapter.views += 1
     chapter.save()
-    chapters = Chapter.objects.filter(course=course).order_by('sn')
+    chapters = Chapter.objects.filter(course=course, status='p').order_by('sn')
     chapter.content = markdown.markdown(chapter.content, extensions=['markdown.extensions.extra',
                                                                      'markdown.extensions.codehilite',
                                                                      'markdown.extensions.toc', ])

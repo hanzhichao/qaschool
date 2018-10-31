@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/static/css/bootstrap.css">
     <link rel="stylesheet" href="/static/css/docs.min.css">
     <link rel="stylesheet" href="/static/css/github.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/code.css">
     <title></title>
 </head>
 <body>
@@ -30,11 +31,38 @@
         
             
         <li class="dropdown">
+          <a href="/course/test_base" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">测试基础</a>
+          <ul class="dropdown-menu">
+            
+                
+            
+                
+                    <li><a href="/course/course/testcase_design">用例设计</a></li>
+                
+            
+                
+                    <li><a href="/course/course/mysql_base">数据库基础</a></li>
+                
+            
+
+
+
+
+
+
+          </ul>
+        </li>
+            
+        
+            
+        <li class="dropdown">
           <a href="/course/performance_test" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">性能测试</a>
           <ul class="dropdown-menu">
             
                 
                     <li><a href="/course/course/jmeter">JMeter</a></li>
+                
+            
                 
             
                 
@@ -51,13 +79,13 @@
         
             
         <li class="dropdown">
-          <a href="/course/test_base" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">测试基础</a>
+          <a href="/course/auto_test" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">自动化测试</a>
           <ul class="dropdown-menu">
             
                 
             
                 
-                    <li><a href="/course/course/mysql_base">数据库基础</a></li>
+            
                 
             
 
@@ -68,6 +96,8 @@
 
           </ul>
         </li>
+            
+        
             
         
       </ul>
@@ -90,9 +120,9 @@
             <div class="bs-callout bs-callout-info" style="padding: 10px 10px;"><h4><a href="/">全部教程</a></h4></div>
             <div class="list-group">
                 
-                <a href="/course/jmeter/jmeter01" class="list-group-item">JMeter简介</a>
+                <a href="/course/jmeter/jmeter01.html" class="list-group-item">JMeter简介</a>
                 
-                <a href="/course/jmeter/jmeter02" class="list-group-item">JMeter基本元件</a>
+                <a href="/course/jmeter/jmeter02.html" class="list-group-item">JMeter基本元件</a>
                 
             </div>
         </div>
@@ -100,6 +130,19 @@
             <h1 id="jmeter">Jmeter 简介</h1>
 <p>Apache JMeter是Apache组织开发的基于Java的压力测试工具。用于对软件做压力测试，它最初被设计用于Web应用测试，但后来扩展到其他测试领域。 它可以用于测试静态和动态资源，例如静态文件、Java 小服务程序、CGI 脚本、Java 对象、数据库、FTP 服务器， 等等。JMeter 可以用于对服务器、网络或对象模拟巨大的负载，来自不同压力类别下测试它们的强度和分析整体性能。另外，JMeter能够对应用程序做功能/回归测试，通过创建带有断言的脚本来验证你的程序返回了你期望的结果。为了最大限度的灵活性，JMeter允许使用正则表达式创建断言。
 Apache jmeter 可以用于对静态的和动态的资源（文件，Servlet，Perl脚本，java 对象，数据库和查询，FTP服务器等等）的性能进行测试。它可以用于对服务器、网络或对象模拟繁重的负载来测试它们的强度或分析不同压力类型下的整体性能。你可以使用它做性能的图形分析或在大并发负载测试你的服务器/脚本/对象。</p>
+<div class="codehilite"><pre><span></span>if STATIC_PAGES:
+    return render(request, &#39;course/chapter.html&#39;, {&#39;chapter&#39;: chapter, &#39;chapters&#39;: chapters, &#39;columns&#39;: columns, &#39;courses&#39;: courses})
+else:
+    # 生成静态页面
+    static_html = os.path.join(BASE_DIR, &#39;pages&#39;, &#39;course&#39;, &#39;{}.html&#39;.format(chapter.slug))
+
+    if not os.path.exists(static_html):
+        tpl = os.path.join(TEMPLATES[0][&#39;DIRS&#39;][0], &#39;course&#39;, &#39;chapter.html&#39;)
+        content = render_to_string(tpl, {&#39;chapter&#39;: chapter, &#39;chapters&#39;: chapters, &#39;columns&#39;: columns, &#39;courses&#39;: courses})
+        with open(static_html, &#39;w&#39;, encoding=&#39;utf-8&#39;) as static_file:
+            static_file.write(content)
+    return render(request, static_html)
+</pre></div>
         </div>
     </div>
 

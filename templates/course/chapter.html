@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+{% block title %}{{ chapter.title }}{% endblock %}
+{% block keywards %}{{ chapter.keywords }}{% endblock %}
+{% block description %}{{ chapter.abst }}{% endblock %}
 {% block main %}
     <div class="container" name="main">
         <div class="col-md-3" name="left">
