@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d39d55c2-263b-4a15-b942-40e6ccd2e979" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course/jmeter02.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course/migrations/0003_column_show_in_nav.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/course/jmeter01.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/course/jmeter02.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/course/mysql01.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrap-hover-dropdown.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/course/lesson.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db2.sqlite3" afterPath="$PROJECT_DIR$/db2.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/models.py" afterPath="$PROJECT_DIR$/course/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/urls.py" afterPath="$PROJECT_DIR$/course/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/views.py" afterPath="$PROJECT_DIR$/course/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qaschool/settings.py" afterPath="$PROJECT_DIR$/qaschool/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qaschool/urls.py" afterPath="$PROJECT_DIR$/qaschool/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,8 +87,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="315">
-                <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+              <first_editor relative-caret-position="360">
+                <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -791,8 +774,8 @@
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="315">
-            <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <first_editor relative-caret-position="360">
+            <caret line="24" column="15" lean-forward="false" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
             <folding />
           </first_editor>
           <second_editor />
