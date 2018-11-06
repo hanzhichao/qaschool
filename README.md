@@ -1,8 +1,9 @@
 # QA School v1.0
 > 使用Django 2.1开发的一款简单的CMS
 
-![首页](https://imgchr.com/i/ioq4zj)
-![章节](https://imgchr.com/i/ioqIQs)
+![首页](https://s1.ax1x.com/2018/11/06/ioq4zj.png)
+
+![章节](https://s1.ax1x.com/2018/11/06/ioqIQs.png)
 
 ## 特性
 - 模型结构为 栏目（Column）-》 课程（Course）-》 章节 （Chapter）
