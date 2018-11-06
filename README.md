@@ -1,7 +1,8 @@
 # QA School v1.0
 > 使用Django 2.1开发的一款简单的CMS
 
-![预览](https://s1.ax1x.com/2018/10/31/iRWcND.png)
+![首页](https://imgchr.com/i/ioq4zj)
+![章节](https://imgchr.com/i/ioqIQs)
 
 ## 特性
 - 模型结构为 栏目（Column）-》 课程（Course）-》 章节 （Chapter）
@@ -11,6 +12,7 @@
 - 栏目，课程，章节可配置是否显示
 - 课程章节支持排序，查看时自动生成静态页面
 - 栏目，课程，章节支持SEO
+- 通过配置可切换模板和主题
 
 ## 使用方法
 > 请提前安装Python3环境
