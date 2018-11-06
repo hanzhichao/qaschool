@@ -6,7 +6,7 @@ from django.views.generic import RedirectView
 
 urlpatterns = [
     path('mdeditor/', include('mdeditor.urls')),
-    path('admin/', admin.site.urls),
+    path('cactus/', admin.site.urls),
     path('', views.index, name='index'),
     path('course/', include('course.urls')),
     path('favicon.ico', RedirectView.as_view(url='/static/favicon.ico'))

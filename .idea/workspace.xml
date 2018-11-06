@@ -2,9 +2,428 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d39d55c2-263b-4a15-b942-40e6ccd2e979" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/style.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/fields.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/forms.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/models.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/settings.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/languages/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/languages/zh-tw.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/static/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/tests.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/urls.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/views.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/editormd/widgets.py" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/__init__.py" afterPath="$PROJECT_DIR$/start.sh" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/css/editormd.css" afterPath="$PROJECT_DIR$/static/css/editormd.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/css/editormd.logo.css" afterPath="$PROJECT_DIR$/static/css/editormd.logo.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/css/editormd.logo.min.css" afterPath="$PROJECT_DIR$/static/css/editormd.logo.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/css/editormd.min.css" afterPath="$PROJECT_DIR$/static/css/editormd.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/css/editormd.preview.css" afterPath="$PROJECT_DIR$/static/css/editormd.preview.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/css/editormd.preview.min.css" afterPath="$PROJECT_DIR$/static/css/editormd.preview.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/editormd.min.js" afterPath="$PROJECT_DIR$/static/js/editormd.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/static/fonts/FontAwesome.otf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/fonts/editormd-logo.eot" afterPath="$PROJECT_DIR$/static/fonts/editormd-logo.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/fonts/editormd-logo.svg" afterPath="$PROJECT_DIR$/static/fonts/editormd-logo.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/fonts/editormd-logo.ttf" afterPath="$PROJECT_DIR$/static/fonts/editormd-logo.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/fonts/editormd-logo.woff" afterPath="$PROJECT_DIR$/static/fonts/editormd-logo.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/loading.gif" afterPath="$PROJECT_DIR$/static/images/loading.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/loading@2x.gif" afterPath="$PROJECT_DIR$/static/images/loading@2x.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/loading@3x.gif" afterPath="$PROJECT_DIR$/static/images/loading@3x.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-favicon-16x16.ico" afterPath="$PROJECT_DIR$/static/images/logos/editormd-favicon-16x16.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-favicon-24x24.ico" afterPath="$PROJECT_DIR$/static/images/logos/editormd-favicon-24x24.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-favicon-32x32.ico" afterPath="$PROJECT_DIR$/static/images/logos/editormd-favicon-32x32.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-favicon-48x48.ico" afterPath="$PROJECT_DIR$/static/images/logos/editormd-favicon-48x48.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-favicon-64x64.ico" afterPath="$PROJECT_DIR$/static/images/logos/editormd-favicon-64x64.ico" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-114x114.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-114x114.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-120x120.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-120x120.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-144x144.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-144x144.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-16x16.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-16x16.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-180x180.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-180x180.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-240x240.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-240x240.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-24x24.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-24x24.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-320x320.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-320x320.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-32x32.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-32x32.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-48x48.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-48x48.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-57x57.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-57x57.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-64x64.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-64x64.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-72x72.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-72x72.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/editormd-logo-96x96.png" afterPath="$PROJECT_DIR$/static/images/logos/editormd-logo-96x96.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/images/logos/vi.png" afterPath="$PROJECT_DIR$/static/images/logos/vi.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/AUTHORS" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/AUTHORS" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/LICENSE" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/LICENSE" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/README.md" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/comment/comment.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/comment/comment.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/comment/continuecomment.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/comment/continuecomment.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/dialog/dialog.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/dialog/dialog.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/dialog/dialog.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/dialog/dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/display/fullscreen.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/display/fullscreen.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/display/fullscreen.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/display/fullscreen.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/display/panel.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/display/panel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/display/placeholder.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/display/placeholder.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/display/rulers.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/display/rulers.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/edit/closebrackets.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/closebrackets.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/edit/closetag.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/closetag.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/edit/continuelist.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/continuelist.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/edit/matchbrackets.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/matchbrackets.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/edit/matchtags.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/matchtags.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/edit/trailingspace.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/edit/trailingspace.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/fold/brace-fold.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/brace-fold.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/fold/comment-fold.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/comment-fold.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/fold/foldcode.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/foldcode.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/fold/foldgutter.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/foldgutter.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/fold/foldgutter.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/foldgutter.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/fold/indent-fold.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/indent-fold.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/fold/markdown-fold.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/markdown-fold.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/fold/xml-fold.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/fold/xml-fold.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/hint/anyword-hint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/anyword-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/hint/css-hint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/css-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/hint/html-hint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/html-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/hint/javascript-hint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/javascript-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/hint/show-hint.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/show-hint.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/hint/show-hint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/show-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/hint/sql-hint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/sql-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/hint/xml-hint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/hint/xml-hint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/lint/coffeescript-lint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/coffeescript-lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/lint/css-lint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/css-lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/lint/javascript-lint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/javascript-lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/lint/json-lint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/json-lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/lint/lint.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/lint.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/lint/lint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/lint/yaml-lint.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/lint/yaml-lint.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/merge/merge.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/merge/merge.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/merge/merge.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/merge/merge.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/mode/loadmode.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/mode/loadmode.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/mode/multiplex.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/mode/multiplex.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/mode/multiplex_test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/mode/multiplex_test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/mode/overlay.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/mode/overlay.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/mode/simple.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/mode/simple.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/runmode/colorize.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/runmode/colorize.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/runmode/runmode-standalone.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/runmode/runmode-standalone.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/runmode/runmode.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/runmode/runmode.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/runmode/runmode.node.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/runmode/runmode.node.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/scroll/annotatescrollbar.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/scroll/annotatescrollbar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/scroll/scrollpastend.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/scroll/scrollpastend.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/scroll/simplescrollbars.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/scroll/simplescrollbars.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/scroll/simplescrollbars.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/scroll/simplescrollbars.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/search/match-highlighter.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/search/match-highlighter.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/search/matchesonscrollbar.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/search/matchesonscrollbar.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/search/matchesonscrollbar.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/search/matchesonscrollbar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/search/search.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/search/search.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/search/searchcursor.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/search/searchcursor.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/selection/active-line.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/selection/active-line.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/selection/mark-selection.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/selection/mark-selection.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/selection/selection-pointer.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/selection/selection-pointer.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/tern/tern.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/tern/tern.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/tern/tern.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/tern/tern.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/tern/worker.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/tern/worker.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addon/wrap/hardwrap.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addon/wrap/hardwrap.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/addons.min.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/addons.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/bower.json" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/bower.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/codemirror.min.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/codemirror.min.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/codemirror.min.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/codemirror.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/lib/codemirror.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/lib/codemirror.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/lib/codemirror.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/lib/codemirror.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/apl/apl.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/apl/apl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/apl/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/apl/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/asterisk/asterisk.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/asterisk/asterisk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/asterisk/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/asterisk/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/clike/clike.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/clike/clike.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/clike/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/clike/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/clike/scala.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/clike/scala.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/clojure/clojure.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/clojure/clojure.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/clojure/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/clojure/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/cobol/cobol.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/cobol/cobol.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/cobol/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/cobol/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/coffeescript/coffeescript.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/coffeescript/coffeescript.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/coffeescript/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/coffeescript/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/commonlisp/commonlisp.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/commonlisp/commonlisp.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/commonlisp/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/commonlisp/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/css/css.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/css.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/css/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/css/less.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/less.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/css/less_test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/less_test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/css/scss.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/scss.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/css/scss_test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/scss_test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/css/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/css/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/cypher/cypher.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/cypher/cypher.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/cypher/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/cypher/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/d/d.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/d/d.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/d/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/d/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/dart/dart.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dart/dart.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/dart/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dart/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/diff/diff.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/diff/diff.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/diff/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/diff/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/django/django.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/django/django.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/django/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/django/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/dockerfile/dockerfile.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dockerfile/dockerfile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/dockerfile/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dockerfile/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/dtd/dtd.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dtd/dtd.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/dtd/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dtd/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/dylan/dylan.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dylan/dylan.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/dylan/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/dylan/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/ebnf/ebnf.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ebnf/ebnf.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/ebnf/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ebnf/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/ecl/ecl.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ecl/ecl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/ecl/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ecl/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/eiffel/eiffel.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/eiffel/eiffel.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/eiffel/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/eiffel/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/erlang/erlang.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/erlang/erlang.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/erlang/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/erlang/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/forth/forth.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/forth/forth.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/forth/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/forth/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/fortran/fortran.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/fortran/fortran.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/fortran/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/fortran/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/gas/gas.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gas/gas.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/gas/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gas/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/gfm/gfm.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gfm/gfm.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/gfm/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gfm/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/gfm/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gfm/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/gherkin/gherkin.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gherkin/gherkin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/gherkin/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/gherkin/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/go/go.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/go/go.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/go/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/go/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/groovy/groovy.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/groovy/groovy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/groovy/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/groovy/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/haml/haml.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haml/haml.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/haml/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haml/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/haml/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haml/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/haskell/haskell.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haskell/haskell.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/haskell/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haskell/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/haxe/haxe.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haxe/haxe.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/haxe/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/haxe/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/htmlembedded/htmlembedded.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/htmlembedded/htmlembedded.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/htmlembedded/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/htmlembedded/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/htmlmixed/htmlmixed.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/htmlmixed/htmlmixed.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/htmlmixed/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/htmlmixed/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/http/http.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/http/http.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/http/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/http/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/idl/idl.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/idl/idl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/idl/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/idl/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/jade/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/jade/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/jade/jade.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/jade/jade.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/javascript/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/javascript/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/javascript/javascript.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/javascript/javascript.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/javascript/json-ld.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/javascript/json-ld.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/javascript/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/javascript/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/javascript/typescript.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/javascript/typescript.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/jinja2/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/jinja2/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/jinja2/jinja2.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/jinja2/jinja2.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/julia/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/julia/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/julia/julia.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/julia/julia.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/kotlin/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/kotlin/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/kotlin/kotlin.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/kotlin/kotlin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/livescript/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/livescript/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/livescript/livescript.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/livescript/livescript.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/lua/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/lua/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/lua/lua.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/lua/lua.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/markdown/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/markdown/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/markdown/markdown.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/markdown/markdown.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/markdown/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/markdown/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/meta.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/meta.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/mirc/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/mirc/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/mirc/mirc.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/mirc/mirc.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/mllike/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/mllike/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/mllike/mllike.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/mllike/mllike.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/modelica/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/modelica/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/modelica/modelica.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/modelica/modelica.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/nginx/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/nginx/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/nginx/nginx.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/nginx/nginx.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/ntriples/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ntriples/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/ntriples/ntriples.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ntriples/ntriples.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/octave/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/octave/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/octave/octave.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/octave/octave.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/pascal/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pascal/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/pascal/pascal.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pascal/pascal.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/pegjs/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pegjs/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/pegjs/pegjs.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pegjs/pegjs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/perl/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/perl/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/perl/perl.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/perl/perl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/php/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/php/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/php/php.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/php/php.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/php/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/php/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/pig/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pig/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/pig/pig.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/pig/pig.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/properties/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/properties/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/properties/properties.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/properties/properties.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/puppet/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/puppet/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/puppet/puppet.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/puppet/puppet.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/python/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/python/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/python/python.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/python/python.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/q/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/q/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/q/q.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/q/q.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/r/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/r/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/r/r.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/r/r.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/rpm/changes/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rpm/changes/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/rpm/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rpm/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/rpm/rpm.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rpm/rpm.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/rst/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rst/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/rst/rst.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rst/rst.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/ruby/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ruby/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/ruby/ruby.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ruby/ruby.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/ruby/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/ruby/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/rust/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rust/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/rust/rust.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/rust/rust.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/sass/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sass/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/sass/sass.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sass/sass.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/scheme/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/scheme/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/scheme/scheme.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/scheme/scheme.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/shell/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/shell/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/shell/shell.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/shell/shell.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/shell/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/shell/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/sieve/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sieve/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/sieve/sieve.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sieve/sieve.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/slim/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/slim/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/slim/slim.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/slim/slim.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/slim/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/slim/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/smalltalk/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smalltalk/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/smalltalk/smalltalk.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smalltalk/smalltalk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/smarty/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smarty/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/smarty/smarty.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smarty/smarty.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/smartymixed/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smartymixed/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/smartymixed/smartymixed.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/smartymixed/smartymixed.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/solr/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/solr/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/solr/solr.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/solr/solr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/soy/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/soy/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/soy/soy.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/soy/soy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/sparql/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sparql/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/sparql/sparql.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sparql/sparql.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/spreadsheet/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/spreadsheet/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/spreadsheet/spreadsheet.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/spreadsheet/spreadsheet.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/sql/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sql/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/sql/sql.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/sql/sql.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/stex/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/stex/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/stex/stex.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/stex/stex.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/stex/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/stex/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/stylus/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/stylus/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/stylus/stylus.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/stylus/stylus.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/tcl/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tcl/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/tcl/tcl.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tcl/tcl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/textile/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/textile/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/textile/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/textile/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/textile/textile.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/textile/textile.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/tiddlywiki/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiddlywiki/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/tiddlywiki/tiddlywiki.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiddlywiki/tiddlywiki.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/tiddlywiki/tiddlywiki.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiddlywiki/tiddlywiki.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/tiki/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiki/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/tiki/tiki.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiki/tiki.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/tiki/tiki.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tiki/tiki.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/toml/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/toml/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/toml/toml.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/toml/toml.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/tornado/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tornado/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/tornado/tornado.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/tornado/tornado.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/turtle/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/turtle/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/turtle/turtle.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/turtle/turtle.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/vb/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/vb/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/vb/vb.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/vb/vb.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/vbscript/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/vbscript/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/vbscript/vbscript.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/vbscript/vbscript.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/velocity/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/velocity/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/velocity/velocity.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/velocity/velocity.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/verilog/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/verilog/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/verilog/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/verilog/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/verilog/verilog.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/verilog/verilog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/xml/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xml/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/xml/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xml/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/xml/xml.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xml/xml.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/xquery/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xquery/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/xquery/test.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xquery/test.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/xquery/xquery.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/xquery/xquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/yaml/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/yaml/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/yaml/yaml.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/yaml/yaml.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/z80/index.html" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/z80/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/mode/z80/z80.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/mode/z80/z80.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/modes.min.js" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/modes.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/package.json" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/package.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/3024-day.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/3024-day.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/3024-night.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/3024-night.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/ambiance-mobile.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/ambiance-mobile.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/ambiance.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/ambiance.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/base16-dark.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/base16-dark.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/base16-light.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/base16-light.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/blackboard.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/blackboard.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/cobalt.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/cobalt.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/colorforth.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/colorforth.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/eclipse.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/eclipse.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/elegant.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/elegant.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/erlang-dark.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/erlang-dark.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/lesser-dark.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/lesser-dark.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/mbo.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/mbo.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/mdn-like.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/mdn-like.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/midnight.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/midnight.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/monokai.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/monokai.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/neat.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/neat.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/neo.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/neo.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/night.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/night.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/paraiso-dark.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/paraiso-dark.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/paraiso-light.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/paraiso-light.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/pastel-on-dark.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/pastel-on-dark.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/rubyblue.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/rubyblue.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/solarized.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/solarized.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/the-matrix.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/the-matrix.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/tomorrow-night-bright.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/tomorrow-night-bright.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/tomorrow-night-eighties.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/tomorrow-night-eighties.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/twilight.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/twilight.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/vibrant-ink.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/vibrant-ink.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/xq-dark.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/xq-dark.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/xq-light.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/xq-light.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/codemirror/theme/zenburn.css" afterPath="$PROJECT_DIR$/static/js/lib/codemirror/theme/zenburn.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/flowchart.min.js" afterPath="$PROJECT_DIR$/static/js/lib/flowchart.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/jquery.flowchart.min.js" afterPath="$PROJECT_DIR$/static/js/lib/jquery.flowchart.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/marked.min.js" afterPath="$PROJECT_DIR$/static/js/lib/marked.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/prettify.min.js" afterPath="$PROJECT_DIR$/static/js/lib/prettify.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/raphael.min.js" afterPath="$PROJECT_DIR$/static/js/lib/raphael.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/sequence-diagram.min.js" afterPath="$PROJECT_DIR$/static/js/lib/sequence-diagram.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/lib/underscore.min.js" afterPath="$PROJECT_DIR$/static/js/lib/underscore.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/code-block-dialog/code-block-dialog.js" afterPath="$PROJECT_DIR$/static/js/plugins/code-block-dialog/code-block-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/emoji-dialog/emoji-dialog.js" afterPath="$PROJECT_DIR$/static/js/plugins/emoji-dialog/emoji-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/emoji-dialog/emoji.json" afterPath="$PROJECT_DIR$/static/js/plugins/emoji-dialog/emoji.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/goto-line-dialog/goto-line-dialog.js" afterPath="$PROJECT_DIR$/static/js/plugins/goto-line-dialog/goto-line-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/help-dialog/help-dialog.js" afterPath="$PROJECT_DIR$/static/js/plugins/help-dialog/help-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/help-dialog/help.md" afterPath="$PROJECT_DIR$/static/js/plugins/help-dialog/help.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/html-entities-dialog/html-entities-dialog.js" afterPath="$PROJECT_DIR$/static/js/plugins/html-entities-dialog/html-entities-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/html-entities-dialog/html-entities.json" afterPath="$PROJECT_DIR$/static/js/plugins/html-entities-dialog/html-entities.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/image-dialog/image-dialog.js" afterPath="$PROJECT_DIR$/static/js/plugins/image-dialog/image-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/link-dialog/link-dialog.js" afterPath="$PROJECT_DIR$/static/js/plugins/link-dialog/link-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/plugin-template.js" afterPath="$PROJECT_DIR$/static/js/plugins/plugin-template.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/preformatted-text-dialog/preformatted-text-dialog.js" afterPath="$PROJECT_DIR$/static/js/plugins/preformatted-text-dialog/preformatted-text-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/reference-link-dialog/reference-link-dialog.js" afterPath="$PROJECT_DIR$/static/js/plugins/reference-link-dialog/reference-link-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/table-dialog/table-dialog.js" afterPath="$PROJECT_DIR$/static/js/plugins/table-dialog/table-dialog.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/plugins/test-plugin/test-plugin.js" afterPath="$PROJECT_DIR$/static/js/plugins/test-plugin/test-plugin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/editormd/static/editor.md/src/editormd.js" afterPath="$PROJECT_DIR$/static/js/editormd.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/bootswatch/static/css/cosmo.css" afterPath="$PROJECT_DIR$/static/css/cosmo.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/bootswatch/static/css/litera.css" afterPath="$PROJECT_DIR$/static/css/litera.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/bootswatch/static/css/materia.css" afterPath="$PROJECT_DIR$/static/css/materia.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/bootswatch/static/css/sandstone.css" afterPath="$PROJECT_DIR$/static/css/sandstone.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/bootswatch/static/css/yeti.css" afterPath="$PROJECT_DIR$/static/css/yeti.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/bootswatch/static/js/custom.js" afterPath="$PROJECT_DIR$/static/js/custom.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/bootswatch/static/js/popper.min.js" afterPath="$PROJECT_DIR$/static/js/popper.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/bootswatch/static/js/prompt.js" afterPath="$PROJECT_DIR$/static/js/prompt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test_tomd.py" afterPath="$PROJECT_DIR$/test/test_tomd.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db2.sqlite3" afterPath="$PROJECT_DIR$/db2.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/models.py" afterPath="$PROJECT_DIR$/course/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nginx.conf" afterPath="$PROJECT_DIR$/nginx.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qaschool/settings.py" afterPath="$PROJECT_DIR$/qaschool/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qaschool/settings_bak.py" afterPath="$PROJECT_DIR$/qaschool/settings_bak.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qaschool/urls.py" afterPath="$PROJECT_DIR$/qaschool/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/jquery.min.js" afterPath="$PROJECT_DIR$/static/js/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/base.html" afterPath="$PROJECT_DIR$/templates/bootswatch/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/course/column.html" afterPath="$PROJECT_DIR$/templates/bootswatch/course/column.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/course/index.html" afterPath="$PROJECT_DIR$/templates/bootswatch/course/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,18 +452,12 @@
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="db2.sqlite3" type="e3449647:DbNodeDescriptor" />
-        <item name="schema #1" type="e3449647:DbNodeDescriptor" />
+        <item name="main" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="db2.sqlite3" type="e3449647:DbNodeDescriptor" />
-        <item name="schema #1" type="e3449647:DbNodeDescriptor" />
-        <item name="course_column" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="db2.sqlite3" type="e3449647:DbNodeDescriptor" />
-        <item name="schema #1" type="e3449647:DbNodeDescriptor" />
+        <item name="main" type="e3449647:DbNodeDescriptor" />
         <item name="course_course" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
@@ -55,59 +468,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="column.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/column.html">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/course/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="34" column="68" lean-forward="false" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
+            <state relative-caret-position="212">
+              <caret line="43" column="7" lean-forward="false" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
               <folding>
-                <element signature="e#1071#1097#0#HTML" expanded="true" />
-                <element signature="e#1165#1171#0#HTML" expanded="true" />
-                <element signature="e#1287#1311#0#HTML" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="174">
-                <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qaschool/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
-              <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="course.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/course.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -115,22 +483,32 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+            <state relative-caret-position="325">
+              <caret line="44" column="44" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="44" selection-end-column="44" />
               <folding>
-                <element signature="e#1622#1648#0#HTML" expanded="true" />
-                <element signature="e#1720#1726#0#HTML" expanded="true" />
-                <element signature="e#1854#1878#0#HTML" expanded="true" />
+                <element signature="e#2456#2483#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chapter.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/chapter.html">
+      <file leaf-file-name="column.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/column.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="390">
+              <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+              <folding>
+                <element signature="e#1851#1878#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="font-awesome.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/font-awesome.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -139,8 +517,18 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bootswatch/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+            <state relative-caret-position="39">
+              <caret line="11" column="64" lean-forward="false" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qaschool/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="387">
+              <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,8 +537,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qaschool/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="120">
+              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -161,11 +549,9 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/course/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#78#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -184,6 +570,7 @@
       <find>article</find>
       <find>chapter2</find>
       <find>h4</find>
+      <find>fa</find>
     </findStrings>
     <replaceStrings>
       <replace>lesson</replace>
@@ -203,26 +590,28 @@
         <option value="$PROJECT_DIR$/course/forms.py" />
         <option value="$PROJECT_DIR$/templates/course/article.html" />
         <option value="$PROJECT_DIR$/static/css/bootstrap.css2" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/course/admin.py" />
-        <option value="$PROJECT_DIR$/course/models.py" />
         <option value="$PROJECT_DIR$/templates/course/chapter.html" />
         <option value="$PROJECT_DIR$/templates/course/course.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/course/column.html" />
         <option value="$PROJECT_DIR$/templates/course/index.html" />
-        <option value="$PROJECT_DIR$/qaschool/settings_bak.py" />
-        <option value="$PROJECT_DIR$/qaschool/settings.py" />
         <option value="$PROJECT_DIR$/course/urls.py" />
-        <option value="$PROJECT_DIR$/qaschool/urls.py" />
         <option value="$PROJECT_DIR$/templates/bootswatch/course/course.html" />
         <option value="$PROJECT_DIR$/templates/bootswatch/course/chapter.html" />
+        <option value="$PROJECT_DIR$/course/views.py" />
+        <option value="$PROJECT_DIR$/static/css/yeti.css" />
+        <option value="$PROJECT_DIR$/start.sh" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/qaschool/settings.py" />
+        <option value="$PROJECT_DIR$/qaschool/settings_bak.py" />
+        <option value="$PROJECT_DIR$/qaschool/urls.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/templates/bootswatch/base.html" />
+        <option value="$PROJECT_DIR$/course/models.py" />
         <option value="$PROJECT_DIR$/templates/bootswatch/course/index.html" />
         <option value="$PROJECT_DIR$/templates/bootswatch/course/column.html" />
-        <option value="$PROJECT_DIR$/course/views.py" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -232,11 +621,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="244" />
-    <option name="y" value="219" />
-    <option name="width" value="1932" />
-    <option name="height" value="619" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="93" />
+    <option name="y" value="165" />
+    <option name="width" value="1774" />
+    <option name="height" value="855" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -256,7 +645,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,11 +652,30 @@
               <item name="qaschool" type="b2602c69:ProjectViewProjectNode" />
               <item name="qaschool" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="qaschool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qaschool" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qaschool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qaschool" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="bootswatch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qaschool" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qaschool" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="bootswatch" type="462c0819:PsiDirectoryNode" />
+              <item name="course" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -279,18 +686,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hanzhichao\Desktop\qaschool\static\img" />
       <recent name="C:\Users\hanzhichao\Desktop\qaschool\static" />
       <recent name="C:\Users\hanzhichao\Desktop\qaschool" />
+      <recent name="C:\Users\hanzhichao\Desktop\qaschool\static\img" />
       <recent name="C:\Users\hanzhichao\Desktop\qaschool\templates\bootstrap" />
       <recent name="C:\Users\hanzhichao\Desktop\qaschool\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\hanzhichao\Desktop\qaschool\static" />
+      <recent name="C:\Users\hanzhichao\Desktop\qaschool\test" />
+      <recent name="C:\Users\hanzhichao\Desktop\qaschool\static\js" />
       <recent name="C:\Users\hanzhichao\Desktop\qaschool\static\css" />
+      <recent name="C:\Users\hanzhichao\Desktop\qaschool\static" />
       <recent name="C:\Users\hanzhichao\Desktop\qaschool\qaschool" />
-      <recent name="C:\Users\hanzhichao\Desktop\qaschool\templates\bootswatch\static\js" />
-      <recent name="C:\Users\hanzhichao\Desktop\qaschool\templates\bootswatch\static\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -373,41 +780,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="93" y="165" width="1774" height="855" extended-state="1" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24095683" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.008168028" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46854663" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21588486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23741794" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14840499" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11605206" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21588486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23741794" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -444,50 +838,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/course/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="74" column="60" lean-forward="false" selection-start-line="74" selection-start-column="60" selection-end-line="74" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/column.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <element signature="e#1071#1097#0#HTML" expanded="true" />
-            <element signature="e#1165#1171#0#HTML" expanded="true" />
-            <element signature="e#1287#1311#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="90" lean-forward="false" selection-start-line="19" selection-start-column="90" selection-end-line="19" selection-end-column="90" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qaschool/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -521,7 +871,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -531,7 +880,7 @@
         <state relative-caret-position="270">
           <caret line="20" column="106" lean-forward="false" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="106" />
           <folding>
-            <element signature="e#0#78#0" expanded="true" />
+            <element signature="e#0#78#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -540,11 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding>
-            <element signature="e#1071#1097#0#HTML" expanded="true" />
-            <element signature="e#1165#1171#0#HTML" expanded="true" />
-            <element signature="e#1287#1311#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -631,14 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/code.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -650,13 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="73" column="12" lean-forward="false" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -702,86 +1031,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qaschool/settings_bak.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="31" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="84" lean-forward="false" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/column.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="34" column="68" lean-forward="false" selection-start-line="34" selection-start-column="68" selection-end-line="34" selection-end-column="68" />
-          <folding>
-            <element signature="e#1071#1097#0#HTML" expanded="true" />
-            <element signature="e#1165#1171#0#HTML" expanded="true" />
-            <element signature="e#1287#1311#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qaschool/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qaschool/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/chapter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="43" column="72" lean-forward="false" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
-          <folding>
-            <element signature="e#1622#1648#0#HTML" expanded="true" />
-            <element signature="e#1720#1726#0#HTML" expanded="true" />
-            <element signature="e#1854#1878#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -793,11 +1047,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/yeti.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142530">
+          <caret line="9502" column="1" lean-forward="false" selection-start-line="9502" selection-start-column="1" selection-end-line="9502" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="84" lean-forward="false" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qaschool/settings_bak.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="174">
-            <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <first_editor relative-caret-position="450">
+            <caret line="30" column="24" lean-forward="false" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
             <folding />
           </first_editor>
           <second_editor />
@@ -811,9 +1105,96 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qaschool/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/font-awesome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qaschool/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bootswatch/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="11" column="64" lean-forward="false" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/93f480e/34223b5d-ba9c-4b49-9889-920cd5006201/main.course_course">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="43" column="7" lean-forward="false" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="44" column="44" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="44" selection-end-column="44" />
+          <folding>
+            <element signature="e#2456#2483#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/column.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding>
+            <element signature="e#1851#1878#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

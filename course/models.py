@@ -2,6 +2,7 @@ from django.db import models
 # from DjangoUeditor.models import UEditorField
 from django.urls import reverse
 from mdeditor.fields import MDTextField
+from qaschool.settings import MEDIA_URL
 
 
 class Column(models.Model):
@@ -15,7 +16,6 @@ class Column(models.Model):
     intro = models.CharField('栏目简介', max_length=256, blank=True, null=True)
     created_time = models.DateTimeField('创建时间', auto_now_add=True, null=True)
     last_modified_time = models.DateTimeField('修改时间', auto_now=True)
-    # thumbnail = models.ImageField('缩略图', blank=True, null=True)
 
     keywords = models.CharField('关键字', max_length=80, blank=True, null=True)
 
@@ -41,7 +41,7 @@ class Course(models.Model):
     visible = models.BooleanField("显示", default=True)
     created_time = models.DateTimeField('创建时间', auto_now_add=True, null=True)
     last_modified_time = models.DateTimeField('修改时间', auto_now=True)
-    # thumbnail = models.ImageField('缩略图', blank=True, null=True)
+    pic = models.ImageField('缩略图', blank=True, null=True)
 
     keywords = models.CharField('关键字', max_length=80, blank=True, null=True)
 
@@ -68,12 +68,8 @@ class Chapter(models.Model):
     slug = models.CharField('网址', max_length=256, db_index=True, unique=True)
     sn = models.IntegerField("排序", null=True)
     course = models.ForeignKey(Course, verbose_name='归属课程', on_delete=models.CASCADE, blank=True, null=True)
-
-    # thumbnail = models.ImageField('缩略图', blank=True, null=True)
-
     abstract = models.CharField('摘要', max_length=256, blank=True, null=True)
     content = MDTextField("内容")
-
     created_time = models.DateTimeField('创建时间', auto_now_add=True)
     last_modified_time = models.DateTimeField('修改时间', auto_now=True)
     views = models.PositiveIntegerField('浏览量', default=0)

@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-9" name="right">
                 <div class="list-group" ><a href="#" class="list-group-item list-group-item-action border-top-0 border-right-0 border-left-0" style="padding: 10px 2px;">
-                    <span class="fas fa-list text-warning"></span>&nbsp;
+                    <span class="fa fa-list text-warning"></span>&nbsp;
                     <strong>{{ column.name }}</strong>
                 </a></div>
                 <div class="row" style="padding: 10px 0;">
@@ -27,10 +27,13 @@
                         <div class="col-md-3">
                             <div class="list-group">
                               <a href="{{ course.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start active">
-                                <div class="d-flex w-100 justify-content-between">
-                                  <h6 class="mb-1">{{ course.name }}</h6>
+                                <div class="row">
+                                    <img src="{{ course.pic.url }}" width="40px" height="40px">
+                                    <div style="padding-left: 10px;">
+                                        <div class="d-flex w-100 justify-content-between"><h6 class="mb-1">{{ course.name }}</h6></div>
+                                        <p class="mb-1">{{ course.author.username }}</p>
+                                    </div>
                                 </div>
-                                <p class="mb-1">{{ course.author }}</p>
                               </a>
                               <a href="{{ course.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start">
                                 <div class="d-flex w-100 justify-content-between">
