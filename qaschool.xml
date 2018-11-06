@@ -1,0 +1,7 @@
+<uwsgi>
+    <socket>127.0.0.1:8997</socket><!-- 内部端口，自定义 -->
+        <chdir>/home/www/qaschool</chdir><!-- 项目路径 -->
+            <module>qaschool.wsgi:application</module>
+                <processes>4</processes> <!-- 进程数 --> 
+    <daemonize>uwsgi.log</daemonize><!-- 日志文件 -->
+</uwsgi>

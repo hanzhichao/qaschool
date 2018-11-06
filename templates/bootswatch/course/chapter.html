@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{ chapter.title }}{% endblock %}
+{% block keywards %}{{ chapter.keywords }}{% endblock %}
+{% block description %}{{ chapter.abst }}{% endblock %}
+{% block main %}
+    <br><br><br><br>
+    <div class="container" name="main">
+        <div class="row">
+            <div class="col-md-3" name="left">
+                <div class="card bg-primary border-secondary">
+                    <h5 class="card-header"><a class="text-white card-link" href="/">全部教程</a></h5>
+                    <ul class="list-group list-group-flush">
+                        {% for chapter in chapters %}
+                        <a class="list-group-item list-group-item-action" href="{{ chapter.get_absolute_url }}" class="list-group-item">{{ chapter.title }}</a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9" name="right">
+                {{ chapter.content|safe }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

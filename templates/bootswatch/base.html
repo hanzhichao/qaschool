@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="all" />
+    <meta name="author" content="qaschool.cn" />
+    <meta name="Keywords" Content="{% block keywords %}{% endblock %}">
+    <meta name="Description" Content="{% block descprition %}{% endblock %}">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static theme_css %}">
+    <link rel="stylesheet" href="{% static 'css/github.css' %}">
+    <title>{% block title %}{% endblock %}-QA学院</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
+    <div class="container">
+{#      <a class="navbar-brand" href="/"><img src="{% static 'img/QA_text.png' %}" >&nbsp;学院</a>#}
+      <a class="navbar-brand" href="/">QA 学院</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link" href="/">首页<span class="sr-only">(current)</span></a></li>
+          {% for column in columns %}
+            {% if column.show_in_nav %}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ column.name }}</a>
+                  <ul class="dropdown-menu">
+                    {% for course in courses %}
+                        {% if course.column == column %}
+                            <li><a class="dropdown-item" href="{{ course.get_absolute_url }}">{{course.name}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">搜索</button>
+        </form>
+      </div>
+    </div>
+</nav>
+{% block main %}
+{% endblock %}
+<div class="container" name="footer"> </div>
+</body>
+
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+{#<script src="{% static 'js/popper.min.js' %}"></script>#}
+{#<script src="{% static 'js/prompt.js' %}"></script>#}
+{#<script src="{% static 'js/custom.js' %}"></script>#}
+</html>

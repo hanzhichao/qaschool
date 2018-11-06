@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}栏目：{{ colunm.name }}{% endblock %}
+{% block keywards %}{{ colunm.keywords }}{% endblock %}
+{% block description %}{{ column.abstract }}{% endblock %}
+{% block main %}
+    <br><br><br><br>
+    <div class="container" name="main">
+        <div class="row">
+            <div class="col-md-3" name="left">
+                <div class="card bg-primary border-secondary">
+                    <h5 class="card-header"><a class="text-white card-link" href="/">全部教程</a></h5>
+                    <ul class="list-group list-group-flush">
+                        {% for column in columns %}
+                        <a class="list-group-item list-group-item-action" href="{{ column.get_absolute_url }}" class="list-group-item">{{ column.name }}</a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9" name="right">
+                <div class="list-group" ><a href="#" class="list-group-item list-group-item-action border-top-0 border-right-0 border-left-0" style="padding: 10px 2px;">
+                    <span class="fas fa-list text-warning"></span>&nbsp;
+                    <strong>{{ column.name }}</strong>
+                </a></div>
+                <div class="row" style="padding: 10px 0;">
+                {% for course in courses %}
+                    {% if course.column == column %}
+                        <div class="col-md-3">
+                            <div class="list-group">
+                              <a href="{{ course.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start active">
+                                <div class="d-flex w-100 justify-content-between">
+                                  <h6 class="mb-1">{{ course.name }}</h6>
+                                </div>
+                                <p class="mb-1">{{ course.author }}</p>
+                              </a>
+                              <a href="{{ course.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                <div class="d-flex w-100 justify-content-between">
+                                </div>
+                                <p class="mb-1">{{ course.intro }}</p>
+                              </a>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
