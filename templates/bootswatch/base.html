@@ -8,12 +8,13 @@
     <meta name="Description" Content="{% block descprition %}{% endblock %}">
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static theme_css %}">
-    <link rel="stylesheet" href="{% static 'css/github.css' %}">
+    <link rel="stylesheet" href="{% static 'css/code.css' %}">
+{#    <link rel="stylesheet" href="{% static 'css/docs.min.css' %}">#}
     <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
     <title>{% block title %}{% endblock %}-QA学院</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary" name="top">
     <div class="container">
 {#      <a class="navbar-brand" href="/"><img src="{% static 'img/QA_text.png' %}" >&nbsp;学院</a>#}
       <a class="navbar-brand" href="/">QA 学院</a>
@@ -48,7 +49,14 @@
 </nav>
 {% block main %}
 {% endblock %}
-<div class="container" name="footer"> </div>
+
+{#<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>#}
+<div name="footer" class="bg-secondary" style="height: 80px">
+    <hr>
+    <div class="container" >
+        <div class="text-center"><small>Copyright © 2013-2018 qaschool.com All Rights Reserved. 京ICP备11018033号 京公网安备11010802013057</small></div>
+    </div>
+</div>
 </body>
 
 <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>

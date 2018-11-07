@@ -21,7 +21,7 @@
 - 安装依赖包 `pip install -r requirements.txt`
 - 启动开发服务器 python3 manager.py runserver
 - 访问 http://127.0.0.1:8000/
-- 后台 http://127.0.0.1/admin/ （注意最后必须有'/'） 用户名：hanzhichao 密码 123456 
+- 后台 http://127.0.0.1/han/ （注意最后必须有'/'） 用户名：hanzhichao 密码 123456 
 
 
 ## 已知问题
@@ -30,19 +30,14 @@
 - 导航内栏目下无课程时仍有下拉菜单问题
 - 切换到其他栏目，首页仍高亮显示
 - css等放到templates无法加载的问题
-- favicon.ico不显示问题
-- 
 
 ## ToDo
-- 标签
 - 评论功能
 - 评分功能
 - 分享
 - 反馈
 - 采集
 - html -> md
-- 侧边TOC功能
-- 代码高亮
 - 搜索
 - sitemaps
 

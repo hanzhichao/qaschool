@@ -1,9 +1,8 @@
-from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
+from django.shortcuts import render
 from django.template.loader import render_to_string
 from .models import Column, Course, Chapter
 import markdown
 from qaschool.settings import *
-import re,os
 
 columns = Column.objects.filter(visible=True).order_by('sn')
 courses = Course.objects.filter(visible=True).order_by('sn')

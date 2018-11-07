@@ -3,15 +3,14 @@
 {% block keywards %}测试教程, 性能测试, 自动化测试, 测试管理{% endblock %}
 {% block description %}QA学院,系统的软件测试文本教程，包含性能测试,自动化测试,测试管理等{% endblock %}
 {% block main %}
-    <br><br><br><br>
-{#    <div class="jumbotron"><div class="container">#}
-{#      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>#}
-{#      <hr class="my-4">#}
-{#      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>#}
-{#      <p class="lead">#}
-{#        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>#}
-{#      </p>#}
-{#    </div></div>#}
+    <div class="jumbotron"><div class="container">
+      <p class="lead">QA学院 —— 软件测试专属教程网</p>
+      <hr class="my-4">
+      <p>学习，为了更好的生活</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+    </div></div>
     <div class="container" name="main">
         <div class="row">
             <div class="col-md-3" name="left">
@@ -26,7 +25,7 @@
             </div>
             <div class="col-md-9" name="right">
                 {% for column in columns %}
-                    <div class="list-group" ><a href="#" class="list-group-item list-group-item-action border-top-0 border-right-0 border-left-0" style="padding: 10px 2px;">
+                    <div class="list-group" ><a href="#" class="list-group-item list-group-item-action border-top-0 border-right-0 border-left-0" style="padding: 10px 5px;">
                         <span class="fa fa-list text-warning"></span>&nbsp;
                         <strong>{{ column.name }}</strong>
                     </a></div>
