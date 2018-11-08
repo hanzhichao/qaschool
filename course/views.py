@@ -1,13 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse, get_object_or_404
 from django.template.loader import render_to_string
 from .models import Column, Course, Chapter
+from .forms import EmailPostForm
 import markdown
-from qaschool.settings import *
+import os
+from qaschool import settings
+from django.core.mail import send_mail
+
+
 
 columns = Column.objects.filter(visible=True).order_by('sn')
 courses = Course.objects.filter(visible=True).order_by('sn')
 
-theme_css = 'css/{}.css'.format(THEME)
+theme_css = 'css/{}.css'.format(settings.THEME)
 
 def index(request):
     return render(request, 'course/index.html', {'columns': columns, 'courses': courses, 'theme_css': theme_css})
@@ -50,15 +55,34 @@ def chapter_detail(request, course_slug, chapter_slug):
                                                                      'markdown.extensions.codehilite',
                                                                      'markdown.extensions.toc', ])
 
-    if not STATIC_PAGES:
-        return render(request, 'course/chapter.html', {'chapter': chapter, 'chapters': chapters, 'columns': columns, 'courses': courses, 'theme_css': theme_css})
+    if not settings.STATIC_PAGES:
+        return render(request, 'course/chapter.html', {'chapter': chapter, 'course':course, 'chapters': chapters, 'columns': columns, 'courses': courses, 'theme_css': theme_css})
     else:
         # 生成静态页面
-        static_html = os.path.join(BASE_DIR, 'pages', 'course', '{}.html'.format(chapter.slug))
+        static_html = os.path.join(settings.BASE_DIR, 'pages', 'course', '{}.html'.format(chapter.slug))
 
         if not os.path.exists(static_html):
-            tpl = os.path.join(TEMPLATES[0]['DIRS'][0], 'course', 'chapter.html')
-            content = render_to_string(tpl, {'chapter': chapter, 'chapters': chapters, 'columns': columns, 'courses': courses, 'theme_css': theme_css})
+            tpl = os.path.join(settings.TEMPLATES[0]['DIRS'][0], 'course', 'chapter.html')
+            content = render_to_string(tpl, {'chapter': chapter, 'course':course, 'chapters': chapters, 'columns': columns, 'courses': courses, 'theme_css': theme_css})
             with open(static_html, 'w', encoding='utf-8') as static_file:
                 static_file.write(content)
         return render(request, static_html)
+
+def chapter_share(request, chapter_slug):
+    chapter = get_object_or_404(Chapter, slug=chapter_slug, status='p')
+    sent = False
+    cd = None
+    if request.method == 'POST':
+        form = EmailPostForm(request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            # post_url = request.build_absolute_uri(chapter.get_absolute_url)
+            post_url = chapter.get_absolute_url
+            subject = '{} {} 推荐你阅读：{}'.format(cd['name'], cd['email'], chapter.title)
+            msg = 'Read "{}" at {}\n\n{}\'s comments: {}'.format(chapter.title, post_url, cd['name'], cd['comments'])
+            send_mail(subject, msg, 'ivan-me@163.com', [cd['to']])
+            sent = True
+    else:
+        form = EmailPostForm()
+    return render(request, 'course/share.html', {'chapter': chapter, 'form': form, 'sent': sent, 'cd': cd, 'theme_css': theme_css})
+

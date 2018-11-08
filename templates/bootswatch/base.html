@@ -8,12 +8,15 @@
     <meta name="Description" Content="{% block descprition %}{% endblock %}">
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static theme_css %}">
+    <link rel="stylesheet" href="{% static 'css/custom.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/code.css' %}">
+{#    <link rel="stylesheet" href="{% static 'css/github.css' %}">#}
 {#    <link rel="stylesheet" href="{% static 'css/docs.min.css' %}">#}
     <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
     <title>{% block title %}{% endblock %}-QA学院</title>
 </head>
-<body>
+<body class="bg-secondary">
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary" name="top">
     <div class="container">
 {#      <a class="navbar-brand" href="/"><img src="{% static 'img/QA_text.png' %}" >&nbsp;学院</a>#}
@@ -47,13 +50,18 @@
       </div>
     </div>
 </nav>
+<div style="min-height: 600px;">
 {% block main %}
 {% endblock %}
-
-{#<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>#}
-<div name="footer" class="bg-secondary" style="height: 80px">
+</div>
+<br><br><br><br><br><br><br><br>
+<div name="footer" style="min-height: 80px">
+    <a href="#top">
+        <span class="fa fa-chevron-circle-up fa-2x" style="position: fixed;right: 1%;bottom: 5%;"></span>
+    </a>
     <hr>
     <div class="container" >
+
         <div class="text-center"><small>Copyright © 2013-2018 qaschool.com All Rights Reserved. 京ICP备11018033号 京公网安备11010802013057</small></div>
     </div>
 </div>
@@ -61,7 +69,6 @@
 
 <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-{#<script src="{% static 'js/popper.min.js' %}"></script>#}
-{#<script src="{% static 'js/prompt.js' %}"></script>#}
-{#<script src="{% static 'js/custom.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>#}
 </html>

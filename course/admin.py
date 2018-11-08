@@ -42,6 +42,6 @@ class ChapterAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Column, ColumnAdmin)
-# admin.site.register(Course, CourseAdmin)
+admin.site.register(Course, CourseAdmin)
 admin.site.register(Chapter, ChapterAdmin)
 

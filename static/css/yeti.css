@@ -5212,7 +5212,7 @@ input[type="button"].btn-block {
 
 @media (min-width: 576px) {
   .jumbotron {
-    padding: 8rem 4rem 4rem 4rem;
+    padding: 8rem 6rem;
   }
 }
 

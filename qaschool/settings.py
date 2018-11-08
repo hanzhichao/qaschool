@@ -132,9 +132,10 @@ STATIC_PAGES = False
 
 # SMTP
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.sina.com'
+EMAIL_USE_SSL = True
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'test_results@sina.com'
+# EMAIL_USE_TLS = True   #是否使用TLS安全传输协议
+# EMAIL_PORT = 25
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_HOST_USER = 'ivan-me@163.com'
 EMAIL_HOST_PASSWORD = 'hanzhichao123'
-DEFAULT_FROM_EMAIL = 'Test Results<test_results@sina.com>'
