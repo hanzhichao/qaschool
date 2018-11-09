@@ -7,13 +7,13 @@ from qaschool.settings import MEDIA_URL
 
 class Column(models.Model):
     # pre_column = models.ForeignKey('self', verbose_name='上级栏目', blank=True, null=True, on_delete=models.CASCADE)
-    name = models.CharField('栏目名称', max_length=256)
-    manager = models.ForeignKey('auth.User', blank=True, null=True, verbose_name='负责人', on_delete=models.CASCADE)
+    name = models.CharField('栏目名称', max_length=200)
+    manager = models.ForeignKey('auth.User', verbose_name='负责人', on_delete=models.CASCADE)
     visible = models.BooleanField("显示", default=True)
     show_in_nav = models.BooleanField("导航显示", default=False)
-    slug = models.CharField('栏目网址', max_length=256, db_index=True, unique=True)
+    slug = models.CharField('栏目网址', max_length=200, db_index=True, unique=True)
     sn = models.IntegerField("排序", null=True)
-    intro = models.CharField('栏目简介', max_length=256, blank=True, null=True)
+    intro = models.CharField('栏目简介', max_length=200, blank=True, null=True)
     created_time = models.DateTimeField('创建时间', auto_now_add=True, null=True)
     last_modified_time = models.DateTimeField('修改时间', auto_now=True)
 
@@ -32,10 +32,10 @@ class Column(models.Model):
 
 
 class Course(models.Model):
-    column = models.ForeignKey(Column, verbose_name='所属栏目', blank=True, null=True, on_delete=models.CASCADE)
-    name = models.CharField('课程名称', max_length=256)
-    author = models.ForeignKey('auth.User', blank=True, null=True, verbose_name='作者', on_delete=models.CASCADE)
-    slug = models.CharField('课程网址', max_length=256, db_index=True, unique=True)
+    column = models.ForeignKey(Column, verbose_name='所属栏目', on_delete=models.CASCADE)
+    name = models.CharField('课程名称', max_length=200)
+    author = models.ForeignKey('auth.User', verbose_name='作者', on_delete=models.CASCADE)
+    slug = models.CharField('课程网址', max_length=200, db_index=True, unique=True)
     sn = models.IntegerField("排序", null=True)
     intro = models.CharField('课程简介', max_length=100)
     visible = models.BooleanField("显示", default=True)
@@ -63,12 +63,12 @@ class Chapter(models.Model):
         ('p', '发布'),
     )
 
-    title = models.CharField('标题', max_length=256)
+    title = models.CharField('标题', max_length=200)
     keywords = models.CharField('关键字', max_length=80, blank=True, null=True)
-    slug = models.CharField('网址', max_length=256, db_index=True, unique=True)
+    slug = models.CharField('网址', max_length=200, db_index=True, unique=True)
     sn = models.IntegerField("排序", null=True)
     course = models.ForeignKey(Course, verbose_name='归属课程', on_delete=models.CASCADE, blank=True, null=True)
-    abstract = models.CharField('摘要', max_length=256, blank=True, null=True)
+    abstract = models.CharField('摘要', max_length=200, blank=True, null=True)
     content = MDTextField("内容")
     created_time = models.DateTimeField('创建时间', auto_now_add=True)
     last_modified_time = models.DateTimeField('修改时间', auto_now=True)

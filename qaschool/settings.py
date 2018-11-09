@@ -48,7 +48,6 @@ CUR_TEMPLATE = 'bootswatch'
 THEME = 'yeti'
 
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -73,8 +72,17 @@ WSGI_APPLICATION = 'qaschool.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db2.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db2.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': '47.94.156.36',
+        'PORT': '3306',
+        'NAME': 'qaschool',
+        'USER': 'root',
+        'PASSWORD': 'hanzhichao',
+        # 'OPTIONS': {
+        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        #     },
     }
 }
 
