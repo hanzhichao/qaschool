@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Column, Course, Chapter
+from .models import Column, Course, Chapter, Comment
 from .forms import ChapterAdminForm
 
 
@@ -40,8 +40,14 @@ class ChapterAdmin(admin.ModelAdmin):
     list_editable = ['sn', 'status']
 
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('chapter', 'name', 'email', 'visible', 'content', 'created_time')
+    list_filter = ('visible', 'created_time', 'last_modified_time')
+    search_fields = ('name', 'email', 'content')
+    list_editable = ['visible']
 
 admin.site.register(Column, ColumnAdmin)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Chapter, ChapterAdmin)
+admin.site.register(Comment, CommentAdmin)
 

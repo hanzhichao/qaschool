@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{% static theme_css %}">
     <link rel="stylesheet" href="{% static 'css/custom.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/code.css' %}">
+    <link rel="stylesheet" href="{% static 'css/toastr.css' %}">
+{#    <link rel="stylesheet" href="{% static 'css/star-rating.css' %}">#}
 {#    <link rel="stylesheet" href="{% static 'css/github.css' %}">#}
 {#    <link rel="stylesheet" href="{% static 'css/docs.min.css' %}">#}
     <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
@@ -21,11 +23,10 @@
     <div class="container">
 {#      <a class="navbar-brand" href="/"><img src="{% static 'img/QA_text.png' %}" >&nbsp;学院</a>#}
       <a class="navbar-brand" href="/">QA 学院</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="navbarColor01">
+      <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active"><a class="nav-link" href="/">首页<span class="sr-only">(current)</span></a></li>
           {% for column in columns %}
@@ -44,8 +45,8 @@
           {% endfor %}
         </ul>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">搜索</button>
+          <input class="form-control mr-sm-2" id='keyword' type="text">
+          <button class="btn btn-secondary my-2 my-sm-0" type="button" onclick=searchAction()>搜索</button>
         </form>
       </div>
     </div>
@@ -66,9 +67,21 @@
     </div>
 </div>
 </body>
-
+<script type="text/javascript">
+    function searchAction() {
+{#        console.log("llllllllllllllll")#}
+        var keyword = $('#keyword').val();
+        var url = '{% url 'search' 'keyword' %}'.replace('keyword', keyword);
+        location.href = url;
+        console.log(url);
+    }
+</script>
+{% block js %}
+{% endblock %}
 <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/toastr.js' %}"></script>
+{#<script type="text/javascript" src="{% static 'js/star-rating.js' %}"></script>#}
 {#<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>#}
 {#<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>#}
 </html>

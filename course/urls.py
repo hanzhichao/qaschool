@@ -7,5 +7,7 @@ urlpatterns = [
     path('<course_slug>', views.course_detail, name='course'),
     # path('<chapter_slug>.html', views.chapter_detail, name='chapter'),
     path('<course_slug>/<chapter_slug>.html', views.chapter_detail, name='chapter'),
-    path('share/<chapter_slug>/', views.chapter_share, name='chapter_share'),
+    path('<course_slug>/<chapter_slug>.html/share/', views.chapter_share, name='chapter_share'),
+    path('<course_slug>/<chapter_slug>.html/comment_add/', views.comment_add, name='comment_add'),
+    path('search/<keyword>', views.search, name='search'),
 ]

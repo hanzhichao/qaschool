@@ -86,3 +86,21 @@ class Chapter(models.Model):
 
     def get_absolute_url(self):
         return reverse('chapter', args=(self.course.slug, self.slug,))
+
+
+class Comment(models.Model):
+    chapter = models.ForeignKey(Chapter, verbose_name="所属章节", related_name='comments', on_delete=models.CASCADE)
+    name = models.CharField("姓名", max_length=80, null=True)
+    email = models.EmailField("邮件", null=True)
+    content = models.TextField("评论内容", null=True)
+    visible = models.BooleanField("显示", default=True)
+    created_time = models.DateTimeField('创建时间', auto_now_add=True)
+    last_modified_time = models.DateTimeField('修改时间', auto_now=True)
+
+    class Meta:
+        verbose_name = '评论'
+        verbose_name_plural = '评论'
+        ordering = ('created_time',)
+
+    def __str__(self):
+        return 'Comment by {} on {}'.format(self.name, self.chapter)
