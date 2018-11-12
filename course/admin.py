@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Column, Course, Chapter, Comment
+from .models import Column, Course, Chapter, Comment, Config
 from .forms import ChapterAdminForm
 
 
@@ -46,8 +46,16 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ('name', 'email', 'content')
     list_editable = ['visible']
 
+
+class ConfigAdmin(admin.ModelAdmin):
+    list_display = ('name', 'template', 'theme', 'gen_static_pages')
+    fields = ('template', 'theme', 'gen_static_pages')
+    readonly_fields = ('name',)
+
+
 admin.site.register(Column, ColumnAdmin)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Chapter, ChapterAdmin)
 admin.site.register(Comment, CommentAdmin)
+admin.site.register(Config, ConfigAdmin)
 

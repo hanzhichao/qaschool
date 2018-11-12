@@ -5,7 +5,7 @@
 {% block main %}
     <div class="container" name="main">
     <div class="page-header" id="banner"><div class="row col-md-12">
-        <h1>{{ course.name }} <small class="text-muted">{{ course.author.username }}</small></h1></div>
+        <h1 class="col-md-12" style="padding-left: 0">{{ course.name }} <small class="text-muted">{{ course.author.username }}</small><div id="star"  class="pull-right"></div></h1></div>
         <p class="lead">{{ course.intro | default_if_none:"&nbsp;" }}</p>
     </div>
         <div class="row">
@@ -123,20 +123,40 @@
 {% endblock %}
 {% block js %}
     <script type="text/javascript">
+        //评星
+        $('#star').raty({score: {{course.star}},
+            click: function(score, evt) {
+                var star = $("input[name='score']").val();
+                $.ajax({
+                    type: "POST",
+                    url: "{% url 'course_eval' course.slug %}" ,
+                    data: "star="+score,
+                    success: function (result) {
+{#                        window.location.reload();#}
+                        toastr.success('评论成功！');
+
+                    },
+                    error : function() {
+                        console.log(result);
+                    }
+                });
+              }
+        });
+        //分享
         function shareAction(){
             $.ajax({
                 type: "POST",
                 url: "{% url 'chapter_share' course.slug chapter.slug %}" ,
                 data: $('#chapter_share').serialize(),
                 success: function (result) {
-                    toastr.success('邮件已发送');
+                    toastr.success('邮件已发送！');
                 },
                 error : function() {
                     console.log(result);
                 }
             });
         }
-
+        //评论
         function commentAction(){
             $.ajax({
                 type: "POST",
@@ -153,7 +173,7 @@
                 }
             });
         }
-
+        //前端添加评论
         function appendComment() {
             var myDate = new Date();
             var name = $("#comment_name").val();

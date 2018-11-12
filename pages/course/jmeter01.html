@@ -2,156 +2,330 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="all" />
+    <meta name="author" content="qaschool.cn" />
+    <meta name="Keywords" Content="">
+    <meta name="Description" Content="">
     
-    <link rel="stylesheet" href="/static/css/bootstrap.css">
-    <link rel="stylesheet" href="/static/css/docs.min.css">
-    <link rel="stylesheet" href="/static/css/github.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/code_win.css">
-    <title></title>
+    <link rel="stylesheet" href="/static/css/yeti.css">
+    <link rel="stylesheet" href="/static/css/custom.min.css">
+    <link rel="stylesheet" href="/static/css/code.css">
+    <link rel="stylesheet" href="/static/css/toastr.css">
+
+
+
+
+    <link rel="stylesheet" href="/static/css/font-awesome.css">
+<script type="text/javascript" src="/static/js/popper.min.js"></script>
+    <title>JMeter简介-QA学院</title>
 </head>
-<body>
-<div class="navbar navbar-default" name="header">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+<body class="bg-secondary">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary" name="top">
+    <div class="container">
+
+      <a class="navbar-brand" href="/">QA 学院</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="/">QA school</a>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link" href="/">首页<span class="sr-only">(current)</span></a></li>
+          
+            
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">测试基础</a>
+                  <ul class="dropdown-menu">
+                    
+                        
+                    
+                        
+                            <li><a class="dropdown-item" href="/course/testcase_design">用例设计</a></li>
+                        
+                    
+                        
+                            <li><a class="dropdown-item" href="/course/mysql_base">数据库基础</a></li>
+                        
+                    
+                  </ul>
+                </li>
+            
+          
+            
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">性能测试</a>
+                  <ul class="dropdown-menu">
+                    
+                        
+                            <li><a class="dropdown-item" href="/course/jmeter">JMeter</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                  </ul>
+                </li>
+            
+          
+            
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">自动化测试</a>
+                  <ul class="dropdown-menu">
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                  </ul>
+                </li>
+            
+          
+            
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0" id="search_form">
+          <input class="form-control mr-sm-2" id='keyword' name="keyword" type="text">
+          <button class="btn btn-secondary my-2 my-sm-0" type="button" id="search_btn" onclick="searchAction()">搜索</button>
+        </form>
+      </div>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/">首页<span class="sr-only">(current)</span></a></li>
-
-        
-            
-        <li class="dropdown">
-          <a href="/course/test_base" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">测试基础</a>
-          <ul class="dropdown-menu">
-            
-                
-            
-                
-                    <li><a href="/course/course/testcase_design">用例设计</a></li>
-                
-            
-                
-                    <li><a href="/course/course/mysql_base">数据库基础</a></li>
-                
-            
-
-
-
-
-
-
-          </ul>
-        </li>
-            
-        
-            
-        <li class="dropdown">
-          <a href="/course/performance_test" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">性能测试</a>
-          <ul class="dropdown-menu">
-            
-                
-                    <li><a href="/course/course/jmeter">JMeter</a></li>
-                
-            
-                
-            
-                
-            
-
-
-
-
-
-
-          </ul>
-        </li>
-            
-        
-            
-        <li class="dropdown">
-          <a href="/course/auto_test" class="dropdown-toggle" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">自动化测试</a>
-          <ul class="dropdown-menu">
-            
-                
-            
-                
-            
-                
-            
-
-
-
-
-
-
-          </ul>
-        </li>
-            
-        
-            
-        
-      </ul>
-
-
-
-
-
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/admin/">登录</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</div>
-
+</nav>
+<div style="min-height: 600px;">
 
     <div class="container" name="main">
-        <div class="col-md-3" name="left">
-            <div class="bs-callout bs-callout-info" style="padding: 10px 10px;"><h4><a href="/">全部教程</a></h4></div>
-            <div class="list-group">
-                
-                <a href="/course/jmeter/jmeter01.html" class="list-group-item">JMeter简介</a>
-                
-                <a href="/course/jmeter/jmeter02.html" class="list-group-item">JMeter基本元件</a>
-                
+    <div class="page-header" id="banner"><div class="row col-md-12">
+        <h1>JMeter <small class="text-muted">hanzhichao</small></h1></div>
+        <p class="lead">Jmeter使用教程</p>
+    </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12" name="left">
+                <div class="card bg-primary border-secondary">
+
+                    <h5 class="card-header"><a class="text-white card-link" href="/course/jmeter">JMeter</a></h5>
+                    <ul class="list-group list-group-flush">
+                        
+                        <a class="list-group-item list-group-item-action" href="/course/jmeter/jmeter01.html" class="list-group-item">
+                            JMeter简介
+                        </a>
+                        
+                        <a class="list-group-item list-group-item-action" href="/course/jmeter/jmeter02.html" class="list-group-item">
+                            JMeter基本元件
+                        </a>
+                        
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="col-md-9" name="right">
-            <h1 id="jmeter">Jmeter 简介</h1>
+            <div class="col-lg-9 col-md-8 col-sm-12" name="right">
+                <div class="card">
+                    <div class="card-body">
+                    <a href="#" data-toggle="modal" data-target="#shareDalog"><span class="fa fa-share-alt-square fa-2x" style="float: right"></span></a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="shareDalog" tabindex="-1" role="dialog" aria-labelledby="shareDalogLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">邮件分享</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                            <form id="chapter_share" action="." method="post">
+                            
+                            <div class="modal-body">
+                              <fieldset>
+
+
+
+
+                                <div class="form-group">
+                                  <label for="email">邮件地址</label>
+                                  <input type="email" class="form-control" id="email"  name=email>
+                                </div>
+                                  <div class="form-group">
+                                      <label for="notes">我的笔记</label>
+                                      <textarea class="form-control" id="notes" name=notes rows="3"></textarea>
+                                    </div>
+                              </fieldset>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary" onclick="shareAction()" data-dismiss="modal">发送邮件</button>
+                          </div></form>
+                        </div>
+                      </div>
+                    </div>
+                     <h1>JMeter简介</h1>
+                     <p class="lead">阅读量： 362</p>
+                    <hr>
+                   <div class="toc">
+<ul>
+<li><a href="#jmeter">Jmeter 简介</a><ul>
+<li><a href="#_1">测试代码</a></li>
+<li><a href="#_2">测试图片</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="jmeter">Jmeter 简介</h1>
 <p>Apache JMeter是Apache组织开发的基于Java的压力测试工具。用于对软件做压力测试，它最初被设计用于Web应用测试，但后来扩展到其他测试领域。 它可以用于测试静态和动态资源，例如静态文件、Java 小服务程序、CGI 脚本、Java 对象、数据库、FTP 服务器， 等等。JMeter 可以用于对服务器、网络或对象模拟巨大的负载，来自不同压力类别下测试它们的强度和分析整体性能。另外，JMeter能够对应用程序做功能/回归测试，通过创建带有断言的脚本来验证你的程序返回了你期望的结果。为了最大限度的灵活性，JMeter允许使用正则表达式创建断言。
 Apache jmeter 可以用于对静态的和动态的资源（文件，Servlet，Perl脚本，java 对象，数据库和查询，FTP服务器等等）的性能进行测试。它可以用于对服务器、网络或对象模拟繁重的负载来测试它们的强度或分析不同压力类型下的整体性能。你可以使用它做性能的图形分析或在大并发负载测试你的服务器/脚本/对象。</p>
-<div class="codehilite"><pre><span></span>if STATIC_PAGES:
-    return render(request, &#39;course/chapter.html&#39;, {&#39;chapter&#39;: chapter, &#39;chapters&#39;: chapters, &#39;columns&#39;: columns, &#39;courses&#39;: courses})
-else:
-    # 生成静态页面
-    static_html = os.path.join(BASE_DIR, &#39;pages&#39;, &#39;course&#39;, &#39;{}.html&#39;.format(chapter.slug))
+<h2 id="_1">测试代码</h2>
+<div class="codehilite"><pre><span></span>    <span class="k">def</span> <span class="nf">func</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;hello, python&quot;</span><span class="p">)</span>
 
-    if not os.path.exists(static_html):
-        tpl = os.path.join(TEMPLATES[0][&#39;DIRS&#39;][0], &#39;course&#39;, &#39;chapter.html&#39;)
-        content = render_to_string(tpl, {&#39;chapter&#39;: chapter, &#39;chapters&#39;: chapters, &#39;columns&#39;: columns, &#39;courses&#39;: courses})
-        with open(static_html, &#39;w&#39;, encoding=&#39;utf-8&#39;) as static_file:
-            static_file.write(content)
-    return render(request, static_html)
+    <span class="k">def</span> <span class="nf">func2</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </pre></div>
+
+
+<h2 id="_2">测试图片</h2>
+<p><img alt="" src="/media/editor\QA_20181107114337424345.png" /></p>
+                    
+                    </div>
+
+                    <div class="card-footer">
+                        
+                        
+                        <a href="/course/jmeter/jmeter02.html" class="card-link pull-right text-success">下一篇: JMeter基本元件&nbsp;<span class="fa fa-angle-double-right"></span></a>
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="modal-header"><h2>评论</h2><span id='comment_num' class="badge badge-pill badge-primary">1</span></div>
+                        <ul id='comments' class="list-group list-group-flush">
+                            
+                            <li class="list-group-item list-group-item-action border-top-0 border-bottom-0">
+                                <span class="fa fa-user-circle"></span>&nbsp;<span>xiaoliu&nbsp;<<span class="text-muted">2018年11月12日 11:00:31</span></span>
+                                  <p>111</p>
+                            </li>
+                            
+                        </ul>
+                        <h2 class="modal-header">发表评论</h2>
+                        <form id='comment_add' action="." method="post">
+                        
+                        <fieldset>
+                            <div class="form-group row">
+                              <label for="comment_name" class="col-sm-2 col-form-label">姓名</label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" id="comment_name" name='comment_name'>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="comment_email" class="col-sm-2 col-form-label">Email</label>
+                              <div class="col-sm-10">
+                                <input type="email" class="form-control" id="comment_email" name='comment_email'>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-form-label" for="comment_content">评论内容</label>
+                              <textarea class="form-control" id="comment_content" name="comment_content" rows="3"></textarea>
+
+                            </div>
+                            <button type="button" class="btn btn-primary pull-right" onclick="commentAction()">提交</button>
+                        </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-<div class="container" name="footer"> </div>
-
-
+</div>
+<div name="footer" style="min-height: 80px; padding-top: 100px;">
+    <a href="#"  id="uptoTop" style="display: none">
+        <span class="fa fa-chevron-circle-up fa-2x" style="position: fixed;right: 1%;bottom: 5%;"></span>
+    </a>
+    <hr>
+    <div class="container" >
+        <div class="text-center">Power By Django 2.1</div>
+        <div class="text-center"><small>Copyright © 2013-2018 qaschool.com All Rights Reserved. 京ICP备11018033号 京公网安备11010802013057</small></div>
+    </div>
+</div>
 </body>
-
 <script type="text/javascript" src="/static/js/jquery.min.js"></script>
 <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
-<script src="/static/js/bootstrap-hover-dropdown.min.js"></script>
+<script type="text/javascript" src="/static/js/toastr.js"></script>
+
+
+
+
+<script type="text/javascript">
+
+    function searchAction() {
+
+        var keyword = $('#keyword').val();
+        if(keyword != ''){
+            var url = '/course/search/keyword'.replace('keyword', keyword);
+            location.href = url;
+        }
+    }
+    $(function(){
+        $(window).scroll(function(){
+            //当window的scrolltop距离大于1时，go to
+            if($(this).scrollTop() > 100){
+                $('#uptoTop').fadeIn();
+            }else{
+                $('#uptoTop').fadeOut();
+            }
+        });
+        $('#uptoTop').click(function(){
+            $('html ,body').animate({scrollTop: 0}, 300);
+            return false;
+        });
+    });
+
+</script>
+
+    <script type="text/javascript">
+        function shareAction(){
+            $.ajax({
+                type: "POST",
+                url: "/course/jmeter/jmeter01.html/share/" ,
+                data: $('#chapter_share').serialize(),
+                success: function (result) {
+                    toastr.success('邮件已发送');
+                },
+                error : function() {
+                    console.log(result);
+                }
+            });
+        }
+
+        function commentAction(){
+            $.ajax({
+                type: "POST",
+                url: "/course/jmeter/jmeter01.html/comment_add/" ,
+                data: $('#comment_add').serialize(),
+                success: function (result) {
+                    appendComment();
+                    document.getElementById("comment_add").reset();
+
+                    toastr.success('评论提交成功');
+                },
+                error : function() {
+                    console.log(result);
+                }
+            });
+        }
+
+        function appendComment() {
+            var myDate = new Date();
+            var name = $("#comment_name").val();
+            var content  = $("#comment_content").val();
+            var num = parseInt($('#comment_num').text())
+            var now = myDate.getFullYear()+'年'+myDate.getMonth()+"月"+myDate.getDate()+"日 "+myDate.getHours()+':'+myDate.getMinutes()+":"+myDate.getSeconds();
+            console.log(name);
+            console.log(content);
+            new_comment = '<li class="list-group-item list-group-item-action border-top-0 border-bottom-0" class="list-group-item">\n' +
+                '                                <span class="fa fa-user-circle"></span>&nbsp;<span>'+name+'&nbsp;<span class="text-muted">'+now+'</span></span>\n' +
+                '                                  <p>'+content+'</p>\n' +
+                '                            </li>';
+            $('#comments').append(new_comment);
+            $('#comment_num').text((num+1).toString());
+        }
+    </script>
+
 </html>

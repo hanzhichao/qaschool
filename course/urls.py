@@ -10,4 +10,5 @@ urlpatterns = [
     path('<course_slug>/<chapter_slug>.html/share/', views.chapter_share, name='chapter_share'),
     path('<course_slug>/<chapter_slug>.html/comment_add/', views.comment_add, name='comment_add'),
     path('search/<keyword>', views.search, name='search'),
+    path('eval/<course_slug>', views.course_eval, name='course_eval'),
 ]

@@ -1,24 +1,37 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404
 from django.template.loader import render_to_string
-from .models import Column, Course, Chapter, Comment
+from .models import Column, Course, Chapter, Comment, Config
 # from .forms import EmailPostForm
 import markdown
 import os
 from qaschool import settings
 from django.core.mail import send_mail
+from django.views.decorators.csrf import csrf_exempt
 
 
 def index(request):
     columns = Column.objects.filter(visible=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
-    theme_css = 'css/{}.css'.format(settings.THEME)
+    config = get_object_or_404(Config, name='默认')
+    if config:
+        theme = config.theme
+    else:
+        theme = settings.THEME
+
+    theme_css = 'css/{}.css'.format(theme)
     return render(request, 'course/index.html', {'columns': columns, 'courses': courses, 'theme_css': theme_css})
 
 
 def column_detail(request, column_slug):
     columns = Column.objects.filter(visible=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
-    theme_css = 'css/{}.css'.format(settings.THEME)
+    config = get_object_or_404(Config, name='默认')
+    if config:
+        theme = config.theme
+    else:
+        theme = settings.THEME
+
+    theme_css = 'css/{}.css'.format(theme)
     column = Column.objects.filter(slug=column_slug)
     if column:
         column = column[0]
@@ -30,7 +43,13 @@ def column_detail(request, column_slug):
 def course_detail(request, course_slug):
     columns = Column.objects.filter(visible=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
-    theme_css = 'css/{}.css'.format(settings.THEME)
+    config = get_object_or_404(Config, name='默认')
+    if config:
+        theme = config.theme
+    else:
+        theme = settings.THEME
+
+    theme_css = 'css/{}.css'.format(theme)
     course = Course.objects.filter(slug=course_slug, visible=True)
     if course:
         course = course[0]
@@ -47,7 +66,13 @@ def course_detail(request, course_slug):
 def chapter_detail(request, course_slug, chapter_slug):
     columns = Column.objects.filter(visible=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
-    theme_css = 'css/{}.css'.format(settings.THEME)
+    config = get_object_or_404(Config, name='默认')
+    if config:
+        theme = config.theme
+    else:
+        theme = settings.THEME
+
+    theme_css = 'css/{}.css'.format(theme)
     course = Course.objects.filter(slug=course_slug, visible=True)
     if course:
         course = course[0]
@@ -80,30 +105,35 @@ def chapter_detail(request, course_slug, chapter_slug):
     comments = chapter.comments.filter(visible=True)
 
     # 生成静态页面
-    if not settings.STATIC_PAGES:
-        return render(request, 'course/chapter.html', {'chapter': chapter, 'course':course, 'chapters': chapters,
-                                                       'columns': columns, 'courses': courses, 'theme_css': theme_css,
-                                                       'comments': comments, 'pre_chapter': pre_chapter,
-                                                       'next_chapter': next_chapter})
-    else:
-
+    if config and config.gen_static_pages:
         static_html = os.path.join(settings.BASE_DIR, 'pages', 'course', '{}.html'.format(chapter.slug))
 
         if not os.path.exists(static_html):
             tpl = os.path.join(settings.TEMPLATES[0]['DIRS'][0], 'course', 'chapter.html')
-            content = render_to_string(tpl, {'chapter': chapter, 'course':course, 'chapters': chapters,
+            content = render_to_string(tpl, {'chapter': chapter, 'course': course, 'chapters': chapters,
                                              'columns': columns, 'courses': courses, 'theme_css': theme_css,
                                              'comments': comments, 'pre_chapter': pre_chapter,
                                              'next_chapter': next_chapter})
             with open(static_html, 'w', encoding='utf-8') as static_file:
                 static_file.write(content)
         return render(request, static_html)
+    else:
+        return render(request, 'course/chapter.html', {'chapter': chapter, 'course': course, 'chapters': chapters,
+                                                       'columns': columns, 'courses': courses, 'theme_css': theme_css,
+                                                       'comments': comments, 'pre_chapter': pre_chapter,
+                                                       'next_chapter': next_chapter})
 
 
 def search(request, keyword):
     columns = Column.objects.filter(visible=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
-    theme_css = 'css/{}.css'.format(settings.THEME)
+    config = get_object_or_404(Config, name='默认')
+    if config:
+        theme = config.theme
+    else:
+        theme = settings.THEME
+
+    theme_css = 'css/{}.css'.format(theme)
     column_result = columns.filter(name__icontains=keyword).order_by('sn')
     course_result = courses.filter(name__icontains=keyword).order_by('sn')
     chapter_result = Chapter.objects.filter(status='p', title__icontains=keyword).order_by('sn')
@@ -141,3 +171,14 @@ def comment_add(request, course_slug, chapter_slug):
     return HttpResponse('不支持GET方法')
 
 
+@csrf_exempt
+def course_eval(request, course_slug):
+    if request.method == 'POST':
+        star = request.POST.get('star')
+        course = get_object_or_404(Course, slug=course_slug, visible=True)
+        total = course.star_eval_num * course.star
+        course.star_eval_num += 1
+        course.star = (total + int(star))/course.star_eval_num
+        course.save()
+
+    return HttpResponse("评论成功")

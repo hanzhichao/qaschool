@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/custom.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/code.css' %}">
     <link rel="stylesheet" href="{% static 'css/toastr.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.raty.css' %}">
 {#    <link rel="stylesheet" href="{% static 'css/bootstrapValidator.css' %}">#}
 {#    <link rel="stylesheet" href="{% static 'css/star-rating.css' %}">#}
 {#    <link rel="stylesheet" href="{% static 'css/github.css' %}">#}
@@ -56,14 +57,13 @@
 {% block main %}
 {% endblock %}
 </div>
-<br><br><br><br><br><br><br><br>
-<div name="footer" style="min-height: 80px">
-    <a href="#top">
+<div name="footer" style="min-height: 80px;  padding-bottom: 10px;">
+    <a href="#"  id="uptoTop" style="display: none">
         <span class="fa fa-chevron-circle-up fa-2x" style="position: fixed;right: 1%;bottom: 5%;"></span>
     </a>
     <hr>
     <div class="container" >
-
+        <div class="text-center">Power By Django 2.1</div>
         <div class="text-center"><small>Copyright © 2013-2018 qaschool.com All Rights Reserved. 京ICP备11018033号 京公网安备11010802013057</small></div>
     </div>
 </div>
@@ -71,19 +71,35 @@
 <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/toastr.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.raty.js' %}"></script>
 {#<script type="text/javascript" src="{% static 'js/bootstrapValidator.js' %}"></script>#}
 {#<script type="text/javascript" src="{% static 'js/star-rating.js' %}"></script>#}
 {#<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>#}
 {#<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>#}
 <script type="text/javascript">
+    //搜索
     function searchAction() {
-
         var keyword = $('#keyword').val();
         if(keyword != ''){
             var url = '{% url 'search' 'keyword' %}'.replace('keyword', keyword);
             location.href = url;
         }
     }
+    //返回顶部
+    $(function(){
+        $(window).scroll(function(){
+            //当window的scrolltop距离大于1时，go to
+            if($(this).scrollTop() > 100){
+                $('#uptoTop').fadeIn();
+            }else{
+                $('#uptoTop').fadeOut();
+            }
+        });
+        $('#uptoTop').click(function(){
+            $('html ,body').animate({scrollTop: 0}, 300);
+            return false;
+        });
+    });
 
 </script>
 {% block js %}
