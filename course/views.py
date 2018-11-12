@@ -104,9 +104,9 @@ def search(request, keyword):
     columns = Column.objects.filter(visible=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
     theme_css = 'css/{}.css'.format(settings.THEME)
-    column_result = columns.filter(name__contains=keyword).order_by('sn')
-    course_result = courses.filter(name__contains=keyword).order_by('sn')
-    chapter_result = Chapter.objects.filter(status='p', title__contains=keyword).order_by('sn')
+    column_result = columns.filter(name__icontains=keyword).order_by('sn')
+    course_result = courses.filter(name__icontains=keyword).order_by('sn')
+    chapter_result = Chapter.objects.filter(status='p', title__icontains=keyword).order_by('sn')
     result_num = column_result.count() + course_result.count() + chapter_result.count()
 
     return render(request, 'course/search.html',  {'columns': columns, 'courses': courses, 'theme_css': theme_css,

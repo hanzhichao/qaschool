@@ -4,3 +4,4 @@
 .gitignore
 .idea
 test/*
+qaschool/settings.py

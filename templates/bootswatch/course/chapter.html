@@ -11,7 +11,8 @@
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-12" name="left">
                 <div class="card bg-primary border-secondary">
-                    <h5 class="card-header"><a class="text-white card-link" href="/">全部教程</a></h5>
+{#                  <h5 class="card-header"><a class="text-white card-link" href="/">全部教程</a></h5>#}
+                    <h5 class="card-header"><a class="text-white card-link" href="{{ course.get_absolute_url }}">{{ course.name }}</a></h5>
                     <ul class="list-group list-group-flush">
                         {% for chapter in chapters %}
                         <a class="list-group-item list-group-item-action" href="{{ chapter.get_absolute_url }}" class="list-group-item">
@@ -64,13 +65,18 @@
                      <p class="lead">阅读量： {{ chapter.views }}</p>
                     <hr>
                    {{ chapter.content|safe }}
+                    {% if chapter.keyword %}
+                    <hr>
+                    <p>标签：</p><span>{{ chapter.keyword}}</span>
+                    {% endif %}
                     </div>
+
                     <div class="card-footer">
                         {% if pre_chapter %}
-                        <a href="{{ pre_chapter.get_absolute_url }}" class="card-link"><span class="fa fa-angle-double-left"></span>&nbsp;上一篇</a>
+                        <a href="{{ pre_chapter.get_absolute_url }}" class="card-link text-success"><span class="fa fa-angle-double-left"></span>&nbsp;上一篇: {{ pre_chapter.title }}</a>
                         {% endif %}
                         {% if next_chapter %}
-                        <a href="{{ next_chapter.get_absolute_url }}" class="card-link pull-right">下一篇&nbsp;<span class="fa fa-angle-double-right"></span></a>
+                        <a href="{{ next_chapter.get_absolute_url }}" class="card-link pull-right text-success">下一篇: {{ next_chapter.title }}&nbsp;<span class="fa fa-angle-double-right"></span></a>
                         {% endif %}
                     </div>
                 </div>
@@ -79,7 +85,7 @@
                         <div class="modal-header"><h2>评论</h2><span id='comment_num' class="badge badge-pill badge-primary">{{ comments.count }}</span></div>
                         <ul id='comments' class="list-group list-group-flush">
                             {% for comment in comments %}
-                            <li class="list-group-item list-group-item-action border-top-0 border-bottom-0   " class="list-group-item">
+                            <li class="list-group-item list-group-item-action border-top-0 border-bottom-0">
                                 <span class="fa fa-user-circle"></span>&nbsp;<span>{{ comment.name }}&nbsp;<<span class="text-muted">{{ comment.created_time }}</span></span>
                                   <p>{{ comment.content }}</p>
                             </li>
@@ -157,7 +163,7 @@
             console.log(name);
             console.log(content);
             new_comment = '<li class="list-group-item list-group-item-action border-top-0 border-bottom-0" class="list-group-item">\n' +
-                '                                <span class="fa-user-circle"></span>&nbsp;<span>'+name+'&nbsp;<span class="text-muted">'+now+'</span></span>\n' +
+                '                                <span class="fa fa-user-circle"></span>&nbsp;<span>'+name+'&nbsp;<span class="text-muted">'+now+'</span></span>\n' +
                 '                                  <p>'+content+'</p>\n' +
                 '                            </li>';
             $('#comments').append(new_comment);

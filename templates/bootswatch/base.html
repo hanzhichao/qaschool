@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{% static 'css/custom.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/code.css' %}">
     <link rel="stylesheet" href="{% static 'css/toastr.css' %}">
+{#    <link rel="stylesheet" href="{% static 'css/bootstrapValidator.css' %}">#}
 {#    <link rel="stylesheet" href="{% static 'css/star-rating.css' %}">#}
 {#    <link rel="stylesheet" href="{% static 'css/github.css' %}">#}
 {#    <link rel="stylesheet" href="{% static 'css/docs.min.css' %}">#}
@@ -44,9 +45,9 @@
             {% endif %}
           {% endfor %}
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" id='keyword' type="text">
-          <button class="btn btn-secondary my-2 my-sm-0" type="button" onclick=searchAction()>搜索</button>
+        <form class="form-inline my-2 my-lg-0" id="search_form">
+          <input class="form-control mr-sm-2" id='keyword' name="keyword" type="text">
+          <button class="btn btn-secondary my-2 my-sm-0" type="button" id="search_btn" onclick="searchAction()">搜索</button>
         </form>
       </div>
     </div>
@@ -67,21 +68,24 @@
     </div>
 </div>
 </body>
-<script type="text/javascript">
-    function searchAction() {
-{#        console.log("llllllllllllllll")#}
-        var keyword = $('#keyword').val();
-        var url = '{% url 'search' 'keyword' %}'.replace('keyword', keyword);
-        location.href = url;
-        console.log(url);
-    }
-</script>
-{% block js %}
-{% endblock %}
 <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/toastr.js' %}"></script>
+{#<script type="text/javascript" src="{% static 'js/bootstrapValidator.js' %}"></script>#}
 {#<script type="text/javascript" src="{% static 'js/star-rating.js' %}"></script>#}
 {#<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>#}
 {#<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>#}
+<script type="text/javascript">
+    function searchAction() {
+
+        var keyword = $('#keyword').val();
+        if(keyword != ''){
+            var url = '{% url 'search' 'keyword' %}'.replace('keyword', keyword);
+            location.href = url;
+        }
+    }
+
+</script>
+{% block js %}
+{% endblock %}
 </html>

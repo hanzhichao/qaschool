@@ -35,7 +35,9 @@
                                 <div class="list-group">
                                   <a href="{{ course.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start active">
                                     <div class="row">
+                                        {% if course.pic %}
                                         <img src="{{ course.pic.url }}" width="40px" height="40px">
+                                        {% endif %}
                                         <div style="padding-left: 10px;">
                                             <div class="d-flex w-100 justify-content-between"><h6 class="mb-1">{{ course.name }}</h6></div>
                                             <p class="mb-1">{{ course.author.username }}</p>

@@ -1,23 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/templates/bootswatch/course/chapter.html" line="152" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/templates/bootswatch/course/chapter.html" line="158" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d39d55c2-263b-4a15-b942-40e6ccd2e979" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course/migrations/0002_auto_20181030_1454.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course/migrations/0003_column_show_in_nav.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course/migrations/0004_auto_20181031_1406.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course/migrations/0005_auto_20181031_1941.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course/migrations/0006_auto_20181031_2002.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course/migrations/0007_auto_20181031_2105.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course/migrations/0008_course_thumbnail.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course/migrations/0009_auto_20181106_1957.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course/migrations/0010_comment.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/bootstrapValidator.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrapValidator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/ar_MA.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/be_FR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/be_NL.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/bg_BG.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/cs_CZ.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/da_DK.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/de_DE.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/en_US.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/es_CL.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/es_ES.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/fa_IR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/fr_FR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/gr_EL.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/he_IL.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/hu_HU.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/id_ID.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/it_IT.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/ja_JP.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/nl_NL.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/no_NO.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/pl_PL.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/pt_BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/pt_PT.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/ro_RO.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/ru_RU.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/sq_AL.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/sr_RS.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/sv_SE.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/th_TH.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/tr_TR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/ua_UA.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/vi_VN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/zh_CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/zh_TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/base64.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/between.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/blank.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/callback.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/choice.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/color.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/creditCard.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/cusip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/cvv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/date.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/different.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/digits.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/ean.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/emailAddress.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/file.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/greaterThan.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/grid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/hex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/hexColor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/iban.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/identical.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/imei.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/imo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/integer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/ip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/isbn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/isin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/ismn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/issn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/lessThan.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/mac.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/meid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/notEmpty.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/numeric.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/phone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/regexp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/remote.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/rtn.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/sedol.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/siren.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/siret.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/step.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/stringCase.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/stringLength.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/uri.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/uuid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/vat.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/vin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/zipCode.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db2.sqlite3" afterPath="$PROJECT_DIR$/db2.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/models.py" afterPath="$PROJECT_DIR$/course/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/views.py" afterPath="$PROJECT_DIR$/course/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qaschool/settings.py" afterPath="$PROJECT_DIR$/qaschool/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/base.html" afterPath="$PROJECT_DIR$/templates/bootswatch/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/course/chapter.html" afterPath="$PROJECT_DIR$/templates/bootswatch/course/chapter.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/course/column.html" afterPath="$PROJECT_DIR$/templates/bootswatch/course/column.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/course/course.html" afterPath="$PROJECT_DIR$/templates/bootswatch/course/course.html" />
@@ -64,8 +145,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/course/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1515">
-              <caret line="108" column="61" lean-forward="false" selection-start-line="108" selection-start-column="61" selection-end-line="108" selection-end-column="61" />
+            <state relative-caret-position="194">
+              <caret line="104" column="64" lean-forward="false" selection-start-line="104" selection-start-column="64" selection-end-line="104" selection-end-column="64" />
               <folding>
                 <element signature="e#0#68#0" expanded="true" />
               </folding>
@@ -76,16 +157,9 @@
       <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="30" column="89" lean-forward="false" selection-start-line="30" selection-start-column="89" selection-end-line="30" selection-end-column="89" />
-              <folding>
-                <element signature="e#1648#1654#0#HTML" expanded="true" />
-                <element signature="e#1654#1660#0#HTML" expanded="true" />
-                <element signature="e#2432#2438#0#HTML" expanded="true" />
-                <element signature="e#2438#2444#0#HTML" expanded="true" />
-                <element signature="e#3228#3234#0#HTML" expanded="true" />
-                <element signature="e#3234#3240#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="764">
+              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -93,38 +167,18 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/course/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="24" column="15" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+            <state relative-caret-position="1340">
+              <caret line="109" column="8" lean-forward="false" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qaschool/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="86" column="1" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="86" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/course/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/bootswatch/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="72" column="42" lean-forward="false" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+            <state relative-caret-position="378">
+              <caret line="78" column="25" lean-forward="true" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -133,28 +187,40 @@
       <file leaf-file-name="chapter.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/chapter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="1343">
+              <caret line="164" column="27" lean-forward="false" selection-start-line="164" selection-start-column="27" selection-end-line="164" selection-end-column="27" />
+              <folding>
+                <element signature="e#4684#4690#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/bootswatch/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="column.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="column.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/column.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+            <state relative-caret-position="365">
+              <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/course.html">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+            <state relative-caret-position="90">
+              <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -163,8 +229,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+            <state relative-caret-position="449">
+              <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="course.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/course.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="139" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="139" />
               <folding />
             </state>
           </provider>
@@ -214,11 +290,9 @@
         <option value="$PROJECT_DIR$/templates/course/column.html" />
         <option value="$PROJECT_DIR$/templates/course/index.html" />
         <option value="$PROJECT_DIR$/start.sh" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/qaschool/settings_bak.py" />
         <option value="$PROJECT_DIR$/static/css/code.css" />
         <option value="$PROJECT_DIR$/qaschool/urls.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/static/css/yeti.css" />
         <option value="$PROJECT_DIR$/course/forms.py" />
         <option value="$PROJECT_DIR$/static/css/custom.min.css" />
@@ -226,15 +300,17 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/course/admin.py" />
         <option value="$PROJECT_DIR$/course/urls.py" />
-        <option value="$PROJECT_DIR$/templates/bootswatch/base.html" />
         <option value="$PROJECT_DIR$/course/views.py" />
-        <option value="$PROJECT_DIR$/templates/bootswatch/course/chapter.html" />
-        <option value="$PROJECT_DIR$/templates/bootswatch/course/column.html" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/templates/bootswatch/course/search.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/qaschool/settings.py" />
+        <option value="$PROJECT_DIR$/templates/bootswatch/base.html" />
         <option value="$PROJECT_DIR$/templates/bootswatch/course/course.html" />
         <option value="$PROJECT_DIR$/templates/bootswatch/course/index.html" />
-        <option value="$PROJECT_DIR$/templates/bootswatch/course/search.html" />
         <option value="$PROJECT_DIR$/course/models.py" />
-        <option value="$PROJECT_DIR$/qaschool/settings.py" />
+        <option value="$PROJECT_DIR$/templates/bootswatch/course/chapter.html" />
+        <option value="$PROJECT_DIR$/templates/bootswatch/course/column.html" />
       </list>
     </option>
   </component>
@@ -244,7 +320,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-82" />
     <option name="y" value="-20" />
     <option name="width" value="1932" />
@@ -268,6 +344,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -330,7 +407,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -342,19 +418,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hanzhichao\Desktop\qaschool\templates\bootswatch\course" />
-      <recent name="C:\Users\hanzhichao\Desktop\qaschool\static\css" />
-      <recent name="C:\Users\hanzhichao\Desktop\qaschool\static\js" />
-      <recent name="C:\Users\hanzhichao\Desktop\qaschool\static" />
-      <recent name="C:\Users\hanzhichao\Desktop\qaschool" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hanzhichao\Desktop\qaschool\static\css" />
       <recent name="C:\Users\hanzhichao\Desktop\qaschool\test" />
       <recent name="C:\Users\hanzhichao\Desktop\qaschool\static\js" />
       <recent name="C:\Users\hanzhichao\Desktop\qaschool\static" />
       <recent name="C:\Users\hanzhichao\Desktop\qaschool\qaschool" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hanzhichao\Desktop\qaschool\static\js" />
+      <recent name="C:\Users\hanzhichao\Desktop\qaschool\static\css" />
+      <recent name="C:\Users\hanzhichao\Desktop\qaschool\templates\bootswatch\course" />
+      <recent name="C:\Users\hanzhichao\Desktop\qaschool\static" />
+      <recent name="C:\Users\hanzhichao\Desktop\qaschool" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -437,20 +513,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20469083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20682302" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12948857" sideWeight="0.5026738" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2675906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41608876" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2675906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2546246" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41608876" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41675735" sideWeight="0.4973262" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23394994" sideWeight="0.4973262" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -474,27 +550,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/course.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/course/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qaschool/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -599,13 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qaschool/settings_bak.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="724">
@@ -645,21 +693,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="533">
-            <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -743,83 +776,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
-          <caret line="108" column="61" lean-forward="false" selection-start-line="108" selection-start-column="61" selection-end-line="108" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="540">
+            <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/chapter.html">
+    <entry file="file://$PROJECT_DIR$/static/js/validator/id.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/column.html">
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrapValidator.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/course.html">
+    <entry file="file://$PROJECT_DIR$/static/js/bootstrapValidator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="30" column="89" lean-forward="false" selection-start-line="30" selection-start-column="89" selection-end-line="30" selection-end-column="89" />
-          <folding>
-            <element signature="e#1648#1654#0#HTML" expanded="true" />
-            <element signature="e#1654#1660#0#HTML" expanded="true" />
-            <element signature="e#2432#2438#0#HTML" expanded="true" />
-            <element signature="e#2438#2444#0#HTML" expanded="true" />
-            <element signature="e#3228#3234#0#HTML" expanded="true" />
-            <element signature="e#3234#3240#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="72" column="42" lean-forward="false" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+        <state relative-caret-position="764">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/course/models.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="24" column="15" lean-forward="true" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+        <state relative-caret-position="90">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/qaschool/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="86" column="1" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="86" selection-end-column="1" />
+        <state relative-caret-position="378">
+          <caret line="78" column="25" lean-forward="true" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bootswatch/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/course.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="139" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="104" column="64" lean-forward="false" selection-start-line="104" selection-start-column="64" selection-end-line="104" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/course/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1340">
+          <caret line="109" column="8" lean-forward="false" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/chapter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="164" column="27" lean-forward="false" selection-start-line="164" selection-start-column="27" selection-end-line="164" selection-end-column="27" />
+          <folding>
+            <element signature="e#4684#4690#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/column.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
           <folding />
         </state>
       </provider>

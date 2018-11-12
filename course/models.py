@@ -104,3 +104,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return 'Comment by {} on {}'.format(self.name, self.chapter)
+
+
+class Config(models.Model):
+    pass
