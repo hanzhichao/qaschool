@@ -5,104 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d39d55c2-263b-4a15-b942-40e6ccd2e979" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/bootstrapValidator.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/bootstrapValidator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/ar_MA.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/be_FR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/be_NL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/bg_BG.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/cs_CZ.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/da_DK.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/de_DE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/en_US.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/es_CL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/es_ES.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/fa_IR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/fr_FR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/gr_EL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/he_IL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/hu_HU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/id_ID.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/it_IT.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/ja_JP.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/nl_NL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/no_NO.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/pl_PL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/pt_BR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/pt_PT.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/ro_RO.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/ru_RU.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/sq_AL.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/sr_RS.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/sv_SE.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/th_TH.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/tr_TR.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/ua_UA.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/vi_VN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/zh_CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/language/zh_TW.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/base64.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/between.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/blank.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/callback.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/choice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/color.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/creditCard.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/cusip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/cvv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/date.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/different.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/digits.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/ean.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/emailAddress.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/file.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/greaterThan.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/grid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/hex.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/hexColor.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/iban.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/id.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/identical.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/imei.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/imo.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/integer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/ip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/isbn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/isin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/ismn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/issn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/lessThan.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/mac.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/meid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/notEmpty.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/numeric.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/phone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/regexp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/remote.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/rtn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/sedol.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/siren.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/siret.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/step.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/stringCase.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/stringLength.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/uri.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/uuid.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/vat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/vin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/validator/zipCode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db2.sqlite3" afterPath="$PROJECT_DIR$/db2.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/models.py" afterPath="$PROJECT_DIR$/course/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/course/views.py" afterPath="$PROJECT_DIR$/course/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qaschool/settings.py" afterPath="$PROJECT_DIR$/qaschool/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/base.html" afterPath="$PROJECT_DIR$/templates/bootswatch/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/course/chapter.html" afterPath="$PROJECT_DIR$/templates/bootswatch/course/chapter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/course/column.html" afterPath="$PROJECT_DIR$/templates/bootswatch/course/column.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/course/course.html" afterPath="$PROJECT_DIR$/templates/bootswatch/course/course.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/course/index.html" afterPath="$PROJECT_DIR$/templates/bootswatch/course/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/bootswatch/course/search.html" afterPath="$PROJECT_DIR$/templates/bootswatch/course/search.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -154,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/search.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
-              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="233">
+              <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -178,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/qaschool/settings.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
-              <caret line="78" column="25" lean-forward="true" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+              <caret line="78" column="25" lean-forward="false" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -200,13 +104,13 @@
         <entry file="file://$PROJECT_DIR$/templates/bootswatch/base.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+              <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="column.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="column.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/column.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="365">
@@ -219,8 +123,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="120">
+              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -230,7 +134,7 @@
         <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="449">
-              <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+              <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -240,7 +144,7 @@
         <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/course.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="139" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="139" />
+              <caret line="15" column="139" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="139" />
               <folding />
             </state>
           </provider>
@@ -302,8 +206,6 @@
         <option value="$PROJECT_DIR$/course/urls.py" />
         <option value="$PROJECT_DIR$/course/views.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/templates/bootswatch/course/search.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/qaschool/settings.py" />
         <option value="$PROJECT_DIR$/templates/bootswatch/base.html" />
         <option value="$PROJECT_DIR$/templates/bootswatch/course/course.html" />
@@ -311,6 +213,8 @@
         <option value="$PROJECT_DIR$/course/models.py" />
         <option value="$PROJECT_DIR$/templates/bootswatch/course/chapter.html" />
         <option value="$PROJECT_DIR$/templates/bootswatch/course/column.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/templates/bootswatch/course/search.html" />
       </list>
     </option>
   </component>
@@ -816,26 +720,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="764">
-          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/qaschool/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="78" column="25" lean-forward="true" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+          <caret line="78" column="25" lean-forward="false" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -843,7 +731,7 @@
     <entry file="file://$PROJECT_DIR$/templates/bootswatch/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="65" lean-forward="true" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
+          <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
           <folding />
         </state>
       </provider>
@@ -851,7 +739,7 @@
     <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/course.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="139" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="139" />
+          <caret line="15" column="139" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="139" />
           <folding />
         </state>
       </provider>
@@ -869,7 +757,7 @@
     <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
-          <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+          <caret line="39" column="53" lean-forward="false" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
           <folding />
         </state>
       </provider>
@@ -896,6 +784,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
           <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bootswatch/course/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding />
         </state>
       </provider>

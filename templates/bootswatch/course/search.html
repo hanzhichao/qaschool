@@ -13,9 +13,9 @@
                 <div class="card bg-primary border-secondary">
                     <h5 class="card-header"><a class="text-white card-link" href="/">全部教程</a></h5>
                     <ul class="list-group list-group-flush">
-                        {% for course in courses %}
-                        <a class="list-group-item list-group-item-action" href="{{ course.get_absolute_url }}" class="list-group-item">
-                            {{ course.name }}
+                        {% for column in columns %}
+                        <a class="list-group-item list-group-item-action" href="{{ column.get_absolute_url }}" class="list-group-item">
+                            {{ column.name }}
                         </a>
                         {% endfor %}
                     </ul>
