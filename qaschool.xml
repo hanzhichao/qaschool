@@ -3,5 +3,5 @@
         <chdir>/home/www/qaschool</chdir><!-- 项目路径 -->
             <module>qaschool.wsgi:application</module>
                 <processes>4</processes> <!-- 进程数 --> 
-    <daemonize>uwsgi.log</daemonize><!-- 日志文件 -->
+    <daemonize>/var/log/uwsgi/uwsgi.log</daemonize><!-- 日志文件 -->
 </uwsgi>

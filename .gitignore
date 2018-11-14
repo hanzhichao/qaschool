@@ -7,5 +7,6 @@ qaschool/settings.py
 db2.sqlite3
 *.xmind
 uploads/*
-pages/*
-static/admin
+pages/course/*
+static/admin/*
+uwsgi.log
