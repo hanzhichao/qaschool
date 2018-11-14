@@ -49,8 +49,8 @@ class CommentAdmin(admin.ModelAdmin):
 
 class ConfigAdmin(admin.ModelAdmin):
     list_display = ('name', 'template', 'theme', 'gen_static_pages')
-    fields = ('template', 'theme', 'gen_static_pages')
-    readonly_fields = ('name',)
+    # fields = ('template', 'theme', 'gen_static_pages')
+    # readonly_fields = ('name',)
 
 
 admin.site.register(Column, ColumnAdmin)

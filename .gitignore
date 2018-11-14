@@ -10,3 +10,4 @@ uploads/*
 pages/course/*
 static/admin/*
 uwsgi.log
+*.sh
