@@ -87,8 +87,9 @@ def chapter_detail(request, course_slug, chapter_slug):
     comments = chapter.comments.filter(visible=True)
 
     # 生成静态页面
-    config = Config.objects.filter(name='默认')
-    if config and config.gen_static_pages:
+    # config = Config.objects.filter(name='默认')
+    # if config and config.gen_static_pages:
+    if settings.STATIC_PAGES:
         static_html = os.path.join(settings.BASE_DIR, 'pages', 'course', '{}.html'.format(chapter.slug))
 
         if not os.path.exists(static_html):
