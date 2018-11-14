@@ -9,47 +9,35 @@ from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
 
 
+def _get_theme_css():
+    config = Config.objects.filter(name='默认')
+    if config and config[0].theme:
+        return 'css/{}.css'.format(config[0].theme)
+    return 'css/{}.css'.format(settings.THEME)
+
 def index(request):
     columns = Column.objects.filter(visible=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
-    config = get_object_or_404(Config, name='默认')
-    if config:
-        theme = config.theme
-    else:
-        theme = settings.THEME
 
-    theme_css = 'css/{}.css'.format(theme)
-    return render(request, 'course/index.html', {'columns': columns, 'courses': courses, 'theme_css': theme_css})
+    return render(request, 'course/index.html', {'columns': columns, 'courses': courses, 'theme_css': _get_theme_css()})
 
 
 def column_detail(request, column_slug):
     columns = Column.objects.filter(visible=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
-    config = get_object_or_404(Config, name='默认')
-    if config:
-        theme = config.theme
-    else:
-        theme = settings.THEME
 
-    theme_css = 'css/{}.css'.format(theme)
     column = Column.objects.filter(slug=column_slug)
     if column:
         column = column[0]
     cur_courses = Course.objects.filter(column=column, visible=True).order_by('sn')
     return render(request, 'course/column.html', {'column': column, 'cur_courses': cur_courses, 'columns': columns,
-                                                  'courses': courses, 'theme_css': theme_css})
+                                                  'courses': courses, 'theme_css': _get_theme_css()})
 
 
 def course_detail(request, course_slug):
     columns = Column.objects.filter(visible=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
-    config = get_object_or_404(Config, name='默认')
-    if config:
-        theme = config.theme
-    else:
-        theme = settings.THEME
 
-    theme_css = 'css/{}.css'.format(theme)
     course = Course.objects.filter(slug=course_slug, visible=True)
     if course:
         course = course[0]
@@ -60,19 +48,13 @@ def course_detail(request, course_slug):
 
     chapters = Chapter.objects.filter(course=course, status='p').order_by('sn')
     return render(request, 'course/course.html', {'course': course, 'chapters': chapters, 'columns': columns,
-                                                  'courses': courses, 'theme_css': theme_css})
+                                                  'courses': courses, 'theme_css': _get_theme_css()})
 
 
 def chapter_detail(request, course_slug, chapter_slug):
     columns = Column.objects.filter(visible=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
-    config = get_object_or_404(Config, name='默认')
-    if config:
-        theme = config.theme
-    else:
-        theme = settings.THEME
 
-    theme_css = 'css/{}.css'.format(theme)
     course = Course.objects.filter(slug=course_slug, visible=True)
     if course:
         course = course[0]
@@ -83,15 +65,15 @@ def chapter_detail(request, course_slug, chapter_slug):
 
     # 获取上一篇，下一篇
     chapter_list = list(chapters)
-    if chapter == chapter_list[0]:
+    cur_index = chapter_list.index(chapter)
+    if cur_index == 0:
         pre_chapter = None
-        next_chapter = chapter_list[1]
-    elif chapter == chapter_list[-1]:
-        pre_chapter = chapter_list[-2]
+    else:
+        pre_chapter = chapter_list[cur_index - 1]
+
+    if chapter == chapter_list[-1]:
         next_chapter = None
     else:
-        cur_index = chapter_list.index(chapter)
-        pre_chapter = chapter_list[cur_index-1]
         next_chapter = chapter_list[cur_index+1]
 
     # 浏览量 + 1
@@ -105,13 +87,14 @@ def chapter_detail(request, course_slug, chapter_slug):
     comments = chapter.comments.filter(visible=True)
 
     # 生成静态页面
+    config = Config.objects.filter(name='默认')
     if config and config.gen_static_pages:
         static_html = os.path.join(settings.BASE_DIR, 'pages', 'course', '{}.html'.format(chapter.slug))
 
         if not os.path.exists(static_html):
             tpl = os.path.join(settings.TEMPLATES[0]['DIRS'][0], 'course', 'chapter.html')
             content = render_to_string(tpl, {'chapter': chapter, 'course': course, 'chapters': chapters,
-                                             'columns': columns, 'courses': courses, 'theme_css': theme_css,
+                                             'columns': columns, 'courses': courses, 'theme_css': _get_theme_css(),
                                              'comments': comments, 'pre_chapter': pre_chapter,
                                              'next_chapter': next_chapter})
             with open(static_html, 'w', encoding='utf-8') as static_file:
@@ -119,7 +102,7 @@ def chapter_detail(request, course_slug, chapter_slug):
         return render(request, static_html)
     else:
         return render(request, 'course/chapter.html', {'chapter': chapter, 'course': course, 'chapters': chapters,
-                                                       'columns': columns, 'courses': courses, 'theme_css': theme_css,
+                                                       'columns': columns, 'courses': courses, 'theme_css': _get_theme_css(),
                                                        'comments': comments, 'pre_chapter': pre_chapter,
                                                        'next_chapter': next_chapter})
 
@@ -127,19 +110,13 @@ def chapter_detail(request, course_slug, chapter_slug):
 def search(request, keyword):
     columns = Column.objects.filter(visible=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
-    config = get_object_or_404(Config, name='默认')
-    if config:
-        theme = config.theme
-    else:
-        theme = settings.THEME
 
-    theme_css = 'css/{}.css'.format(theme)
     column_result = columns.filter(name__icontains=keyword).order_by('sn')
     course_result = courses.filter(name__icontains=keyword).order_by('sn')
     chapter_result = Chapter.objects.filter(status='p', title__icontains=keyword).order_by('sn')
     result_num = column_result.count() + course_result.count() + chapter_result.count()
 
-    return render(request, 'course/search.html',  {'columns': columns, 'courses': courses, 'theme_css': theme_css,
+    return render(request, 'course/search.html',  {'columns': columns, 'courses': courses, 'theme_css': _get_theme_css(),
                                                    'column_result': column_result, 'course_result': course_result,
                                                    'chapter_result': chapter_result, 'result_num': str(result_num)})
 

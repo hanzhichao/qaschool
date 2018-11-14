@@ -1,9 +1,11 @@
 .idea/*
 */__pycache__/*
 *.pyc
-.gitignore
 .idea
 test/*
 qaschool/settings.py
 db2.sqlite3
 *.xmind
+uploads/*
+pages/*
+static/admin

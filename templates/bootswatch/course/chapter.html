@@ -74,6 +74,8 @@
                     <div class="card-footer">
                         {% if pre_chapter %}
                         <a href="{{ pre_chapter.get_absolute_url }}" class="card-link text-success"><span class="fa fa-angle-double-left"></span>&nbsp;上一篇: {{ pre_chapter.title }}</a>
+                        {% else %}
+                        &nbsp;
                         {% endif %}
                         {% if next_chapter %}
                         <a href="{{ next_chapter.get_absolute_url }}" class="card-link pull-right text-success">下一篇: {{ next_chapter.title }}&nbsp;<span class="fa fa-angle-double-right"></span></a>
