@@ -80,7 +80,7 @@ def chapter_detail(request, course_slug, chapter_slug):
     chapter.views += 1
     chapter.save()
 
-    chapter.content = markdown.markdown(chapter.content, extensions=['markdown.extensions.extra',
+    chapter.content = markdown.markdown(chapter.content.replace("\r\n", '  \n'), extensions=['markdown.extensions.extra',
                                                                      'markdown.extensions.codehilite',
                                                                      'markdown.extensions.toc', ])
     # 评论
