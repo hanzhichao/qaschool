@@ -1,7 +1,7 @@
 .idea/*
+*/workspace.xml
 */__pycache__/*
 *.pyc
-.idea
 test/*
 qaschool/settings.py
 db2.sqlite3

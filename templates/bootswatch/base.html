@@ -80,6 +80,7 @@
     //搜索
     function searchAction() {
         var keyword = $('#keyword').val();
+        keyword = keyword.replace(/^\s\s*/, '');
         if(keyword != ''){
             var url = '{% url 'search' 'keyword' %}'.replace('keyword', keyword);
             location.href = url;
