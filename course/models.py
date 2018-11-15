@@ -75,7 +75,7 @@ class Chapter(models.Model):
     last_modified_time = models.DateTimeField('修改时间', auto_now=True)
     views = models.PositiveIntegerField('浏览量', default=0)
     likes = models.PositiveIntegerField('点赞数', default=0)
-    status = models.CharField("状态", max_length=1, choices=STATUS_CHOICES)
+    status = models.CharField("状态", max_length=1, choices=STATUS_CHOICES, default='p')
 
     def __str__(self):
         return self.title

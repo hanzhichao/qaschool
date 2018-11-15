@@ -218,6 +218,9 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 svg {
