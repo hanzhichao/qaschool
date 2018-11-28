@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="all" />
+    <meta name="author" content="qaschool.cn" />
+    <meta name="Keywords" Content="{% block keywords %}{% endblock %}">
+    <meta name="Description" Content="{% block descprition %}{% endblock %}">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/yeti.css' %}">
+    <link rel="stylesheet" href="{% static 'css/github.css' %}">
+    <link rel="stylesheet" href="{% static 'css/code.css' %}">
+    <link rel="stylesheet" href="{% static 'css/toastr.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.raty.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+    <title>{% block title %}{% endblock %}-QA学院</title>
+</head>
+<body>
+<!--导航----------------------------------------------------------------------------------------------------------->
+<header>
+  <nav class="navbar navbar-dark navbar-expand-lg bg-primary border-bottom shadow-sm" name="top">
+    <div class="container">
+      <a class="navbar-brand" href="/">QA 学院</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link" href="/">首页</a></li>
+          {% for column in columns %}
+            {% if column.show_in_nav %}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ column.name }}</a>
+                  <ul class="dropdown-menu">
+                    {% for course in courses %}
+                        {% if course.column == column %}
+                            <li><a class="dropdown-item" href="{{ course.get_absolute_url }}">{{course.name}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <form class="form-inline my-2 my-lg-0" id="search_form">
+          <input class="form-control mr-sm-2" id='keyword' name="keyword" type="text">
+          <button class="btn btn-secondary my-2 my-sm-0" type="button" id="search_btn" onclick="searchAction()">搜索</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+{% block main %}
+{% endblock %}
+
+<div name="footer" class="p-3 mb-3">
+    <a href="#"  id="uptoTop" style="display: none">
+        <span class="fa fa-chevron-circle-up fa-2x" style="position: fixed;right: 1%;bottom: 5%;"></span>
+    </a>
+    <div class="container" >
+        <div class="text-center text-muted">Power By Django 2.1</div>
+        <div class="text-center text-muted"><small>Copyright © 2018-2028 qaschool.cn 京ICP备18056904号 - QA学院</small></div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap4.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/toastr.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.raty.js' %}"></script>
+<script type="text/javascript">
+    //搜索
+    function searchAction() {
+        var keyword = $('#keyword').val();
+        keyword = keyword.replace(/^\s\s*/, '');
+        if(keyword != ''){
+            var url = '{% url 'search' 'keyword' %}'.replace('keyword', keyword);
+            location.href = url;
+        }
+    }
+    //返回顶部
+    $(function(){
+        $(window).scroll(function(){
+            //当window的scrolltop距离大于1时，go to
+            if($(this).scrollTop() > 100){
+                $('#uptoTop').fadeIn();
+            }else{
+                $('#uptoTop').fadeOut();
+            }
+        });
+        $('#uptoTop').click(function(){
+            $('html ,body').animate({scrollTop: 0}, 300);
+            return false;
+        });
+    });
+
+</script>
+{% block js %}
+{% endblock %}
+</html>

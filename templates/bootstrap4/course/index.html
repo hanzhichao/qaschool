@@ -1,0 +1,403 @@
+{% extends "base.html" %}
+{% block title %}首页{% endblock %}
+{% block keywards %}测试教程, 性能测试, 自动化测试, 测试管理{% endblock %}
+{% block description %}QA学院,系统的软件测试文本教程，包含性能测试,自动化测试,测试管理等{% endblock %}
+{% block main %}
+{% load staticfiles %}
+<main role="main">
+  <section class="jumbotron text-center" style="background-color: #fff">
+    <div class="container">
+      <h1 class="jumbotron-heading">QA学院 - 软件测试教程、资源网</h1>
+      <p class="lead text-muted">由于网络上的资源大多零碎而散乱，我们旨在为软件测试从业者提供系统的学习课程，软件，视频，电子书等相关资源</p>
+      <p class="text-muted">参与项目，请加Q群: 633575308</p>
+      <p>
+        <a href="{% url 'course_all' %}" class="btn btn-primary my-2">全部课程</a>
+      </p>
+    </div>
+  </section>
+  <!--推荐课程----------------------------------------------------------------------------------------------------------->
+  <div class="py-5 bg-light">
+    <div class="container">
+      <h4 class="pb-2 mb-3">推荐教程</h4>
+      <div class="row">
+        {% for course in suggest_courses %}
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <div class="media">
+                  <div class="pull-left">
+{#                      <img class="media-object" src="{{ course.pic }}" alt="{{ course.name }}" style="height:40px; width:40px">#}
+                      <img class="media-object" src="{% static 'img/QA.png' %}" alt="{{ course.name }}" style="height:40px; width:40px">
+                  </div>
+                  <div class="media-body">
+                    <strong><div class="media-heading">{{ course.name }}</div></strong>
+                    <small>作者: {{ course.author.username }}</small>
+
+                  </div>
+                </div>
+            </div>
+            <div class="card-body">
+              <p class="card-text">{{ course.intro }}</p>
+                <div class="btn-group">
+                  <a href="{{ course.get_absolute_url}}"  class="btn btn-sm btn-outline-primary">开始学习</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!--职业方向----------------------------------------------------------------------------------------------------------->
+{#  <div class="py-5 bg-white">#}
+{#    <div class="container">#}
+{#      <h4 class="pb-2 mb-3">全部教程</h4>#}
+{#      <div class="row">#}
+{#        <div class="col-md-2">#}
+{#          <div class="list-group ">#}
+{#            {% for column in columns%}#}
+{#              <a href="{{ column.get_absolute_url }}" class="list-group-item list-group-item-action list-group-item-primary">{{ column.name }}</a>#}
+{#            {% endfor %}#}
+{#          </div>#}
+{#      </div>#}
+{#        <div class="col-md-10">#}
+{#          {% for column in columns %}#}
+{#            <h5 class="mb-4">{{ column.name }}</h5>#}
+{#            <div class="row">#}
+{#            {% for course in courses %}#}
+{#                {% if course.column == column %}#}
+{#                <div class="col-md-3 mb-4">#}
+{#                  <button type="button" class="btn p-3 btn-light text-left shadow-sm">#}
+{#                    <div class="media">#}
+{#                        <div class="pull-left">#}
+{#                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">#}
+{#                        </div>#}
+{#                        <div class="media-body">#}
+{#                          <strong><div class="media-heading">{{ course.name }}</div></strong>#}
+{#                          <small>作者: {{ course.author.username }}</small>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                  </button>#}
+{#                </div>#}
+{#                {% endif %}#}
+{#            {% endfor %}#}
+{#          </div>#}
+{#          {% endfor %}#}
+{##}
+{#        </div>#}
+{#    </div>#}
+{#    </div>#}
+{#  </div>#}
+
+<div class="py-5 bg-white">
+  <div class="container">
+    <div class="row">
+        <div class="col-xl-2 col-md-2 col-sm-3 sticky hidden-xs">
+            <div class="list-group ">
+              <a href="{% url 'course_all' %}" class="list-group-item list-group-item-action active text-white">全部教程</a>
+              {% for column in columns %}
+              <a href="{{ column.get_absolute_url }}" class="list-group-item list-group-item-action">{{ column.name }}</a>
+              {% endfor %}
+            </div>
+        </div>
+        <div class="col-xl-10 col-md-10 col-sm-9">
+          <div class="card">
+            <div class="card-body">
+              {% for column in columns %}
+              <div class="mb-3"><i class="fa fa-list mr-1 ml-1"></i>{{ column.name }}</div>
+                <div class="row">
+                {% for course in courses %}
+                   {% if course.column == column %}
+                        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                          <div class="list-group">
+                            <a href="{{ course.get_absolute_url }}" class="list-group-item active">
+                              <div class="media">
+                                <div class="pull-left">
+                                    <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                                </div>
+                                <div class="media-body">
+                                  <strong><div class="media-heading">{{ course.name }}</div></strong>
+                                  <small>作者: {{ course.author.username }}</small>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="{{ course.get_absolute_url }}" class="list-group-item">{{ course.intro | default_if_none:"&nbsp;" }}</a>
+                          </div>
+                        </div>
+                   {% endif %}
+                {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+{#<!--教程分类----------------------------------------------------------------------------------------------------------->#}
+{#  <div class="py-5 bg-white">#}
+{#    <div class="container">#}
+{#      <h4 class="pb-2 mb-3">所有栏目</h4>#}
+{#      <div class="row">#}
+{#        {% for column in columns %}#}
+{#        <div class="col-md-2">#}
+{#          <div class="list-group shadow-sm mb-4">#}
+{#            <a href="{{ column.get_absolute_url }}" class="list-group-item active list-group-item-action">#}
+{#              <h5 class="card-text">{{ column.name }}</h5>#}
+{#              <div class="d-flex justify-content-between align-items-center">#}
+{#                <small>{{ column.intro }}</small>#}
+{#              </div>#}
+{#            </a>#}
+{#          </div>#}
+{#        </div>#}
+{#        {% endfor %}#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+
+{#  <!--教程分类----------------------------------------------------------------------------------------------------------->#}
+{#  <div class="py-5 bg-white">#}
+{#    <div class="container">#}
+{#      <h4 class="pb-2 mb-3">教程分类</h4>#}
+{#      <div class="row">#}
+{#        {% for column in columns %}#}
+{#        <div class="col-md-2">#}
+{#          <div class="card mb-4 shadow-sm bg-primary border-primary text-white">#}
+{#            <div class="card-body">#}
+{#              <p class="card-text">{{ column.name }}</p>#}
+{#              <div class="d-flex justify-content-between align-items-center">#}
+{#                <small>{{ column.intro }}</small>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#        {% endfor %}#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+
+{#  <!--资源分类----------------------------------------------------------------------------------------------------------->#}
+{#  <div class="py-5 bg-light">#}
+{#    <div class="container">#}
+{#      <h4 class="pb-2 mb-3">相关资源</h4>#}
+{#      <div class="row">#}
+{#        <div class="col-md-3">#}
+{#          <div class="card mb-4 shadow-sm">#}
+{#            <div class="card-body">#}
+{#              <p class="card-text">软件</p>#}
+{#              <div class="d-flex justify-content-between align-items-center">#}
+{#                <small class="text-muted">9 mins</small>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="col-md-3">#}
+{#          <div class="card mb-4 shadow-sm">#}
+{#            <div class="card-body">#}
+{#              <p class="card-text">软件</p>#}
+{#              <div class="d-flex justify-content-between align-items-center">#}
+{#                <small class="text-muted">9 mins</small>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="col-md-3">#}
+{#          <div class="card mb-4 shadow-sm">#}
+{#            <div class="card-body">#}
+{#              <p class="card-text">软件</p>#}
+{#              <div class="d-flex justify-content-between align-items-center">#}
+{#                <small class="text-muted">9 mins</small>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#        <div class="col-md-3">#}
+{#          <div class="card mb-4 shadow-sm">#}
+{#            <div class="card-body">#}
+{#              <p class="card-text">软件</p>#}
+{#              <div class="d-flex justify-content-between align-items-center">#}
+{#                <small class="text-muted">9 mins</small>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{#  <!--每日一题----------------------------------------------------------------------------------------------------------->#}
+{#  <div class="py-5 bg-white">#}
+{#    <div class="container">#}
+{#      <h4 class="pb-2 mb-3">每日一题</h4>#}
+{#      <div class="row">#}
+{#        <div class="col-md-12">#}
+{#          <p>linux怎么样搜索路径中的200？</p>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+{##}
+{#  <!--热门问答----------------------------------------------------------------------------------------------------------->#}
+{#  <div class="py-5 bg-light">#}
+{#    <div class="container">#}
+{#      <h4 class="pb-2">热门问答</h4>#}
+{#      <div class="row">#}
+{#        <div class="col-md-12">#}
+{#          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">#}
+{#          <ol class="carousel-indicators">#}
+{#            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>#}
+{#            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>#}
+{#            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>#}
+{#          </ol>#}
+{#          <div class="carousel-inner">#}
+{#            <div class="carousel-item active">#}
+{#              <div class="row mb-5">#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card border-primary mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card border-primary mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card border-primary mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card border-primary mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#            <div class="carousel-item">#}
+{#              <div class="row border-primary mb-5">#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#            <div class="carousel-item">#}
+{#              <div class="row mb-5">#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="col-md-3">#}
+{#                  <div class="card mb-4 shadow-sm">#}
+{#                    <div class="card-body">#}
+{#                      <p class="card-text">软件</p>#}
+{#                      <div class="d-flex justify-content-between align-items-center">#}
+{#                        <small class="text-muted">9 mins</small>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                  </div>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+{#          </div>#}
+{#          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">#}
+{#            <span class="carousel-control-prev-icon" aria-hidden="true"></span>#}
+{#            <span class="sr-only">Previous</span>#}
+{#          </a>#}
+{#          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">#}
+{#            <span class="carousel-control-next-icon" aria-hidden="true"></span>#}
+{#            <span class="sr-only">Next</span>#}
+{#          </a>#}
+{#        </div>#}
+{#        </div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
+
+</main>
+{% endblock %}

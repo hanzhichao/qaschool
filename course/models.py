@@ -1,8 +1,8 @@
 from django.db import models
-# from DjangoUeditor.models import UEditorField
 from django.urls import reverse
 from mdeditor.fields import MDTextField
 from qaschool.settings import MEDIA_URL
+from ckeditor.fields import RichTextField
 
 
 class Column(models.Model):
@@ -30,6 +30,7 @@ class Column(models.Model):
         return reverse('column', args=(self.slug,))
 
 
+
 class Course(models.Model):
     column = models.ForeignKey(Column, verbose_name='所属栏目', on_delete=models.CASCADE)
     name = models.CharField('课程名称', max_length=200)
@@ -43,6 +44,7 @@ class Course(models.Model):
     pic = models.ImageField('缩略图', null=True, blank=True)
     star = models.IntegerField("评星", default=3)
     star_eval_num = models.IntegerField("评星人数", default=1)
+    is_suggest = models.BooleanField('推荐', default=False)
 
     keywords = models.CharField('关键字', max_length=80, blank=True, null=True)
 
@@ -70,7 +72,10 @@ class Chapter(models.Model):
     sn = models.IntegerField("排序", null=True)
     course = models.ForeignKey(Course, verbose_name='归属课程', on_delete=models.CASCADE, null=True)
     abstract = models.CharField('摘要', max_length=200, blank=True, null=True)
-    content = MDTextField("内容")
+    content = MDTextField("内容", blank=True, null=True)
+    # html_content = UEditorField('html内容', default=u'', blank=True, imagePath="uploads/images/",
+    #                             toolbars='besttome', filePath='uploads/files/', null=True)
+    html_content = RichTextField("html内容", blank=True, null=True)
     created_time = models.DateTimeField('创建时间', auto_now_add=True, null=True)
     last_modified_time = models.DateTimeField('修改时间', auto_now=True)
     views = models.PositiveIntegerField('浏览量', default=0)
@@ -78,7 +83,7 @@ class Chapter(models.Model):
     status = models.CharField("状态", max_length=1, choices=STATUS_CHOICES, default='p')
 
     def __str__(self):
-        return self.title
+        return "《{}》第{}章-{}".format(self.course.name, self.sn, self.title)
 
     class Meta:
         verbose_name = '章节'
@@ -105,30 +110,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return '{}上{}的评论'.format(self.name, self.chapter)
-
-
-class Config(models.Model):
-    TEMPLATE_CHOICES = (
-        ('bootstrap', "bootstrap"),
-        ('bootswatch', 'bootswatch'),
-    )
-    THEME_CHOICES = (
-        ('bootstrap', "bootstrap"),
-        ('litera', 'litera'),
-        ('litera', 'litera'),
-        ('materia', 'materia'),
-        ('stadstone', 'stadstone'),
-        ('yeti', 'yeti'),
-    )
-    name = models.CharField("名称", max_length=20)
-    template = models.CharField("模板", max_length=20, choices=TEMPLATE_CHOICES)
-
-    theme = models.CharField("模板", max_length=20, choices=THEME_CHOICES)
-    gen_static_pages = models.BooleanField("是否生成静态页面", default=False)
-
-    class Meta:
-        verbose_name = '配置'
-        verbose_name_plural = '配置'
-
-    def __str__(self):
-        return self.name

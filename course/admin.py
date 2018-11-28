@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Column, Course, Chapter, Comment, Config
+from .models import Column, Course, Chapter, Comment
 from .forms import ChapterAdminForm
 
 
@@ -32,12 +32,12 @@ class CourseAdmin(admin.ModelAdmin):
 
 
 class ChapterAdmin(admin.ModelAdmin):
-    list_display = ('title', 'sn', 'course', 'views', 'status', 'created_time', 'last_modified_time')
+    # list_display = ('title', 'sn', 'course', 'views', 'status', 'created_time', 'last_modified_time')
     form = ChapterAdminForm
-    fields = ('title', 'sn', 'slug', 'course', 'abstract', 'content', 'status')
-    list_filter = ('course', 'status')
+    fields = ('title', 'sn', 'slug', 'course', 'abstract', 'html_content','content','status')
+    # list_filter = ('course', 'status')
     ordering = ('sn',)
-    list_editable = ['sn', 'status']
+    # list_editable = ['sn', 'status']
 
 
 class CommentAdmin(admin.ModelAdmin):
@@ -47,15 +47,11 @@ class CommentAdmin(admin.ModelAdmin):
     list_editable = ['visible']
 
 
-class ConfigAdmin(admin.ModelAdmin):
-    list_display = ('name', 'template', 'theme', 'gen_static_pages')
-    # fields = ('template', 'theme', 'gen_static_pages')
-    # readonly_fields = ('name',)
 
 
 admin.site.register(Column, ColumnAdmin)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Chapter, ChapterAdmin)
 admin.site.register(Comment, CommentAdmin)
-admin.site.register(Config, ConfigAdmin)
+
 

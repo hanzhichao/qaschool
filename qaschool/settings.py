@@ -19,6 +19,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'account',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -27,7 +28,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'mdeditor',
-    'course'
+    'ckeditor',
+    'ckeditor_uploader',
+    'course',
+    'resource',
+
 ]
 
 MIDDLEWARE = [
@@ -44,7 +49,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'qaschool.urls'
 
 
-CUR_TEMPLATE = 'bootswatch'
+CUR_TEMPLATE = 'bootstrap4'
 THEME = 'yeti'
 
 
@@ -149,3 +154,11 @@ EMAIL_PORT = 465
 EMAIL_HOST = 'smtp.163.com'
 EMAIL_HOST_USER = 'ivan-me@163.com'
 EMAIL_HOST_PASSWORD = 'hanzhichao123'
+
+
+CKEDITOR_UPLOAD_PATH = "uploads"
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Full',
+    },
+}

@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% block title %}{{ chapter.title }}{% endblock %}
+{% block keywards %}{{ chapter.keywords }}{% endblock %}
+{% block description %}{{ chapter.abst }}{% endblock %}
+{% block main %}
+    <div class="container" name="main">
+    <div class="page-header" id="banner"><div class="row col-md-12">
+        <h1 class="col-md-12" style="padding-left: 0">{{ course.name }} <small class="text-muted">{{ course.author.username }}</small><div id="star"  class="pull-right"></div></h1></div>
+        <p class="lead">{{ course.intro | default_if_none:"&nbsp;" }}</p>
+    </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12" name="left">
+                <div class="card bg-primary border-secondary">
+{#                  <h5 class="card-header"><a class="text-white card-link" href="/">全部教程</a></h5>#}
+                    <h5 class="card-header"><a class="text-white card-link" href="{{ course.get_absolute_url }}">{{ course.name }}</a></h5>
+                    <ul class="list-group list-group-flush">
+                        {% for chapter in chapters %}
+                        <a class="list-group-item list-group-item-action" href="{{ chapter.get_absolute_url }}" class="list-group-item">
+                            {{ chapter.title }}
+                        </a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-12" name="right">
+                <div class="card">
+                    <div class="card-body">
+                    <a href="#" data-toggle="modal" data-target="#shareDalog"><span class="fa fa-share-alt-square fa-2x" style="float: right"></span></a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="shareDalog" tabindex="-1" role="dialog" aria-labelledby="shareDalogLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title">邮件分享</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                            <form id="chapter_share" action="." method="post">
+                            {% csrf_token %}
+                            <div class="modal-body">
+                              <fieldset>
+{#                                  <div class="form-group">#}
+{#                                  <label for="user_name">姓名</label>#}
+{#                                  <input type="text" class="form-control" id="user_name">#}
+{#                                </div>#}
+                                <div class="form-group">
+                                  <label for="email">邮件地址</label>
+                                  <input type="email" class="form-control" id="email"  name=email>
+                                </div>
+                                  <div class="form-group">
+                                      <label for="notes">我的笔记</label>
+                                      <textarea class="form-control" id="notes" name=notes rows="3"></textarea>
+                                    </div>
+                              </fieldset>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary" onclick="shareAction()" data-dismiss="modal">发送邮件</button>
+                          </div></form>
+                        </div>
+                      </div>
+                    </div>
+                     <h1>{{ chapter.title }}</h1>
+                     <p class="lead">阅读量： {{ chapter.views }}</p>
+                    <hr>
+                   {{ chapter.content|safe }}
+                    {% if chapter.keyword %}
+                    <hr>
+                    <p>标签：</p><span>{{ chapter.keyword}}</span>
+                    {% endif %}
+                    </div>
+
+                    <div class="card-footer">
+                        {% if pre_chapter %}
+                        <a href="{{ pre_chapter.get_absolute_url }}" class="card-link text-success"><span class="fa fa-angle-double-left"></span>&nbsp;上一篇: {{ pre_chapter.title }}</a>
+                        {% else %}
+                        &nbsp;
+                        {% endif %}
+                        {% if next_chapter %}
+                        <a href="{{ next_chapter.get_absolute_url }}" class="card-link pull-right text-success">下一篇: {{ next_chapter.title }}&nbsp;<span class="fa fa-angle-double-right"></span></a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="modal-header"><h2>评论</h2><span id='comment_num' class="badge badge-pill badge-primary">{{ comments.count }}</span></div>
+                        <ul id='comments' class="list-group list-group-flush">
+                            {% for comment in comments %}
+                            <li class="list-group-item list-group-item-action border-top-0 border-bottom-0">
+                                <span class="fa fa-user-circle"></span>&nbsp;<span>{{ comment.name }}&nbsp;<<span class="text-muted">{{ comment.created_time }}</span></span>
+                                  <p>{{ comment.content }}</p>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <h2 class="modal-header">发表评论</h2>
+                        <form id='comment_add' action="." method="post">
+                        {% csrf_token %}
+                        <fieldset>
+                            <div class="form-group row">
+                              <label for="comment_name" class="col-sm-2 col-form-label">姓名</label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" id="comment_name" name='comment_name'>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="comment_email" class="col-sm-2 col-form-label">Email</label>
+                              <div class="col-sm-10">
+                                <input type="email" class="form-control" id="comment_email" name='comment_email'>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="col-form-label" for="comment_content">评论内容</label>
+                              <textarea class="form-control" id="comment_content" name="comment_content" rows="3"></textarea>
+{#                              <small class="form-text text-muted">评论需要经过审核后才会正常显示</small>#}
+                            </div>
+                            <button type="button" class="btn btn-primary pull-right" onclick="commentAction()">提交</button>
+                        </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript">
+        //评星
+        $('#star').raty({score: {{course.star}},
+            click: function(score, evt) {
+                var star = $("input[name='score']").val();
+                $.ajax({
+                    type: "POST",
+                    url: "{% url 'course_eval' course.slug %}" ,
+                    data: "star="+score,
+                    success: function (result) {
+{#                        window.location.reload();#}
+                        toastr.success('评论成功！');
+
+                    },
+                    error : function() {
+                        console.log(result);
+                    }
+                });
+              }
+        });
+        //分享
+        function shareAction(){
+            $.ajax({
+                type: "POST",
+                url: "{% url 'chapter_share' course.slug chapter.slug %}" ,
+                data: $('#chapter_share').serialize(),
+                success: function (result) {
+                    toastr.success('邮件已发送！');
+                },
+                error : function() {
+                    console.log(result);
+                }
+            });
+        }
+        //评论
+        function commentAction(){
+            $.ajax({
+                type: "POST",
+                url: "{% url 'comment_add' course.slug chapter.slug %}" ,
+                data: $('#comment_add').serialize(),
+                success: function (result) {
+                    appendComment();
+                    document.getElementById("comment_add").reset();
+{#                    window.location.reload();#}
+                    toastr.success('评论提交成功');
+                },
+                error : function() {
+                    console.log(result);
+                }
+            });
+        }
+        //前端添加评论
+        function appendComment() {
+            var myDate = new Date();
+            var name = $("#comment_name").val();
+            var content  = $("#comment_content").val();
+            var num = parseInt($('#comment_num').text())
+            var now = myDate.getFullYear()+'年'+myDate.getMonth()+"月"+myDate.getDate()+"日 "+myDate.getHours()+':'+myDate.getMinutes()+":"+myDate.getSeconds();
+            console.log(name);
+            console.log(content);
+            new_comment = '<li class="list-group-item list-group-item-action border-top-0 border-bottom-0" class="list-group-item">\n' +
+                '                                <span class="fa fa-user-circle"></span>&nbsp;<span>'+name+'&nbsp;<span class="text-muted">'+now+'</span></span>\n' +
+                '                                  <p>'+content+'</p>\n' +
+                '                            </li>';
+            $('#comments').append(new_comment);
+            $('#comment_num').text((num+1).toString());
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}搜索结果{% endblock %}
+{#{% block keywards %}{{ chapter.keywords }}{% endblock %}#}
+{#{% block description %}{{ chapter.abst }}{% endblock %}#}
+{% block main %}
+    <div class="container" name="main">
+    <div class="page-header" id="banner"><div class="row col-md-12">
+        <h1>搜索结果</h1></div>
+        <p class="lead">数量：{{ result_num }}</p>
+    </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12" name="left">
+                <div class="card bg-primary border-secondary">
+                    <h5 class="card-header"><a class="text-white card-link" href="/">全部教程</a></h5>
+                    <ul class="list-group list-group-flush">
+                        {% for column in columns %}
+                        <a class="list-group-item list-group-item-action" href="{{ column.get_absolute_url }}" class="list-group-item">
+                            {{ column.name }}
+                        </a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-12" name="right">
+            {% if column_result %}
+                <div class="card">
+                    <div class="card-body">
+                     <h2 class="modal-header">栏目</h2>
+                     {% for column in column_result %}
+                         <ul class="list-group list-group-flush">
+                             <a class="list-group-item list-group-item-action  border-bottom-0 border-top-0"  href="{{ column.get_absolute_url }}">
+                                 <span class="fa fa-list"></span>&nbsp;&nbsp;{{ column.name }}
+                             <p>{{ column.intro | default_if_none:"&nbsp;" }}</p>
+                             </a>
+                         </ul>
+                     {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+            {% if course_result %}
+                <div class="card">
+                    <div class="card-body">
+                     <h2 class="modal-header">课程</h2>
+                     {% for course in course_result %}
+                         <ul class="list-group list-group-flush">
+                            <a class="list-group-item list-group-item-action  border-bottom-0 border-top-0" href="{{ course.get_absolute_url }}">
+                                <span class="fa fa-book"></span>&nbsp;&nbsp;{{ course.name }}
+                                <p>{{ course.intro | default_if_none:"&nbsp;" }}</p>
+                            </a>
+                         </ul>
+                     {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+            {% if chapter_result %}
+                <div class="card">
+                    <div class="card-body">
+                     <h2 class="modal-header">章节</h2>
+                     {% for chapter in chapter_result %}
+                         <ul class="list-group list-group-flush">
+                             <a class="list-group-item list-group-item-action border-bottom-0 border-top-0" href="{{ chapter.get_absolute_url }}">
+                                 <span class="fa fa-file-text"></span>&nbsp;&nbsp;{{ chapter.title }}
+                             <p>{{ chapter.abstract | default_if_none:"&nbsp;" }}</p>
+                             </a>
+                         </ul>
+                     {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+
+{% endblock %}

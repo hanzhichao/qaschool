@@ -1,25 +1,25 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404
 from django.template.loader import render_to_string
-from .models import Column, Course, Chapter, Comment, Config
+from .models import Column, Course, Chapter, Comment
 # from .forms import EmailPostForm
 import markdown
 import os
 from qaschool import settings
 from django.core.mail import send_mail
 from django.views.decorators.csrf import csrf_exempt
+from resource.models import Category
 
 
 def _get_theme_css():
-    config = Config.objects.filter(name='默认')
-    if config and config[0].theme:
-        return 'css/{}.css'.format(config[0].theme)
     return 'css/{}.css'.format(settings.THEME)
 
 def index(request):
     columns = Column.objects.filter(visible=True).order_by('sn')
+    suggest_courses = Course.objects.filter(visible=True, is_suggest=True).order_by('sn')
     courses = Course.objects.filter(visible=True).order_by('sn')
-
-    return render(request, 'course/index.html', {'columns': columns, 'courses': courses, 'theme_css': _get_theme_css()})
+    categories = Category.objects.all()
+    return render(request, 'course/index.html', {'columns': columns, 'suggest_courses': suggest_courses,
+                                                 'courses': courses, 'theme_css': _get_theme_css(), 'categories': categories})
 
 
 def column_detail(request, column_slug):
@@ -33,6 +33,12 @@ def column_detail(request, column_slug):
     return render(request, 'course/column.html', {'column': column, 'cur_courses': cur_courses, 'columns': columns,
                                                   'courses': courses, 'theme_css': _get_theme_css()})
 
+def course_all(request):
+    columns = Column.objects.filter(visible=True).order_by('sn')
+    courses = Course.objects.filter(visible=True).order_by('sn')
+
+    return render(request, 'course/course_all.html', {'columns': columns,
+                                                  'courses': courses, 'theme_css': _get_theme_css()})
 
 def course_detail(request, course_slug):
     columns = Column.objects.filter(visible=True).order_by('sn')
@@ -80,15 +86,17 @@ def chapter_detail(request, course_slug, chapter_slug):
     chapter.views += 1
     chapter.save()
 
-    chapter.content = markdown.markdown(chapter.content.replace("\r\n", '  \n'), extensions=['markdown.extensions.extra',
-                                                                     'markdown.extensions.codehilite',
-                                                                     'markdown.extensions.toc', ])
+    if chapter.html_content:
+        chapter.content = chapter.html_content
+    else:
+        chapter.content = markdown.markdown(chapter.content.replace("\r\n", '  \n'),
+                                            extensions=['markdown.extensions.extra',
+                                                        'markdown.extensions.codehilite',
+                                                        'markdown.extensions.toc', ])
     # 评论
     comments = chapter.comments.filter(visible=True)
 
     # 生成静态页面
-    # config = Config.objects.filter(name='默认')
-    # if config and config.gen_static_pages:
     if settings.STATIC_PAGES:
         static_html = os.path.join(settings.BASE_DIR, 'pages', 'course', '{}.html'.format(chapter.slug))
 
@@ -160,3 +168,14 @@ def course_eval(request, course_slug):
         course.save()
 
     return HttpResponse("评论成功")
+
+
+@csrf_exempt
+def add_likes(request, chapter_slug):
+    chapter = Chapter.objects.filter(slug=chapter_slug, status='p')
+    if not chapter:
+        return HttpResponse("没有找到相关章节")
+
+    chapter[0].likes += 1;
+    chapter[0].save()
+    return HttpResponse("点赞成功")

@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="all" />
+    <meta name="author" content="qaschool.cn" />
+    <meta name="Keywords" Content="{% block keywords %}{% endblock %}">
+    <meta name="Description" Content="{% block descprition %}{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/docs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/github.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mine.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/code_win.css' %}">
+    <title>{% block title %}{% endblock %}-QA学院</title>
+</head>
+<body>
+<!--导航条------------------------------------------------------------------------------------------------------------------------>
+<nav class="navbar navbar-default navbar-fixed-top border-top">
+    <div class="container">
+    <div class="navbar-header"><a class="navbar-brand" href="/" >QA 学院</a></div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a class="nav-link" href="/">Home</a></li>
+      <li ><a class="nav-link active" href="#">Documentation</a></li>
+      <li >
+        <a class="nav-link" href="#">Examples</a>
+      </li>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </ul>
+      <p class="navbar-text navbar-right"><a href="#">登录</a></p>
+      <p class="navbar-text navbar-right"><a href="#">注册</a></p>
+    </div>
+</nav>
+<!--banner------------------------------------------------------------------------------------------------------------------------>
+<div class="jumbotron">
+    <div class="container">
+        <h1>Hello, world!</h1>
+        <p>...</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+</div>
+<!--面包屑------------------------------------------------------------------------------------------------------------------------>
+<div class="container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">首页</a></li>
+    <li class="breadcrumb-item"><a href="#">测试入门</a></li>
+    <li class="breadcrumb-item active">MySQL基础</li>
+  </ol>
+</div>
+
+
+<!--全部课程主体------------------------------------------------------------------------------------------------------------------------>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-2 col-md-2 col-sm-3 sticky hidden-xs">
+            <div class="list-group">
+              <a href="#" class="list-group-item active">
+                Cras justo odio
+              </a>
+              <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+              <a href="#" class="list-group-item">Morbi leo risus</a>
+              <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+              <a href="#" class="list-group-item">Vestibulum at eros</a>
+            </div>
+        </div>
+        <div class="col-xl-10 col-md-10 col-sm-9">
+          <div class="panel">
+            <div class="panel-body">
+              <h5><span class="glyphicon glyphicon-th"></span>&nbsp;&nbsp;<span>测试基础</span><span class="pull-right"><a href="#">更多..</a></span></h5>
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+              </div>
+              <h5><span class="glyphicon glyphicon-th"></span> <span>测试基础</span><span class="pull-right"><a href="#">更多..</a></span></h5>
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+              </div>
+              <h5><span class="glyphicon glyphicon-th"></span> <span>测试基础</span><span class="pull-right"><a href="#">更多..</a></span></h5>
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+              </div>
+              <h5><span class="glyphicon glyphicon-th"></span> <span>测试基础</span><span class="pull-right"><a href="#">更多..</a></span></h5>
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item course-header">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <li class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</li>
+                  </div>
+                </div>
+              </div>
+              <h5><span class="glyphicon glyphicon-th"></span> <span>测试基础</span><span class="pull-right"><a href="#">更多..</a></span></h5>
+              <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</a>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</a>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</a>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</a>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</a>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item active">
+                      <div class="media">
+                        <div class="pull-left">
+                            <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                        </div>
+                        <div class="media-body">
+                          <strong><div class="media-heading">测试入门</div></strong>
+                          <small>作者: hanzhichao - 共12章</small>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item">测试入门教程，包含测试基础，Mysql基础，Linux基础等</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--章节主体---------------------------------------------------------------------------------------------------------------------->
+<div class="container">
+    <div class="row">
+        <!--左侧边栏---------------------------------------------------------------------------------------------------------------------->
+        <div class="col-xl-2 col-md-2 col-sm-3 border-right-1 sticky hidden-xs">
+
+        <nav class="" id="bd-docs-nav"><div class="bd-toc-item active">
+              <a class="module-title" href="/docs/4.1/getting-started/introduction/">
+                Getting started
+              </a>
+              <ul class="nav bd-sidenav"><li class="active bd-sidenav-active">
+                    <a href="/docs/4.1/getting-started/introduction/">
+                      Introduction
+                    </a></li><li>
+                    <a href="/docs/4.1/getting-started/download/">
+                      Download
+                    </a></li><li>
+                    <a href="/docs/4.1/getting-started/contents/">
+                      Contents
+                    </a></li><li>
+                    <a href="/docs/4.1/getting-started/browsers-devices/">
+                      Browsers & devices
+                    </a></li><li>
+                    <a href="/docs/4.1/getting-started/javascript/">
+                      JavaScript
+                    </a></li><li>
+                    <a href="/docs/4.1/getting-started/theming/">
+                      Theming
+                    </a></li><li>
+                    <a href="/docs/4.1/getting-started/build-tools/">
+                      Build tools
+                    </a></li><li>
+                    <a href="/docs/4.1/getting-started/webpack/">
+                      Webpack
+                    </a></li><li>
+                    <a href="/docs/4.1/getting-started/accessibility/">
+                      Accessibility
+                    </a></li></ul>
+            </div><div class="bd-toc-item">
+              <a class="bd-toc-link" href="/docs/4.1/layout/overview/">
+                Layout
+              </a>
+
+              <ul class="nav bd-sidenav"><li>
+                    <a href="/docs/4.1/layout/overview/">
+                      Overview
+                    </a></li><li>
+                    <a href="/docs/4.1/layout/grid/">
+                      Grid
+                    </a></li><li>
+                    <a href="/docs/4.1/layout/media-object/">
+                      Media object
+                    </a></li><li>
+                    <a href="/docs/4.1/layout/utilities-for-layout/">
+                      Utilities for layout
+                    </a></li></ul>
+            </div>
+            <div class="bd-toc-item">
+              <a class="bd-toc-link" href="/docs/4.1/content/reboot/">
+                Content
+              </a>
+              <ul class="nav bd-sidenav"><li>
+                    <a href="/docs/4.1/content/reboot/">
+                      Reboot
+                    </a></li><li>
+                    <a href="/docs/4.1/content/typography/">
+                      Typography
+                    </a></li><li>
+                    <a href="/docs/4.1/content/code/">
+                      Code
+                    </a></li><li>
+                    <a href="/docs/4.1/content/images/">
+                      Images
+                    </a></li><li>
+                    <a href="/docs/4.1/content/tables/">
+                      Tables
+                    </a></li><li>
+                    <a href="/docs/4.1/content/figures/">
+                      Figures
+                    </a></li></ul>
+            </div>
+        </nav></div>
+
+
+        <!--中间内容---------------------------------------------------------------------------------------------------------------------->
+        <div class="col-xl-8 col-md-8 col-sm-9" role="main">
+        <!--标签---------------------------------------------------------------------------------------------------------------------->
+          <span class="pull-right">
+            <span class="label label-default">性能测试</span>&nbsp;
+            <span class="label label-default">自动化</span>&nbsp;
+            <span class="label label-default">Selenium</span>
+          </span>
+
+        <h1>Getting started</h1>
+          <small>
+          <span class="pull-right">hanzhichao 更新于：2018年06月11日 10:10:10</span>&nbsp;
+          <span>浏览 20</span>&nbsp;&nbsp;<span>赞 8</span>&nbsp;&nbsp;<span>评论 2</span>
+        </small>
+          <hr class="line">
+
+        <!--中间内容主题---------------------------------------------------------------------------------------------------------------------->
+        <h1 class="bd-title" id="content">Introduction</h1>
+        <p class="bd-lead">Get started with Bootstrap, the world’s most popular framework for building responsive, mobile-first sites, with BootstrapCDN and a template starter page.</p>
+        <script async src="https://cdn.carbonads.com/carbon.js?serve=CKYIKKJL&placement=getbootstrapcom" id="_carbonads_js"></script>
+
+        <h2 id="quick-start">Quick start</h2>
+
+        <p>Looking to quickly add Bootstrap to your project? Use BootstrapCDN, provided for free by the folks at StackPath. Using a package manager or need to download the source files? <a href="/docs/4.1/getting-started/download/">Head to the downloads page.</a></p>
+
+        <h3 id="css">CSS</h3>
+
+        <p>Copy-paste the stylesheet <code class="highlighter-rouge">&lt;link&gt;</code> into your <code class="highlighter-rouge">&lt;head&gt;</code> before all other stylesheets to load our CSS.</p>
+
+        <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span></code></pre></figure>
+
+        <h3 id="js">JS</h3>
+
+        <p>Many of our components require the use of JavaScript to function. Specifically, they require <a href="https://jquery.com">jQuery</a>, <a href="https://popper.js.org/">Popper.js</a>, and our own JavaScript plugins. Place the following <code class="highlighter-rouge">&lt;script&gt;</code>s near the end of your pages, right before the closing <code class="highlighter-rouge">&lt;/body&gt;</code> tag, to enable them. jQuery must come first, then Popper.js, and then our JavaScript plugins.</p>
+
+        <p>We use <a href="https://blog.jquery.com/2016/06/09/jquery-3-0-final-released/">jQuery’s slim build</a>, but the full version is also supported.</p>
+
+        <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span></code></pre></figure>
+
+        <p>Curious which components explicitly require jQuery, our JS, and Popper.js? Click the show components link below. If you’re at all unsure about the general page structure, keep reading for an example page template.</p>
+
+        <p>Our <code class="highlighter-rouge">bootstrap.bundle.js</code> and <code class="highlighter-rouge">bootstrap.bundle.min.js</code> include <a href="https://popper.js.org/">Popper</a>, but not <a href="https://jquery.com/">jQuery</a>. For more information about what’s included in Bootstrap, please see our <a href="/docs/4.1/getting-started/contents/#precompiled-bootstrap">contents</a> section.</p>
+
+        <details>
+        <summary class="text-primary mb-3">Show components requiring JavaScript</summary>
+
+
+        <ul>
+          <li>Alerts for dismissing</li>
+          <li>Buttons for toggling states and checkbox/radio functionality</li>
+          <li>Carousel for all slide behaviors, controls, and indicators</li>
+          <li>Collapse for toggling visibility of content</li>
+          <li>Dropdowns for displaying and positioning (also requires <a href="https://popper.js.org/">Popper.js</a>)</li>
+          <li>Modals for displaying, positioning, and scroll behavior</li>
+          <li>Navbar for extending our Collapse plugin to implement responsive behavior</li>
+          <li>Tooltips and popovers for displaying and positioning (also requires <a href="https://popper.js.org/">Popper.js</a>)</li>
+          <li>Scrollspy for scroll behavior and navigation updates</li>
+        </ul>
+
+        </details>
+
+        <h2 id="starter-template">Starter template</h2>
+
+        <p>Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:</p>
+
+        <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
+        <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;head&gt;</span>
+            <span class="c">&lt;!-- Required meta tags --&gt;</span>
+            <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span>
+
+            <span class="c">&lt;!-- Bootstrap CSS --&gt;</span>
+            <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+
+            <span class="nt">&lt;title&gt;</span>Hello, world!<span class="nt">&lt;/title&gt;</span>
+          <span class="nt">&lt;/head&gt;</span>
+          <span class="nt">&lt;body&gt;</span>
+            <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
+
+            <span class="c">&lt;!-- Optional JavaScript --&gt;</span>
+            <span class="c">&lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;</span>
+            <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.3.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+            <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+            <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+          <span class="nt">&lt;/body&gt;</span>
+        <span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+        <p>That’s all you need for overall page requirements. Visit the <a href="/docs/4.1/layout/overview/">Layout docs</a> or <a href="/docs/4.1/examples/">our official examples</a> to start laying out your site’s content and components.</p>
+
+        <h2 id="important-globals">Important globals</h2>
+
+        <p>Bootstrap employs a handful of important global styles and settings that you’ll need to be aware of when using it, all of which are almost exclusively geared towards the <em>normalization</em> of cross browser styles. Let’s dive in.</p>
+
+        <h3 id="html5-doctype">HTML5 doctype</h3>
+
+        <p>Bootstrap requires the use of the HTML5 doctype. Without it, you’ll see some funky incomplete styling, but including it shouldn’t cause any considerable hiccups.</p>
+
+        <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!doctype html&gt;</span>
+        <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+          ...
+        <span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+        <h3 id="responsive-meta-tag">Responsive meta tag</h3>
+
+        <p>Bootstrap is developed <em>mobile first</em>, a strategy in which we optimize code for mobile devices first and then scale up components as necessary using CSS media queries. To ensure proper rendering and touch zooming for all devices, <strong>add the responsive viewport meta tag</strong> to your <code class="highlighter-rouge">&lt;head&gt;</code>.</p>
+
+        <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span></code></pre></figure>
+
+        <p>You can see an example of this in action in the <a href="#starter-template">starter template</a>.</p>
+
+        <h3 id="box-sizing">Box-sizing</h3>
+
+        <p>For more straightforward sizing in CSS, we switch the global <code class="highlighter-rouge">box-sizing</code> value from <code class="highlighter-rouge">content-box</code> to <code class="highlighter-rouge">border-box</code>. This ensures <code class="highlighter-rouge">padding</code> does not affect the final computed width of an element, but it can cause problems with some third party software like Google Maps and Google Custom Search Engine.</p>
+
+        <p>On the rare occasion you need to override it, use something like the following:</p>
+
+        <figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.selector-for-some-widget</span> <span class="p">{</span>
+          <span class="nl">box-sizing</span><span class="p">:</span> <span class="n">content-box</span><span class="p">;</span>
+        <span class="p">}</span></code></pre></figure>
+
+        <p>With the above snippet, nested elements—including generated content via <code class="highlighter-rouge">::before</code> and <code class="highlighter-rouge">::after</code>—will all inherit the specified <code class="highlighter-rouge">box-sizing</code> for that <code class="highlighter-rouge">.selector-for-some-widget</code>.</p>
+
+        <p>Learn more about <a href="https://css-tricks.com/box-sizing/">box model and sizing at CSS Tricks</a>.</p>
+
+        <h3 id="reboot">Reboot</h3>
+
+        <p>For improved cross-browser rendering, we use <a href="/docs/4.1/content/reboot/">Reboot</a> to correct inconsistencies across browsers and devices while providing slightly more opinionated resets to common HTML elements.</p>
+
+        <h2 id="community">Community</h2>
+
+        <p>Stay up to date on the development of Bootstrap and reach out to the community with these helpful resources.</p>
+
+        <ul>
+          <li>Follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a>.</li>
+          <li>Read and subscribe to <a href="https://blog.getbootstrap.com">The Official Bootstrap Blog</a>.</li>
+          <li>Join <a href="https://bootstrap-slack.herokuapp.com">the official Slack room</a>.</li>
+          <li>Chat with fellow Bootstrappers in IRC. On the <code class="highlighter-rouge">irc.freenode.net</code> server, in the <code class="highlighter-rouge">##bootstrap</code> channel.</li>
+          <li>Implementation help may be found at Stack Overflow (tagged <a href="https://stackoverflow.com/questions/tagged/bootstrap-4"><code class="highlighter-rouge">bootstrap-4</code></a>).</li>
+          <li>Developers should use the keyword <code class="highlighter-rouge">bootstrap</code> on packages which modify or add to the functionality of Bootstrap when distributing through <a href="https://www.npmjs.com/browse/keyword/bootstrap">npm</a> or similar delivery mechanisms for maximum discoverability.</li>
+        </ul>
+
+        <p>You can also follow <a href="https://twitter.com/getbootstrap">@getbootstrap on Twitter</a> for the latest gossip and awesome music videos.</p>
+
+
+
+        <div class="text-center">
+          <div class="btn-group" role="group"><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-question-sign"></span></button></div>
+          <div class="btn-group" role="group"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span></button></div>
+          <div class="btn-group" role="group"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-gift"></span></button></div>
+          <div class="btn-group" role="group"><button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-thumbs-up"></span></button></div>
+          <div class="btn-group" role="group"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-share"></span></button></div>
+          </div>
+
+        <!--上一篇下一篇---------------------------------------------------------------------------------------------------------------------->
+        <hr class="line">
+        <div class="page-footer">
+          <span><span class="text-muted">上一篇：</span><a href="#">Grid</a></span>
+          <span class="pull-right"><span class="text-muted">下一篇：</span><a href="#">Webpack</a></span>
+        </div>
+
+        <!--评论---------------------------------------------------------------------------------------------------------------------->
+        <div>
+          <div class="media">
+            <div class="pull-left">
+                <img class="media-object" src="{% static 'img/default.gif' %}" alt="..." style="height:40px; width:40px">
+            </div>
+            <div class="media-body">
+              <strong><div class="media-heading">hanzhichao</div></strong><span class="pull-right">#2</span>
+              <p>这个飞后ID后覅后Ian那你发货那还还不</p>
+              <small class="text-muted">2015年11月17日
+                <span class="glyphicon glyphicon-thumbs-up"></span> 0
+                <span class="glyphicon glyphicon-share-alt"></span> 回复
+                <span class="pull-right">
+                  <span class="glyphicon glyphicon-heart-empty"></span>
+                  <span class="glyphicon glyphicon-warning-sign"></span>
+                </span> </small>
+            </div>
+          </div>
+          <hr class="line">
+           <div class="media">
+            <div class="pull-left">
+                <img class="media-object" src="{% static 'img/default.gif' %}" alt="..." style="height:40px; width:40px">
+            </div>
+            <div class="media-body">
+              <strong><div class="media-heading">hanzhichao</div></strong>
+              <p>这个飞后ID后覅后Ian那你发货那还还不</p>
+              <small class="text-muted">2015年11月17日   <span class="glyphicon glyphicon-thumbs-up"></span> 0 <span class="glyphicon glyphicon-share-alt"></span> 回复</small>
+            </div>
+          </div>
+          <hr class="line">
+           <div class="media">
+            <div class="pull-left">
+                <img class="media-object" src="{% static 'img/default.gif' %}" alt="..." style="height:40px; width:40px">
+            </div>
+            <div class="media-body">
+              <strong><div class="media-heading">hanzhichao</div></strong>
+              <p>这个飞后ID后覅后Ian那你发货那还还不</p>
+              <small class="text-muted">2015年11月17日   <span class="glyphicon glyphicon-thumbs-up"></span> 0 <span class="glyphicon glyphicon-share-alt"></span> 回复</small>
+            </div>
+          </div>
+          <hr class="line">
+           <div class="media">
+            <div class="pull-left">
+                <img class="media-object" src="{% static 'img/default.gif' %}" alt="..." style="height:40px; width:40px">
+            </div>
+            <div class="media-body">
+              <strong><div class="media-heading">hanzhichao</div></strong>
+              <p>这个飞后ID后覅后Ian那你发货那还还不</p>
+              <small class="text-muted">2015年11月17日   <span class="glyphicon glyphicon-thumbs-up"></span> 0 <span class="glyphicon glyphicon-share-alt"></span> 回复</small>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="well text-center">
+          <span>只有登录了才能参与评论，快登录！如果你还没有账号你可以注册一个账号。</span>
+        </div>
+
+
+        <div class="well">
+          <div class="media">
+            <div class="pull-left">
+                <img class="media-object" src="{% static 'img/default.gif' %}" alt="..." style="height:40px; width:40px">
+            </div>
+            <div class="media-body">
+              <strong><div class="media-heading">hanzhichao</div></strong>
+              <form>
+                <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea></div>
+
+                <button type="submit" class="btn btn-default">提交</button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+          <h1><a href="#" class="glyphicon glyphicon-circle-arrow-up"></a>
+
+
+
+        </div>
+        <!--右侧边栏---------------------------------------------------------------------------------------------------------------------->
+        <div class="col-xl-2 col-md-2 sticky toc hidden-xs hidden-sm">
+        <ul class="section-nav">
+        <li class="toc-entry toc-h2"><a href="#quick-start">Quick start</a>
+        <ul>
+        <li class="toc-entry toc-h3"><a href="#css">CSS</a></li>
+        <li class="toc-entry toc-h3"><a href="#js">JS</a></li>
+        </ul>
+        </li>
+        <li class="toc-entry toc-h2"><a href="#starter-template">Starter template</a></li>
+        <li class="toc-entry toc-h2"><a href="#important-globals">Important globals</a>
+        <ul>
+        <li class="toc-entry toc-h3"><a href="#html5-doctype">HTML5 doctype</a></li>
+        <li class="toc-entry toc-h3"><a href="#responsive-meta-tag">Responsive meta tag</a></li>
+        <li class="toc-entry toc-h3"><a href="#box-sizing">Box-sizing</a></li>
+        <li class="toc-entry toc-h3"><a href="#reboot">Reboot</a></li>
+        </ul>
+        </li>
+        <li class="toc-entry toc-h2"><a href="#community">Community</a></li>
+        </ul>
+        </div>
+    </div>
+</div>
+<!--footer---------------------------------------------------------------------------------------------------------------------->
+<hr>
+<div class="container">
+    <div class="row hidden-sm">
+      <div class="col-md-2">
+            <dl class="">
+              <dt>产品</dt>
+              <dd class="active"><a href="#">Home</a></dd>
+              <dd><a href="#">Profile</a></dd>
+              <dd><a href="#">Messages</a></dd>
+            </dl>
+        </div>
+      <div class="col-md-2">
+            <dl class="">
+              <dt>产品</dt>
+              <dd class="active"><a href="#">Home</a></dd>
+              <dd><a href="#">Profile</a></dd>
+              <dd><a href="#">Messages</a></dd>
+            </dl>
+        </div>
+      <div class="col-md-2">
+            <dl class="">
+              <dt>产品</dt>
+              <dd class="active"><a href="#">Home</a></dd>
+              <dd><a href="#">Profile</a></dd>
+              <dd><a href="#">Messages</a></dd>
+            </dl>
+        </div>
+      <div class="col-md-2">
+            <dl class="">
+              <dt>产品</dt>
+              <dd class="active"><a href="#">Home</a></dd>
+              <dd><a href="#">Profile</a></dd>
+              <dd><a href="#">Messages</a></dd>
+            </dl>
+        </div>
+      <div class="col-md-2">
+            <dl class="">
+              <dt>产品</dt>
+              <dd class="active"><a href="#">Home</a></dd>
+              <dd><a href="#">Profile</a></dd>
+              <dd><a href="#">Messages</a></dd>
+            </dl>
+        </div>
+      <div class="col-md-2">
+            <dl class="">
+              <dt>产品</dt>
+              <dd class="active"><a href="#">Home</a></dd>
+              <dd><a href="#">Profile</a></dd>
+              <dd><a href="#">Messages</a></dd>
+            </dl>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+      <p class="text-center">Copyright © 2011-2018 SegmentFault. 当前呈现版本 17.06.16 浙ICP备 15005796号-2
+        <br>浙公网安备 33010602002000号 杭州堆栈科技有限公司版权所有</p>
+    </div>
+</div>
+
+
+</body>
+
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-hover-dropdown.min.js' %}"></script>
+</html>
