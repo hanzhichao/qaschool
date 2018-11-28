@@ -26,8 +26,8 @@
             <div class="card-header">
                 <div class="media">
                   <div class="pull-left">
-{#                      <img class="media-object" src="{{ course.pic }}" alt="{{ course.name }}" style="height:40px; width:40px">#}
-                      <img class="media-object" src="{% static 'img/QA.png' %}" alt="{{ course.name }}" style="height:40px; width:40px">
+                      <img class="media-object" src="{{ course.pic.url }}" alt="{{ course.name }}" style="height:40px; width:40px">
+{#                      <img class="media-object" src="{% static 'img/QA.png' %}" alt="{{ course.name }}" style="height:40px; width:40px">#}
                   </div>
                   <div class="media-body">
                     <strong><div class="media-heading">{{ course.name }}</div></strong>

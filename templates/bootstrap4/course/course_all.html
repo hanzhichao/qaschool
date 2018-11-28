@@ -40,7 +40,8 @@
                             <a href="{{ course.get_absolute_url }}" class="list-group-item active">
                               <div class="media">
                                 <div class="pull-left">
-                                    <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                                    <img class="media-object" src="{{ course.pic.url }}" alt="{{ course.name }}" style="height:40px; width:40px">
+{#                                    <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">#}
                                 </div>
                                 <div class="media-body">
                                   <strong><div class="media-heading">{{ course.name }}</div></strong>
