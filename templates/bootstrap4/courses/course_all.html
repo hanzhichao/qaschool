@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}栏目：{{ category.title }}{% endblock %}
+{% block keywards %}{{ category.keywords }}{% endblock %}
+{% block description %}{{ category.abstract }}{% endblock %}
+{% block main %}
+{% load staticfiles %}
+
+<div class="bg-light pb-5">
+    <div class="container" name="main">
+      <!--面包屑------------------------------------------------------------------------------------------------------------------------>
+
+      <ol class="breadcrumb border-0 mb-1">
+        <li class="breadcrumb-item"><a href="/">首页</a></li>
+        <li class="breadcrumb-item active">全部教程</li>
+      </ol>
+
+{#        <div class="page-header" id="banner"><div class="row col-md-12">#}
+{#        <h1>{{ category.title }} <small class="text-muted">{{ category.manager.username }}</small></h1></div>#}
+{#        <p class="lead">{{ category.description | default_if_none:"&nbsp;" }}</p>#}
+{#        </div>#}
+      <div class="row">
+        <div class="col-xl-2 col-md-2 col-sm-3 sticky hidden-xs">
+            <div class="list-group ">
+              <a class="list-group-item list-group-item-action active text-white">全部教程</a>
+              {% for category in categories %}
+              <a href="{{ category.get_absolute_url }}" class="list-group-item list-group-item-action">{{ category.title }}</a>
+              {% endfor %}
+            </div>
+        </div>
+        <div class="col-xl-10 col-md-10 col-sm-9">
+          <div class="card">
+            <div class="card-body">
+              {% for category in categories %}
+              <div class="mb-3"><i class="fa fa-list mr-1 ml-1"></i>{{ category.title }}</div>
+                <div class="row">
+                {% for course in courses %}
+                   {% if course.category == category %}
+                        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                          <div class="list-group">
+                            <a href="{{ course.get_absolute_url }}" class="list-group-item active">
+                              <div class="media">
+                                <div class="pull-left">
+                                    {% if course.pic %}
+                                      <img class="media-object mr-2" src="{{ course.pic.url }}" alt="{{ course.title }}" style="height:40px; width:40px">
+                                      {% else %}
+                                      <img class="media-object mr-2" src="{% static 'img/QA.png' %}" alt="{{ course.title }}" style="height:40px; width:40px">
+                                    {% endif %}
+                                </div>
+                                <div class="media-body">
+                                  <strong><div class="media-heading">{{ course.title }}</div></strong>
+                                  <small>作者: {{ course.owner.username }}</small>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="{{ course.get_absolute_url }}" class="list-group-item">{{ course.description | default_if_none:"&nbsp;" }}</a>
+                          </div>
+                        </div>
+                   {% endif %}
+                {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+    </div>
+      </div>
+    </div>
+{% endblock %}

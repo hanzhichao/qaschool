@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
-from course import views
+from courses import views
 from django.views.generic import RedirectView
 
 
@@ -11,9 +11,8 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('han/', admin.site.urls),
     path('', views.index, name='index'),
-    path('course/', include('course.urls')),
+    path('courses/', include('courses.urls')),
     path('resource/', include('resource.urls')),
-
 ]
 
 

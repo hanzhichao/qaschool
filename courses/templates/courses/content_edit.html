@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block main %}
+  <div class="row">
+    <div class="col-md-2">
+      <div class="card">
+        <div class="card-header">
+          <h1>课程</h1>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+        <div class="list-group list-group-flush">
+            <a href="#" class="list-group-item list-group-item-action active"> 1111</a></li>
+            <a href="#" class="list-group-item list-group-item-action"> 1111</a></li>
+            <a href="#" class="list-group-item list-group-item-action"> 1111</a></li>
+            <a href="#" class="list-group-item list-group-item-action"> 1111</a></li>
+            <a href="#" class="list-group-item list-group-item-action"> 1111</a></li>
+            <a href="#" class="list-group-item list-group-item-action"> 1111</a></li>
+            <a href="#" class="list-group-item list-group-item-action"> 1111</a></li>
+            <a href="#" class="list-group-item list-group-item-action"> 1111</a></li>
+          </div>
+      </div>
+
+    </div>
+    <div class="col-md-10">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <h1>编辑内容</h1>
+          <form method="post" action=".">
+            {% csrf_token %}
+            {{  form.media }}
+            {{ form.as_p }}
+            <p><input type="submit" class="btn btn-primary" value="保存"></p>
+          </form>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
