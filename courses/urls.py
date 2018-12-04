@@ -6,7 +6,7 @@ from courses import views
 urlpatterns = [
     # path('', views.lesson_edit, name='lesson_edit'),
     path('category/<category_slug>', views.category_detail, name='category'),
-    path('all/', views.course_all, name='course_all'),
+    path('all/', views.category_all, name='category_all'),
     path('<course_slug>', views.course_detail, name='course'),
     # path('<lesson_slug>.html', views.lesson_detail, name='lesson'),
     path('<course_slug>/<lesson_slug>.html', views.lesson_detail, name='lesson'),

@@ -55,8 +55,8 @@
                   
                    <h1>{{ lesson.title }}</h1>
                     <small>
-                    <span class="pull-right">{{ course.owner.username }} 更新于：{{ lesson.last_modified_time }}</span>&nbsp;
-                    <span>浏览 1 </span>&nbsp;&nbsp;<span>赞 <span id="likes">1</span></span>&nbsp;&nbsp;<span>评论 1 </span>
+                    <span class="pull-right">{{ course.owner.username }} 更新于：{{ lesson.updated }}</span>&nbsp;
+                    <span>浏览 {{ lesson.views }} </span>&nbsp;&nbsp;<span>赞 <span id="likes">{{ lesson.likes }}</span></span>&nbsp;&nbsp;<span>评论 1 </span>
                   </small>
                   <hr>
                  {{ lesson.content|safe }}

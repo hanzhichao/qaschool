@@ -1,0 +1,9 @@
+.card-body img{
+    max-width: 100%;
+}
+
+
+.card-body pre{
+    padding: 15px;
+    border: 1px solid #eee;
+}

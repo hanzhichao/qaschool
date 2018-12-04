@@ -11,7 +11,7 @@
       <p class="lead text-muted">由于网络上的资源大多零碎而散乱，我们旨在为软件测试从业者提供系统的学习课程，软件，视频，电子书等相关资源</p>
       <p class="text-muted">参与项目，请加Q群: 633575308</p>
       <p>
-        <a href="{% url 'course_all' %}" class="btn btn-primary my-2">全部课程</a>
+        <a href="{% url 'category_all' %}" class="btn btn-primary my-2">全部课程</a>
       </p>
     </div>
   </section>
@@ -35,7 +35,7 @@
                       </div>
                       <div class="media-body">
                         <strong><div class="media-heading">{{ course.title }}</div></strong>
-                        <small>作者: {{ course.owner.username }}</small>
+                        <small>作者: {{ course.owner.username }} - 共{{ course.lessons.count }}章</small>
 
                       </div>
                     </div>
@@ -99,7 +99,7 @@
     <div class="row">
         <div class="col-xl-2 col-md-2 col-sm-3 sticky hidden-xs">
             <div class="list-group ">
-              <a href="{% url 'course_all' %}" class="list-group-item list-group-item-action active text-white">全部教程</a>
+              <a href="{% url 'category_all' %}" class="list-group-item list-group-item-action active text-white">全部教程</a>
               {% for category in categories %}
               <a href="{{ category.get_absolute_url }}" class="list-group-item list-group-item-action">{{ category.title }}</a>
               {% endfor %}
@@ -113,7 +113,7 @@
                 <div class="row">
                 {% for course in courses %}
                    {% if course.category == category %}
-                        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                        <div class="col-md-4 col-sm-6 mb-3">
                           <div class="list-group">
                             <a href="{{ course.get_absolute_url }}" class="list-group-item active">
                               <div class="media">
@@ -126,7 +126,7 @@
                                 </div>
                                 <div class="media-body">
                                   <strong><div class="media-heading">{{ course.title }}</div></strong>
-                                  <small>作者: {{ course.owner.username }}</small>
+                                  <small>作者: {{ course.owner.username }} - 共{{ course.lessons.count }}章</small>
                                 </div>
                               </div>
                             </a>

@@ -23,19 +23,17 @@ def index(request):
 def category_detail(request, category_slug):
     categories = Category.objects.all()
 
-
     category = get_object_or_404(Category, slug=category_slug, visible=True)
-    courses = Course.objects.filter(slug=category_slug)
+    courses = Course.objects.filter(category=category)
 
     return render(request, 'courses/category.html', {'category': category, 'categories': categories,
                                                   'courses': courses})
 
-def course_all(request):
+def category_all(request):
     categories = Category.objects.all()
     courses = Course.objects.all()
 
-    return render(request, 'courses/course_all.html', {'categories': categories,
-                                                  'courses': courses})
+    return render(request, 'courses/category_all.html', {'categories': categories, 'courses': courses})
 
 def course_detail(request, course_slug):
     course = get_object_or_404(Course, slug=course_slug, visible=True)

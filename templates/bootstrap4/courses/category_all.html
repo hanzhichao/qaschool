@@ -35,7 +35,7 @@
                 <div class="row">
                 {% for course in courses %}
                    {% if course.category == category %}
-                        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                        <div class="col-md-4 col-sm-6 mb-3">
                           <div class="list-group">
                             <a href="{{ course.get_absolute_url }}" class="list-group-item active">
                               <div class="media">
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="media-body">
                                   <strong><div class="media-heading">{{ course.title }}</div></strong>
-                                  <small>作者: {{ course.owner.username }}</small>
+                                  <small>作者: {{ course.owner.username }} - 共{{ course.lessons.count }}章</small>
                                 </div>
                               </div>
                             </a>

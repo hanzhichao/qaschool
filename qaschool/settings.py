@@ -50,7 +50,6 @@ ROOT_URLCONF = 'qaschool.urls'
 
 
 CUR_TEMPLATE = 'bootstrap4'
-THEME = 'yeti'
 
 
 TEMPLATES = [

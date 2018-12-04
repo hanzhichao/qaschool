@@ -29,38 +29,35 @@
                     </a>
                     {% endfor %}
                 </div>
-
             </div>
             <div class="col-md-10" name="right">
                 <div class="card">
                   <div class="card-body">
                     <div class="mb-3"><i class="fa fa-list mr-1 ml-1"></i>{{ category.title }}</div>
                     <div class="row">
-                {% for course in courses %}
-                   {% if course.category == category %}
-                        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                          <div class="list-group">
-                            <a href="{{ course.get_absolute_url }}" class="list-group-item active">
-                              <div class="media">
-                                <div class="pull-left">
-                                   {% if course.pic %}
-                                      <img class="media-object mr-2" src="{{ course.pic.url }}" alt="{{ course.title }}" style="height:40px; width:40px">
-                                      {% else %}
-                                      <img class="media-object" src="{% static 'img/QA.png' %}" alt="{{ course.title }}" style="height:40px; width:40px">
-                                   {% endif %}
-                                </div>
-                                <div class="media-body">
-                                  <strong><div class="media-heading">{{ course.title }}</div></strong>
-                                  <small>作者: {{ course.owner.username }}</small>
+                      {% for course in courses %}
+                              <div class="col-md-4 col-sm-6 mb-3">
+                                <div class="list-group">
+                                  <a href="{{ course.get_absolute_url }}" class="list-group-item active">
+                                    <div class="media">
+                                      <div class="pull-left">
+                                         {% if course.pic %}
+                                            <img class="media-object mr-2" src="{{ course.pic.url }}" alt="{{ course.title }}" style="height:40px; width:40px">
+                                            {% else %}
+                                            <img class="media-object mr-2" src="{% static 'img/QA.png' %}" alt="{{ course.title }}" style="height:40px; width:40px">
+                                         {% endif %}
+                                      </div>
+                                      <div class="media-body">
+                                        <strong><div class="media-heading">{{ course.title }}</div></strong>
+                                        <small>作者: {{ course.owner.username }} - 共{{ course.lessons.count }}章</small>
+                                      </div>
+                                    </div>
+                                  </a>
+                                  <a href="{{ course.get_absolute_url }}" class="list-group-item">{{ course.description | default_if_none:"&nbsp;" }}</a>
                                 </div>
                               </div>
-                            </a>
-                            <a href="{{ course.get_absolute_url }}" class="list-group-item">{{ course.description | default_if_none:"&nbsp;" }}</a>
-                          </div>
-                        </div>
-                   {% endif %}
-                {% endfor %}
-                </div>
+                      {% endfor %}
+                  </div>
                 </div>
                 </div></div></div>
       </div>
