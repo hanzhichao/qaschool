@@ -55,14 +55,14 @@
                   
                    <h1>{{ lesson.title }}</h1>
                     <small>
-                    <span class="pull-right">{{ course.owner.username }} 更新于：{{ lesson.updated }}</span>&nbsp;
-                    <span>浏览 {{ lesson.views }} </span>&nbsp;&nbsp;<span>赞 <span id="likes">{{ lesson.likes }}</span></span>&nbsp;&nbsp;<span>评论 1 </span>
+                    <span class="pull-right text-muted">{{ course.owner.username }} 更新于：{{ lesson.updated }}</span>&nbsp;
+                    <span class="text-muted">浏览 {{ lesson.views }} &nbsp;&nbsp;赞 <span id="likes">{{ lesson.likes }}&nbsp;&nbsp;</span>评论 1 </span>
                   </small>
                   <hr>
                  {{ lesson.content|safe }}
-                  {% if lesson.keyword %}
+                  {% if lesson.keywords %}
                   <hr>
-                  <p>标签：</p><span>{{ lesson.keyword}}</span>
+                  <small>标签：<span class="badge badge-light">{{ content.keywords}}</span></small>
                   {% endif %}
                   </div>
 

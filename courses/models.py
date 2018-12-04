@@ -46,7 +46,7 @@ class Social(models.Model):
 
 class Category(Page):
     class Meta:
-        verbose_name_plural = verbose_name = '分类'
+        verbose_name_plural = verbose_name = '教程分类'
 
     def get_absolute_url(self):
         return reverse('category', args=(self.slug,))
@@ -61,7 +61,7 @@ class Course(Page):
     stars = models.IntegerField("评星", default=3)
 
     class Meta:
-        verbose_name_plural = verbose_name = '课程'
+        verbose_name_plural = verbose_name = '教程'
 
     def get_absolute_url(self):
         return reverse('course', args=(self.slug,))
@@ -69,13 +69,13 @@ class Course(Page):
 
 class Lesson(Page, Social):
     course = models.ForeignKey(Course, related_name='lessons',
-                               on_delete=models.CASCADE, verbose_name="所属模块")
+                               on_delete=models.CASCADE, verbose_name="所属课程")
     order = OrderField(for_fields=['course'], blank=True, verbose_name="排序")
     md_content = MDTextField("内容", blank=True, null=True)
     html_content = RichTextField("内容", blank=True, null=True)
 
     class Meta:
-        verbose_name_plural = verbose_name = '内容'
+        verbose_name_plural = verbose_name = '教程内容'
 
     def get_absolute_url(self):
         return reverse('lesson', args=(self.course.slug, self.slug,))

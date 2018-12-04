@@ -29,20 +29,26 @@
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active"><a class="nav-link" href="/">首页</a></li>
-          {% for column in columns %}
-            {% if column.show_in_nav %}
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ column.name }}</a>
-                  <ul class="dropdown-menu">
-                    {% for course in courses %}
-                        {% if course.column == column %}
-                            <li><a class="dropdown-item" href="{{ course.get_absolute_url }}">{{course.name}}</a></li>
-                        {% endif %}
-                    {% endfor %}
-                  </ul>
-                </li>
-            {% endif %}
-          {% endfor %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">教程</a>
+            <ul class="dropdown-menu">
+              {% for category in categories %}
+                  {% if course.column == column %}
+                      <li><a class="dropdown-item" href="{{ category.get_absolute_url }}">{{category.title}}</a></li>
+                  {% endif %}
+              {% endfor %}
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资源</a>
+            <ul class="dropdown-menu">
+              {% for category in res_categories %}
+                  {% if course.column == column %}
+                      <li><a class="dropdown-item" href="{{ category.get_absolute_url }}">{{category.title}}</a></li>
+                  {% endif %}
+              {% endfor %}
+            </ul>
+          </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" id="search_form">
           <input class="form-control mr-sm-2" id='keyword' name="keyword" type="text">

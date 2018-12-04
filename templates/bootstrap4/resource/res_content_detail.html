@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}{{ res_content.title }}{% endblock %}
+{% block keywards %}{{ res_content.keywords }}{% endblock %}
+{% block description %}{{ res_content.abst }}{% endblock %}
+{% block main %}
+  {% load staticfiles %}
+  <div class="bg-light">
+    <div class="container" name="main">
+      <!--面包屑------------------------------------------------------------------------------------------------------------------------>
+      <ol class="breadcrumb border-0 mb-1">
+        <li class="breadcrumb-item"><a href="/">首页</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'res_category_all' %}">资源</a></li>
+        <li class="breadcrumb-item"><a href="{{ res_category.get_absolute_url }}">{{ res_category.title }}</a></li>
+        <li class="breadcrumb-item active">{{ res_content.title }}</li>
+      </ol>
+      <div class="row">
+          <div class="col-xl-2 col-md-2 col-sm-3 sticky hidden-xs">
+            <div class="list-group ">
+              <a class="list-group-item list-group-item-action active text-white">全部资源</a>
+              {% for res_category in res_categories %}
+              <a href="{{ res_category.get_absolute_url }}" class="list-group-item list-group-item-action">{{ res_category.title }}</a>
+              {% endfor %}
+            </div>
+        </div>
+
+
+      <!--课程主体2 ------------------------------------------------------------------------------------------------------->
+          <div class="col-lg-9 col-md-8 col-sm-12" name="right">
+              <div class="card mb-5">
+                  <div class="card-body">
+                  <!--标签---------------------------------------------------------------------------------------------------------------------->
+                    {% if res_content.keyword %}
+                    <span class="pull-right">
+                      <span class="label label-default">{{ res_content.keyword }}</span>
+                    </span>
+                    {% endif %}
+                  
+                   <h1>{{ res_content.title }}</h1>
+                    <small>
+                    <span class="pull-right">{{ res_content.owner.username }} 更新于：{{ res_content.updated }}</span>&nbsp;
+                    <span>浏览 {{ res_content.views }}</span>&nbsp;&nbsp;<span>赞 <span id="likes">{{ res_content.likes }}</span></span>&nbsp;&nbsp;<span>评论 1 </span>
+                  </small>
+                  <hr>
+                 {{ res_content.html_content | safe}}
+                  {% if res_content.keywords %}
+                  <hr>
+                  <small>标签：<span class="badge badge-light">{{ res_content.keywords}}</span></small>
+                  {% endif %}
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript">
+
+    </script>
+{% endblock %}

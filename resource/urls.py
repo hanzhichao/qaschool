@@ -1,9 +1,9 @@
 from django.urls import path
 from resource import views
 
-# app_name = 'resource'
+
 urlpatterns = [
-    path('all/', views.category_all, name='category_all'),
-    path('<category_slug>', views.content_list, name='content_list'),
-    path('<category_slug>/<content_slug>.html', views.content_detail, name='content_detail'),
+    path('', views.res_category_all, name='res_category_all'),
+    path('<res_category_slug>', views.res_category, name='res_category'),
+    path('<res_category_slug>/<res_content_slug>.html', views.res_content_detail, name='res_content'),
 ]

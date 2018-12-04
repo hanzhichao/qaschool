@@ -7,3 +7,15 @@
     padding: 15px;
     border: 1px solid #eee;
 }
+
+.card-body p{
+    line-height: 1.8;
+}
+
+.card-body br{
+    line-height: 1.6;
+}
+
+.list-group {
+    font-weight: 400;
+}

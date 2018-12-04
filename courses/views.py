@@ -9,15 +9,19 @@ from django.core.mail import send_mail
 from qaschool import settings
 from .forms import MDEditorForm, CKEditorForm
 from .models import Category, Course, Lesson
+from resource.models import ResCategory
 
 
-
+def common():
+    categories = Category.objects.all()
+    res_categories = ResCategory.objects.all()
+    return {'categories': categories, 'res_categories': res_categories}
 
 
 def index(request):
-    categories = Category.objects.all()
     courses = Course.objects.all()
-    return render(request, 'courses/index.html', {'categories': categories, 'courses': courses})
+    locals().update(common())
+    return render(request, 'courses/index.html', locals())
 
 
 def category_detail(request, category_slug):
@@ -25,26 +29,26 @@ def category_detail(request, category_slug):
 
     category = get_object_or_404(Category, slug=category_slug, visible=True)
     courses = Course.objects.filter(category=category)
-
-    return render(request, 'courses/category.html', {'category': category, 'categories': categories,
-                                                  'courses': courses})
+    locals().update(common())
+    return render(request, 'courses/category.html', locals())
 
 def category_all(request):
-    categories = Category.objects.all()
     courses = Course.objects.all()
+    locals().update(common())
+    return render(request, 'courses/category_all.html', locals())
 
-    return render(request, 'courses/category_all.html', {'categories': categories, 'courses': courses})
 
 def course_detail(request, course_slug):
     course = get_object_or_404(Course, slug=course_slug, visible=True)
-
     lesson_one = Lesson.objects.filter(course=course).first()
 
     if lesson_one:
         return lesson_detail(request, course.slug, lesson_one.slug)
 
     lessons = Lesson.objects.filter(course=course)
-    return render(request, 'courses/course.html', {'course': course, 'lessons': lessons})
+
+    locals().update(common())
+    return render(request, 'courses/course.html', locals())
 
 
 def lesson_detail(request, course_slug, lesson_slug):
@@ -78,25 +82,20 @@ def lesson_detail(request, course_slug, lesson_slug):
     else:
         lesson.content = ''
 
-
-
-    return render(request, 'courses/lesson.html', {'lesson': lesson, 'course': course, 'lessons': lessons,
-                                                   'pre_lesson': pre_lesson, 'next_lesson': next_lesson})
+    locals().update(common())
+    return render(request, 'courses/lesson.html', locals())
 
 
 def search(request, keyword):
-    categories = Category.objects.all().order_by('order')
-    courses = Course.objects.all().order_by('order')
+    categories = Category.objects.all()
+    courses = Course.objects.all()
 
-    category_result = categories.filter(title__icontains=keyword).order_by('order')
-    course_result = courses.filter(title__icontains=keyword).order_by('order')
-    lesson_result = Lesson.objects.filter(status='p', title__icontains=keyword).order_by('order')
+    category_result = categories.filter(title__icontains=keyword)
+    course_result = courses.filter(title__icontains=keyword)
+    lesson_result = Lesson.objects.filter(status='p', title__icontains=keyword)
     result_num = category_result.count() + course_result.count() + lesson_result.count()
-
-    return render(request, 'courses/search.html',  {'categories': categories, 'courses': courses,
-                                                   'category_result': category_result, 'course_result': course_result,
-
-                                                   'lesson_result': lesson_result, 'result_num': str(result_num)})
+    locals().update(common())
+    return render(request, 'courses/search.html',  locals())
 
 # def lesson_share(request, course_slug, lesson_slug):
 #     course = get_object_or_404(Course, slug=course_slug)
