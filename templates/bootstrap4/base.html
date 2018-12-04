@@ -30,7 +30,7 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active"><a class="nav-link" href="/">首页</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">教程</a>
+            <a class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">教程</a>
             <ul class="dropdown-menu">
               {% for category in categories %}
                   {% if course.column == column %}
@@ -39,8 +39,9 @@
               {% endfor %}
             </ul>
           </li>
+          <li class="nav-item "><a class="nav-link" href="{% url 'item_category_all' %}">面试题</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资源</a>
+            <a class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资源</a>
             <ul class="dropdown-menu">
               {% for category in res_categories %}
                   {% if course.column == column %}

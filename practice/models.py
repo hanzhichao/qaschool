@@ -5,26 +5,25 @@ from courses.models import Page, Social, OrderField
 
 
 
-class ResCategory(Page):
+class ItemCategory(Page):
     class Meta:
-        verbose_name_plural = verbose_name = '资源分类'
+        verbose_name_plural = verbose_name = '题目分类'
 
     def get_absolute_url(self):
-        return reverse('res_category', args=(self.slug,))
+        return reverse('item_category', args=(self.slug,))
 
 
-class ResContent(Page, Social):
-    category = models.ForeignKey(ResCategory, related_name='res_contents',
+class ItemContent(Page, Social):
+    category = models.ForeignKey(ItemCategory, related_name='item_contents',
                                on_delete=models.CASCADE, verbose_name="所属分类")
-    pic = models.ImageField('缩略图', null=True, blank=True)
     order = OrderField(for_fields=['category'], blank=True, verbose_name="排序")
-    html_content = RichTextField("内容", blank=True, null=True)
+    answer = RichTextField("参考答案", blank=True, null=True)
 
     class Meta:
-        verbose_name_plural = verbose_name = '资源'
+        verbose_name_plural = verbose_name = '题目'
 
     def get_absolute_url(self):
-        return reverse('res_content', args=(self.category.slug, self.slug,))
+        return reverse('item_content', args=(self.category.slug, self.slug,))
 
 
     def viewed(self):

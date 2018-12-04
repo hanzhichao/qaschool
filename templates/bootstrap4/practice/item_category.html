@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}题目：{{ item_category.title }}{% endblock %}
+{% block keywards %}{{ item_category.keywords }}{% endblock %}
+{% block description %}{{ item_category.description }}{% endblock %}
+{% load staticfiles %}
+{% block main %}
+    <div class="bg-light pb-5">
+    <div class="container" name="main">
+      <!--面包屑------------------------------------------------------------------------------------------------------------------------>
+
+      <ol class="breadcrumb border-0 mb-1">
+        <li class="breadcrumb-item"><a href="/">首页</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'item_category_all' %}">题目</a></li>
+        <li class="breadcrumb-item active">{{ item_category.title }}</li>
+      </ol>
+      <div class="row">
+        <div class="col-xl-2 col-md-2 col-sm-3 sticky hidden-xs">
+            <div class="list-group ">
+              <a href="{% url 'item_category_all' %}" class="list-group-item list-group-item-action">全部题目</a>
+              {% for item_cate in item_categories %}
+              <a href="{{ item_cate.get_absolute_url }}" class="list-group-item {% if item_cate == item_category %}active{% endif %} list-group-item-action">{{ item_cate.title }}</a>
+              {% endfor %}
+            </div>
+        </div>
+        <div class="col-xl-10 col-md-10 col-sm-9">
+          <div class="card">
+            <div class="card-body">
+                {% for item_content in item_contents %}
+                        <div class="mb-2">
+                          <div class="list-group list-group-flush">
+                            <a href="{{ item_content.get_absolute_url }}" class="list-group-item list-group-item-action">
+                              <div class="media">
+                                <div class="pull-left">
+                                    {% if item_content.pic %}
+                                    <img class="media-object mr-2" src="{{ item_content.pic.url }}" alt="{{ item_content.title }}" style="height:40px; width:40px">
+                                    {% else %}
+                                    <img class="media-object mr-2" src="{% static 'img/QA.png' %}" alt="{{ item_content.title }}" style="height:40px; width:40px">
+                                    {% endif %}
+                                </div>
+                                <div class="media-body">
+                                  <strong><div class="media-heading">{{ item_content.title }}</div></strong>
+                                  <small>{{ item_content.description | default_if_none:"&nbsp;" }}</small>
+                                </div>
+                              </div>
+                            </a>
+
+                          </div>
+                        </div>
+                {% endfor %}
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+{% endblock %}

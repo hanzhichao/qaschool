@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import ResCategory, ResContent
+from .models import ItemCategory, ItemContent
 
 
-class ResCategoryAdmin(admin.ModelAdmin):
+class ItemCategoryAdmin(admin.ModelAdmin):
     def get_queryset(self, request):
-        qs = super(ResCategoryAdmin, self).get_queryset(request)
+        qs = super(ItemCategoryAdmin, self).get_queryset(request)
         if request.user.is_superuser:
             return qs
         return qs.filter(owner=request.user)
@@ -16,19 +16,19 @@ class ResCategoryAdmin(admin.ModelAdmin):
 
 
 
-class ResContentAdmin(admin.ModelAdmin):
+class ItemContentAdmin(admin.ModelAdmin):
     def get_queryset(self, request):
-        qs = super(ResContentAdmin, self).get_queryset(request)
+        qs = super(ItemContentAdmin, self).get_queryset(request)
         if request.user.is_superuser:
             return qs
         return qs.filter(owner=request.user)
 
-    fields = ('title', 'slug', ('category', 'owner'), 'pic', 'keywords', 'description', 'html_content')
+    fields = ('title', 'slug', ('category', 'owner'), 'keywords', 'description', 'answer')
     list_display = ('title', 'category', 'order', 'visible', 'owner', 'created', 'updated')
     list_filter = ('category', 'visible', 'owner')
     list_editable = ['visible']
 
 
 
-admin.site.register(ResCategory, ResCategoryAdmin)
-admin.site.register(ResContent, ResContentAdmin)
+admin.site.register(ItemCategory, ItemCategoryAdmin)
+admin.site.register(ItemContent, ItemContentAdmin)

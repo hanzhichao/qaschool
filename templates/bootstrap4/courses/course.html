@@ -20,7 +20,7 @@
                     <a class="card-link" href="{{ course.get_absolute_url }}">{{ course.title }}</a>
                   </h5>
 
-                  <small class="text-muted">作者: {{ course.owner.username }} - 共{{ chapters.count }}章</small>
+                  <small class="text-muted">作者: {{ course.owner.username }} - 共{{ lessons.count }}章</small>
                   <div id="star"></div>
                 </div>
 
@@ -41,8 +41,8 @@
                   <div class="card-body">
                    <h1>{{ course.title }}</h1>
                     <small>
-                    <span class="pull-right">{{ course.owner.username }} 更新于：{{ course.last_modified_time }}</span>&nbsp;
-                    <span>共{{ chapters.count }}章</span>
+                    <span class="pull-right">{{ course.owner.username }} 更新于：{{ course.updated }}</span>&nbsp;
+                    <span>共{{ lessons.count }}章</span>
                   </small>
                   <hr>
                  {{ course.description }}

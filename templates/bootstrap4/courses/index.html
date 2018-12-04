@@ -109,7 +109,7 @@
           <div class="card">
             <div class="card-body">
               {% for category in categories %}
-              <div class="mb-3"><i class="fa fa-list mr-1 ml-1"></i>{{ category.title }}</div>
+              <div class="mb-3 text-muted"><i class="fa fa-list mr-1 ml-1"></i>{{ category.title }}</div>
                 <div class="row">
                 {% for course in courses %}
                    {% if course.category == category %}

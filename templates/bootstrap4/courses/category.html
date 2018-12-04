@@ -19,7 +19,6 @@
 {#        </div>#}
         <div class="row">
             <div class="col-md-2" name="left">
-
                 <div class="list-group list-group-flush">
                     <a href="{% url 'category_all' %}" class="list-group-item list-group-item-action">全部教程</a>
                     {% for clm in categories %}
@@ -33,7 +32,7 @@
             <div class="col-md-10" name="right">
                 <div class="card">
                   <div class="card-body">
-                    <div class="mb-3"><i class="fa fa-list mr-1 ml-1"></i>{{ category.title }}</div>
+                    <div class="mb-3 text-muted"><i class="fa fa-list mr-1 ml-1"></i>{{ category.title }}</div>
                     <div class="row">
                       {% for course in courses %}
                               <div class="col-md-4 col-sm-6 mb-3">

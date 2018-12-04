@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}{{ item_content.title }}{% endblock %}
+{% block keywards %}{{ item_content.keywords }}{% endblock %}
+{% block description %}{{ item_content.abst }}{% endblock %}
+{% block main %}
+  {% load staticfiles %}
+  <div class="bg-light">
+    <div class="container" name="main">
+      <!--面包屑------------------------------------------------------------------------------------------------------------------------>
+      <ol class="breadcrumb border-0 mb-1">
+        <li class="breadcrumb-item"><a href="/">首页</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'item_category_all' %}">题目</a></li>
+        <li class="breadcrumb-item"><a href="{{ item_category.get_absolute_url }}">{{ item_category.title }}</a></li>
+        <li class="breadcrumb-item active">{{ item_content.title }}</li>
+      </ol>
+      <div class="row">
+          <div class="col-xl-2 col-md-2 col-sm-3 sticky hidden-xs">
+            <div class="list-group ">
+              <a class="list-group-item list-group-item-action active text-white">全部题目</a>
+              {% for item_category in item_categories %}
+              <a href="{{ item_category.get_absolute_url }}" class="list-group-item list-group-item-action">{{ item_category.title }}</a>
+              {% endfor %}
+            </div>
+        </div>
+
+
+      <!--课程主体2 ------------------------------------------------------------------------------------------------------->
+          <div class="col-lg-9 col-md-8 col-sm-12" name="right">
+              <div class="card mb-5">
+                  <div class="card-body">
+                  <!--标签---------------------------------------------------------------------------------------------------------------------->
+                    {% if item_content.keyword %}
+                    <span class="pull-right">
+                      <span class="label label-default">{{ item_content.keyword }}</span>
+                    </span>
+                    {% endif %}
+                  
+                   <h1>{{ item_content.title }}</h1>
+                    <small>
+                    <span class="pull-right">{{ item_content.owner.username }} 更新于：{{ item_content.updated }}</span>&nbsp;
+                    <span>浏览 {{ item_content.views }}</span>&nbsp;&nbsp;<span>赞 <span id="likes">{{ item_content.likes }}</span></span>&nbsp;&nbsp;<span>评论 1 </span>
+                  </small>
+                  <hr>
+                 {{ item_content.html_content | safe}}
+                  {% if item_content.keywords %}
+                  <hr>
+                  <small>标签：<span class="badge badge-light">{{ item_content.keywords}}</span></small>
+                  {% endif %}
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript">
+
+    </script>
+{% endblock %}

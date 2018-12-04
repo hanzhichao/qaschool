@@ -22,5 +22,6 @@ def res_content_detail(request, res_category_slug, res_content_slug):
     res_categories = ResCategory.objects.all()
     res_category = get_object_or_404(ResCategory, visible=True, slug=res_category_slug)
     res_content = get_object_or_404(ResContent, category=res_category, slug=res_content_slug)
+    res_content.viewed()
     locals().update(common())
     return render(request, 'resource/res_content_detail.html', locals())

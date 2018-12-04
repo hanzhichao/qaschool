@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'resource',
     'courses',
+    'practice',
 
 ]
 

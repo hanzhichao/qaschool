@@ -13,6 +13,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('courses/', include('courses.urls')),
     path('resource/', include('resource.urls')),
+    path('practice/', include('practice.urls')),
 ]
 
 
