@@ -26,9 +26,9 @@ class CourseAdmin(admin.ModelAdmin):
         return qs.filter(owner=request.user)
 
     fields = ('title', 'slug', ('category', 'owner', 'is_suggest'), 'pic', 'keywords', 'description')
-    list_display = ('title', 'category', 'order', 'visible', 'owner', 'created', 'updated')
-    list_filter = ('category', 'visible', 'owner')
-    list_editable = ['order', 'visible']
+    list_display = ('title', 'category', 'order', 'visible', 'is_suggest', 'owner', 'created', 'updated')
+    list_filter = ('category', 'visible', 'is_suggest', 'owner')
+    list_editable = ['order', 'visible', 'is_suggest']
 
 
 

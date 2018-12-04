@@ -123,23 +123,23 @@
 {% block js %}
     <script type="text/javascript">
         //评星
-        $('#star').raty({score: {{course.star}},
-            click: function(score, evt) {
-                var star = $("input[name='score']").val();
-                $.ajax({
-                    type: "POST",
-                    url: "{% url 'course_eval' course.slug %}" ,
-                    data: "star="+score,
-                    success: function (result) {
+{#        $('#star').raty({score: {{course.star}},#}
+{#            click: function(score, evt) {#}
+{#                var star = $("input[name='score']").val();#}
+{#                $.ajax({#}
+{#                    type: "POST",#}
+{#                    url: "{% url 'course_eval' course.slug %}" ,#}
+{#                    data: "star="+score,#}
+{#                    success: function (result) {#}
 {#                        window.location.reload();#}
-                        toastr.success('评论成功！');
-
-                    },
-                    error : function() {
-                        console.log(result);
-                    }
-                });
-              }
-        });
+{#                        toastr.success('评论成功！');#}
+{##}
+{#                    },#}
+{#                    error : function() {#}
+{#                        console.log(result);#}
+{#                    }#}
+{#                });#}
+{#              }#}
+{#        });#}
     </script>
 {% endblock %}
