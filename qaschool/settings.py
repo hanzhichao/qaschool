@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '47.94.156.36',
         'PORT': '3306',
-        'NAME': 'qaschool',
+        'NAME': 'qaschool_dev',
         'USER': 'root',
         'PASSWORD': 'hanzhichao',
         'OPTIONS': {
