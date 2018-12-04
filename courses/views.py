@@ -45,7 +45,7 @@ def course_detail(request, course_slug):
     if lesson_one:
         return lesson_detail(request, course.slug, lesson_one.slug)
 
-    lessons = Lesson.objects.filter(course=course, status='p').order_by('order')
+    lessons = Lesson.objects.filter(course=course)
     return render(request, 'courses/course.html', {'course': course, 'lessons': lessons})
 
 

@@ -3,7 +3,7 @@ from django.urls import reverse
 from mdeditor.fields import MDTextField
 from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
-
+from .fields import OrderField
 
 class VisibleManager(models.Manager):
     def get_queryset(self):
@@ -55,8 +55,9 @@ class Category(Page):
 class Course(Page):
     category = models.ForeignKey(Category, related_name='courses',
                                  on_delete=models.CASCADE, verbose_name="所属分类")
+    order = OrderField(for_fields=['category'], blank=True, verbose_name="排序")
     pic = models.ImageField('缩略图', null=True, blank=True)
-    is_suggest = models.BooleanField(default=False)
+    is_suggest = models.BooleanField("推荐课程", default=False)
     stars = models.IntegerField("评星", default=3)
 
     class Meta:
@@ -69,6 +70,7 @@ class Course(Page):
 class Lesson(Page, Social):
     course = models.ForeignKey(Course, related_name='lessons',
                                on_delete=models.CASCADE, verbose_name="所属模块")
+    order = OrderField(for_fields=['course'], blank=True, verbose_name="排序")
     md_content = MDTextField("内容", blank=True, null=True)
     html_content = RichTextField("内容", blank=True, null=True)
 
