@@ -21,7 +21,7 @@
             <div class="col-md-2" name="left">
 
                 <div class="list-group list-group-flush">
-                    <a href="{% url 'course_all' %}" class="list-group-item list-group-item-action">全部教程</a>
+                    <a href="{% url 'category_all' %}" class="list-group-item list-group-item-action">全部教程</a>
                     {% for clm in categories %}
                     <a class="list-group-item list-group-item-action {% if clm == category %}active{% endif %}" href="{{ clm.get_absolute_url }}">
 {#                            <span class="fa fa-angle-right pull-right"></span>#}
