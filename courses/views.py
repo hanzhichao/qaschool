@@ -25,7 +25,7 @@ def category_detail(request, category_slug):
 
 
     category = get_object_or_404(Category, slug=category_slug, visible=True)
-    courses = Course.objects.all(slug=category_slug)
+    courses = Course.objects.filter(slug=category_slug)
 
     return render(request, 'courses/category.html', {'category': category, 'categories': categories,
                                                   'courses': courses})
