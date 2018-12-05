@@ -20,7 +20,7 @@
 <body>
 <!--导航----------------------------------------------------------------------------------------------------------->
 <header>
-  <nav class="navbar navbar-dark navbar-expand-lg bg-primary border-bottom shadow-sm" name="top">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-primary border-bottom shadow-sm " name="top">
     <div class="container">
       <a class="navbar-brand" href="/">QA 学院</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active"><a class="nav-link" href="/">首页</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">教程</a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">教程</a>
             <ul class="dropdown-menu">
               {% for category in categories %}
                   {% if course.column == column %}
@@ -41,7 +41,7 @@
           </li>
           <li class="nav-item "><a class="nav-link" href="{% url 'item_category_all' %}">面试题</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资源</a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资源</a>
             <ul class="dropdown-menu">
               {% for category in res_categories %}
                   {% if course.column == column %}
@@ -52,13 +52,62 @@
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0" id="search_form">
-          <input class="form-control mr-sm-2" id='keyword' name="keyword" type="text">
-          <button class="btn btn-secondary my-2 my-sm-0" type="button" id="search_btn" onclick="searchAction()">搜索</button>
+          <input class="form-control border-primary mr-1" id='keyword' name="keyword" type="text">
+          <button class="btn btn-secondary border-primary" type="button" id="search_btn" onclick="searchAction()">搜索</button>
         </form>
+        <ul class="navbar-nav pull-right ml-3">
+          {% if request.user.is_authenticated %}
+          <li class="nav-item dropdown">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <img class="mr-1" src="{% static 'img/default.gif' %}" style="width: 25px; height: 25px;">
+            {{request.user}}<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">资料</a></li>
+              <li><a class="dropdown-item" href="#">设置</a></li>
+              <li><a class="dropdown-item" href="{% url 'logout' %}">退出</a></li>
+            </ul>
+          </li>
+          {% else %}
+          <li class="nav-item pull-right"><a class="nav-link" href="#">注册</a></li>
+          <li class="nav-item pull-right"><a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">登录</a></li>
+          {% endif %}
+        </ul>
+
       </div>
     </div>
   </nav>
 </header>
+
+<!--登录对话框-->
+<div class="modal fade" id="loginModal" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">用户登录</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form id="login" action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <div class="modal-body">
+          <div class="form-group">{{ login_form.username }}</div>
+          <div class="form-group">{{ login_form.password }}</div>
+          <button type="submit" class="btn btn-primary form-control">登录</button>
+      </div>
+      <div class="modal-footer">
+      </div></form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 
 
 {% block main %}

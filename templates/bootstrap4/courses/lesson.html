@@ -47,12 +47,6 @@
               <div class="card mb-5">
                   <div class="card-body">
                   <!--标签---------------------------------------------------------------------------------------------------------------------->
-                    {% if lesson.keyword %}
-                    <span class="pull-right">
-                      <span class="label label-default">{{ lesson.keyword }}</span>
-                    </span>
-                    {% endif %}
-                  
                    <h1>{{ lesson.title }}</h1>
                     <small>
                     <span class="pull-right text-muted">{{ course.owner.username }} 更新于：{{ lesson.updated }}</span>&nbsp;
@@ -62,7 +56,7 @@
                  {{ lesson.content|safe }}
                   {% if lesson.keywords %}
                   <hr>
-                  <small>标签：<span class="badge badge-light">{{ content.keywords}}</span></small>
+                  <small>标签：<span class="badge badge-light">{{ lesson.keywords}}</span></small>
                   {% endif %}
                   </div>
 

@@ -1,8 +1,8 @@
 from django.contrib import admin
 from .models import Category, Course, Lesson
 
-admin.site.site_header = 'QA School后台管理系统'
-admin.site.site_title = 'QA School后台管理系统'
+admin.site.site_header = 'QA学院后台'
+admin.site.site_title = 'QA学院后台'
 
 
 class CategoryAdmin(admin.ModelAdmin):

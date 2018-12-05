@@ -10,12 +10,15 @@ from qaschool import settings
 from .forms import MDEditorForm, CKEditorForm
 from .models import Category, Course, Lesson
 from resource.models import ResCategory
+from account.forms import LoginForm
+
 
 
 def common():
     categories = Category.objects.all()
     res_categories = ResCategory.objects.all()
-    return {'categories': categories, 'res_categories': res_categories}
+    login_form = LoginForm()
+    return {'categories': categories, 'res_categories': res_categories, 'login_form': login_form}
 
 
 def index(request):
