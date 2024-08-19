@@ -21,7 +21,7 @@
 - 安装依赖包 `pip install -r requirements.txt`
 - 启动开发服务器 python3 manager.py runserver
 - 访问 http://127.0.0.1:8000/
-- 后台 http://127.0.0.1/han/ （注意最后必须有'/'） 用户名：hanzhichao 密码 123456 
+- 后台 http://127.0.0.1/han/ （注意最后必须有'/'） 用户名：admin 密码 admin123 
 
 
 ## 已知问题
@@ -36,6 +36,8 @@
 - 采集
 - html -> md
 - sitemaps
+
+
 
 2.0会开发独立admin并进行前后端分离
 

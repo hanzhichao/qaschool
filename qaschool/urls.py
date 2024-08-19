@@ -3,7 +3,6 @@ from django.urls import path,include
 from django.conf import settings
 
 from courses import views
-from django.views.generic import RedirectView
 from django.contrib.auth import views as auth_views
 
 
@@ -18,10 +17,10 @@ urlpatterns = [
 
     path('', views.index, name='index'),
 
-    path('account/', include('account.urls')),
-    path('courses/', include('courses.urls')),
+    path('account/', include('apps.account.urls')),
+    path('courses/', include('apps.courses.urls')),
     path('resource/', include('resource.urls')),
-    path('practice/', include('practice.urls')),
+    path('practice/', include('apps.practice.urls')),
 ]
 
 

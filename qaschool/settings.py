@@ -1,22 +1,14 @@
 import os
+import sys
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '#8t=%obel7cq1hsh3kcoxffx+=i7arj68vjr5p#xi1x0#3#r!z'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
-
-# Application definition
 
 INSTALLED_APPS = [
     'account',
@@ -49,9 +41,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'qaschool.urls'
 
-
 CUR_TEMPLATE = 'bootstrap4'
-
 
 TEMPLATES = [
     {
@@ -71,26 +61,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'qaschool.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db2.sqlite3'),
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': '',
-        'PORT': '3306',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -110,7 +89,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -125,13 +103,13 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/media/'
+FORM_RENDERER = 'django.forms.renderers.DjangoTemplates'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
@@ -144,8 +122,6 @@ DATE_FORMAT = 'Y年m月d日'
 
 STATIC_PAGES = False
 
-
-
 # SMTP
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_SSL = True
@@ -156,7 +132,6 @@ EMAIL_HOST = 'smtp.163.com'
 EMAIL_HOST_USER = 'ivan-me@163.com'
 EMAIL_HOST_PASSWORD = 'hanzhichao123'
 
-
 CKEDITOR_UPLOAD_PATH = "uploads"
 CKEDITOR_CONFIGS = {
     'default': {
@@ -166,11 +141,10 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-
 MDEDITOR_CONFIGS = {
     'default': {
         'width': '100%',  # 自定义编辑框宽度
-        'heigth': 500,   # 自定义编辑框高度
+        'height': 500,  # 自定义编辑框高度
         'toolbar': ["undo", "redo", "|",
                     "bold", "del", "italic", "quote", "ucwords", "uppercase", "lowercase", "|",
                     "h1", "h2", "h3", "h5", "h6", "|",
