@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="all" />
+    <meta name="author" content="qaschool.cn" />
+    <meta name="Keywords" Content="{% block keywords %}{% endblock %}">
+    <meta name="Description" Content="{% block descprition %}{% endblock %}">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static theme_css %}">
+    <link rel="stylesheet" href="{% static 'css/custom.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/code.css' %}">
+    <link rel="stylesheet" href="{% static 'css/toastr.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.raty.css' %}">
+{#    <link rel="stylesheet" href="{% static 'css/bootstrapValidator.css' %}">#}
+{#    <link rel="stylesheet" href="{% static 'css/star-rating.css' %}">#}
+{#    <link rel="stylesheet" href="{% static 'css/github.css' %}">#}
+{#    <link rel="stylesheet" href="{% static 'css/docs.min.css' %}">#}
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+    <title>{% block title %}{% endblock %}-QA学院</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary" name="top">
+    <div class="container">
+{#      <a class="navbar-brand" href="/"><img src="{% static 'img/QA_text.png' %}" >&nbsp;学院</a>#}
+      <a class="navbar-brand" href="/">QA 学院</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a class="nav-link" href="/">首页<span class="sr-only">(current)</span></a></li>
+          {% for column in columns %}
+            {% if column.show_in_nav %}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ column.name }}</a>
+                  <ul class="dropdown-menu">
+                    {% for course in courses %}
+                        {% if course.column == column %}
+                            <li><a class="dropdown-item" href="{{ course.get_absolute_url }}">{{course.name}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <form class="form-inline my-2 my-lg-0" id="search_form">
+          <input class="form-control mr-sm-2" id='keyword' name="keyword" type="text">
+          <button class="btn btn-secondary my-2 my-sm-0" type="button" id="search_btn" onclick="searchAction()">搜索</button>
+        </form>
+      </div>
+    </div>
+</nav>
+<div style="min-height: 600px;">
+{% block main %}
+{% endblock %}
+</div>
+<div name="footer" style="min-height: 80px;  padding-bottom: 10px;">
+    <a href="#"  id="uptoTop" style="display: none">
+        <span class="fa fa-chevron-circle-up fa-2x" style="position: fixed;right: 1%;bottom: 5%;"></span>
+    </a>
+    <hr>
+    <div class="container" >
+        <div class="text-center">Power By Django 2.1</div>
+        <div class="text-center"><small>Copyright © 2013-2018 qaschool.com All Rights Reserved. 京ICP备11018033号 京公网安备11010802013057</small></div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/toastr.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.raty.js' %}"></script>
+{#<script type="text/javascript" src="{% static 'js/bootstrapValidator.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/star-rating.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>#}
+<script type="text/javascript">
+    //搜索
+    function searchAction() {
+        var keyword = $('#keyword').val();
+        keyword = keyword.replace(/^\s\s*/, '');
+        if(keyword != ''){
+            var url = '{% url 'search' 'keyword' %}'.replace('keyword', keyword);
+            location.href = url;
+        }
+    }
+    //返回顶部
+    $(function(){
+        $(window).scroll(function(){
+            //当window的scrolltop距离大于1时，go to
+            if($(this).scrollTop() > 100){
+                $('#uptoTop').fadeIn();
+            }else{
+                $('#uptoTop').fadeOut();
+            }
+        });
+        $('#uptoTop').click(function(){
+            $('html ,body').animate({scrollTop: 0}, 300);
+            return false;
+        });
+    });
+
+</script>
+{% block js %}
+{% endblock %}
+</html>

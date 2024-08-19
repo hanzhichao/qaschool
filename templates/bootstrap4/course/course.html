@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}课程：{{ course.name }}{% endblock %}
+{% block keywards %}{{ course.keywords }}{% endblock %}
+{% block description %}{{ course.intro }}{% endblock %}
+
+{% block main %}
+    <div class="container" name="main">
+    <div class="page-header" id="banner"><div class="row col-md-12">
+    <h1>{{ course.name }} <small class="text-muted">{{ course.author.username }}</small></h1></div>
+    <p class="lead">{{ course.intro | default_if_none:"&nbsp;" }}</p>
+    </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12" name="left">
+                <div class="card bg-primary border-secondary">
+{#                    <h5 class="card-header"><a class="text-white card-link" href="/">全部教程</a></h5>#}
+                    <h5 class="card-header"><a class="text-white card-link" href="{{ course.get_absolute_url }}">{{ course.name }}</a></h5>
+                    <ul class="list-group list-group-flush">
+                        {% for chapter in chapters %}
+                        <a class="list-group-item list-group-item-action" href="{{ chapter.get_absolute_url }}" class="list-group-item">
+                            {{ chapter.title }}</a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-12" name="right">
+                <div class="card"><div class="card-body">
+                <h1>{{ course.name }} <div id="star" class="pull-right"></div></h1>
+                <p>{{ course.intro | default_if_none:"&nbsp;" }}</p>
+                </div></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+<script type="text/javascript">
+    $('#star').raty({ readOnly: true, score: {{ course.star }} });
+</script>
+{% endblock %}

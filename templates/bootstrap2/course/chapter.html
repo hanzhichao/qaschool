@@ -1,0 +1,232 @@
+{% extends "base.html" %}
+{% block title %}{{ chapter.title }}{% endblock %}
+{% block keywards %}{{ chapter.keywords }}{% endblock %}
+{% block description %}{{ chapter.abst }}{% endblock %}
+{% block main %}
+{% load staticfiles %}
+
+<!--面包屑------------------------------------------------------------------------------------------------------------------------>
+<div class="container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">首页</a></li>
+    <li class="breadcrumb-item"><a href="{{ course.column.get_absolute_url }}">{{ course.column.name }}</a></li>
+    <li class="breadcrumb-item"><a href="{{ course.get_absolute_url }}">{{ course.name }}</a></li>
+    <li class="breadcrumb-item active">{{ chapter.title }}</li>
+  </ol>
+</div>
+
+<!--章节主体---------------------------------------------------------------------------------------------------------------------->
+<div class="container">
+    <div class="row">
+<!--左侧边栏---------------------------------------------------------------------------------------------------------------------->
+<div class="col-xl-2 col-md-2 col-sm-3 border-right-1 sticky hidden-xs">
+
+    
+    <div class="list-group">
+      <a href="{{ course.get_absolute_url }}" class="list-group-item active">
+        <h4 class="list-group-heading">{{ course.name }}教程</h4>
+      </a>
+      {% for ch in chapters %}
+      <a class="list-group-item {% if ch == chapter %}border-left-2{% endif %}" href="{{ ch.get_absolute_url }}">{{ ch.title }}</a>
+      {% endfor %}
+    </div>
+
+</div>
+
+<!--中间内容---------------------------------------------------------------------------------------------------------------------->
+{#<div class="col-xl-8 col-md-8 col-sm-9" role="main">#}
+<div class="col-xl-10 col-md-10 col-sm-9" role="main">
+<!--标签---------------------------------------------------------------------------------------------------------------------->
+  {% if chapter.keyword %}
+  <span class="pull-right">
+    <span class="label label-default">{{ chapter.keyword }}</span>
+  </span>
+  {% endif %}
+
+<h1>{{ chapter.title }}</h1>
+  <small>
+  <span class="pull-right">{{ course.author.username }} 更新于：{{ chapter.last_modified_time }}</span>&nbsp;
+  <span>浏览 {{ chapter.views }}</span>&nbsp;&nbsp;<span>赞 <span id="likes">{{ chapter.likes }}</span></span>&nbsp;&nbsp;<span>评论 {{ comments.count }}</span>
+</small>
+  <hr class="line">
+
+<!--中间内容主体---------------------------------------------------------------------------------------------------------------------->
+{{ chapter.content|safe }}
+
+<!--上一篇下一篇---------------------------------------------------------------------------------------------------------------------->
+<div>
+<hr class="line">
+{% if pre_chapter %}
+  <span><span class="text-muted">上一篇：</span><a href="{{ pre_chapter.get_absolute_url }}">{{ pre_chapter.title }}</a></span>
+{% endif %}
+{% if next_chapter %}
+  <span class="pull-right"><span class="text-muted">下一篇：</span><a href="{{ next_chapter.get_absolute_url }}">{{ next_chapter.title }}</a></span>
+{% endif %}
+</div>
+
+<div class="text-center box-1">
+  <div class="btn-group" role="group"><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-question-sign"></span></button></div>
+  <div class="btn-group" role="group"><button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok-sign"></span></button></div>
+  <div class="btn-group" role="group"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-gift"></span></button></div>
+  <div id="like" class="btn-group" role="group"><button type="button" class="btn btn-primary" onClick=addLikes()><span class="glyphicon glyphicon-thumbs-up"></span></button></div>
+  <div class="btn-group" role="group"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-share"></span></button></div>
+  </div>
+
+
+<!--评论---------------------------------------------------------------------------------------------------------------------->
+{% if comments.count != 0 %}
+<div class="comments">
+  {% for comment in comments %}
+  <hr class="line">
+   <div class="media">
+    <div class="pull-left">
+        <img class="media-object" src="{% static 'img/default.gif' %}" alt="..." style="height:40px; width:40px">
+    </div>
+    <div class="media-body">
+      <strong><div class="media-heading">hanzhichao</div></strong>
+      <p>{{ comment.content }}</p>
+      <small class="text-muted">2015年11月17日
+        <span class="glyphicon glyphicon-thumbs-up"></span> 0
+        <span class="glyphicon glyphicon-share-alt"></span> 回复
+        <span class="pull-right">
+          <span class="glyphicon glyphicon-heart-empty"></span>
+          <span class="glyphicon glyphicon-warning-sign"></span>
+        </span>
+      </small>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+{% if not request.user.is_authenticated %}
+<div class="well text-center">
+  <span>只有登录了才能参与评论，快<a href="#"> 登录</a>！如果你还没有账号你可以<a href="#"> 注册</a>一个账号。</span>
+</div>
+{% else %}
+
+<div class="well">
+  <div class="media">
+    <div class="pull-left">
+        <img class="media-object" src="{% static 'img/default.gif' %}" alt="..." style="height:40px; width:40px">
+    </div>
+    <div class="media-body">
+      <strong><div class="media-heading">hanzhichao</div></strong>
+      <form>
+        <div class="form-group">
+        <textarea class="form-control" rows="3"></textarea></div>
+        <button type="submit" class="btn btn-default">提交</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endif %}
+</div>
+<!--右侧边栏---------------------------------------------------------------------------------------------------------------------->
+{#<div class="col-xl-2 col-md-2 sticky toc hidden-xs hidden-sm">#}
+{#<ul class="section-nav">#}
+{#<li class="toc-entry toc-h2"><a href="#quick-start">Quick start</a>#}
+{#<ul>#}
+{#<li class="toc-entry toc-h3"><a href="#css">CSS</a></li>#}
+{#<li class="toc-entry toc-h3"><a href="#js">JS</a></li>#}
+{#</ul>#}
+{#</li>#}
+{#<li class="toc-entry toc-h2"><a href="#starter-template">Starter template</a></li>#}
+{#<li class="toc-entry toc-h2"><a href="#important-globals">Important globals</a>#}
+{#<ul>#}
+{#<li class="toc-entry toc-h3"><a href="#html5-doctype">HTML5 doctype</a></li>#}
+{#<li class="toc-entry toc-h3"><a href="#responsive-meta-tag">Responsive meta tag</a></li>#}
+{#<li class="toc-entry toc-h3"><a href="#box-sizing">Box-sizing</a></li>#}
+{#<li class="toc-entry toc-h3"><a href="#reboot">Reboot</a></li>#}
+{#</ul>#}
+{#</li>#}
+{#<li class="toc-entry toc-h2"><a href="#community">Community</a></li>#}
+{#</ul>#}
+{#</div>#}
+
+</div>
+{% endblock %}
+{% block js %}
+    <script type="text/javascript">
+        //评星
+        $('#star').raty({score: {{course.star}},
+            click: function(score, evt) {
+                var star = $("input[name='score']").val();
+                $.ajax({
+                    type: "POST",
+                    url: "{% url 'course_eval' course.slug %}" ,
+                    data: "star="+score,
+                    success: function (result) {
+                        toastr.success('评论成功！');
+                    },
+                    error : function() {
+                        console.log(result);
+                    }
+                });
+              }
+        });
+        //点赞
+        function addLikes() {
+                $.ajax({
+                    type: "POST",
+                    url: "{% url 'add_likes' chapter.slug %}" ,
+                    data: null,
+                    success: function (result) {
+                        toastr.success('点赞成功！');
+                    },
+                    error : function() {
+                        console.log(result);
+                    }
+                });
+                var likes = $('#likes').text();
+                console.log(likes)
+                likes = parseInt(likes) + 1;
+                $('#likes').text(''+likes);
+
+        }
+        //分享
+        function shareAction(){
+            $.ajax({
+                type: "POST",
+                url: "{% url 'chapter_share' course.slug chapter.slug %}" ,
+                data: $('#chapter_share').serialize(),
+                success: function (result) {
+                    toastr.success('邮件已发送！');
+                },
+                error : function() {
+                    console.log(result);
+                }
+            });
+        }
+        //评论
+        function commentAction(){
+            $.ajax({
+                type: "POST",
+                url: "{% url 'comment_add' course.slug chapter.slug %}" ,
+                data: $('#comment_add').serialize(),
+                success: function (result) {
+                    appendComment();
+                    document.getElementById("comment_add").reset();
+{#                    window.location.reload();#}
+                    toastr.success('评论提交成功');
+                },
+                error : function() {
+                    console.log(result);
+                }
+            });
+        }
+        //前端添加评论
+        function appendComment() {
+            var myDate = new Date();
+            var name = $("#comment_name").val();
+            var content  = $("#comment_content").val();
+            var num = parseInt($('#comment_num').text())
+            var now = myDate.getFullYear()+'年'+myDate.getMonth()+"月"+myDate.getDate()+"日 "+myDate.getHours()+':'+myDate.getMinutes()+":"+myDate.getSeconds();
+            new_comment = '<li class="list-group-item list-group-item-action border-top-0 border-bottom-0" class="list-group-item">\n' +
+                '                                <span class="fa fa-user-circle"></span>&nbsp;<span>'+name+'&nbsp;<span class="text-muted">'+now+'</span></span>\n' +
+                '                                  <p>'+content+'</p>\n' +
+                '                            </li>';
+            $('#comments').append(new_comment);
+            $('#comment_num').text((num+1).toString());
+        }
+    </script>
+{% endblock %}

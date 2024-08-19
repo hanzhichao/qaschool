@@ -1,6 +1,0 @@
-from django.apps import AppConfig
-
-
-class CoursesConfig(AppConfig):
-    name = 'courses'
-    verbose_name_plural = verbose_name = '课程'

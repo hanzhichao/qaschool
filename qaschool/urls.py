@@ -1,30 +1,21 @@
 from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
-
-from courses import views
-from django.contrib.auth import views as auth_views
-
+from course import views
+from django.views.generic import RedirectView
+from DjangoUeditor import urls as DjangoUeditor_urls
 
 urlpatterns = [
-    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
-    path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),
-
-    path('han/', admin.site.urls),
-
     path('mdeditor/', include('mdeditor.urls')),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
-
+    path('han/', admin.site.urls),
+    path(r'^ueditor/', include(DjangoUeditor_urls)),
     path('', views.index, name='index'),
-
-    path('account/', include('apps.account.urls')),
-    path('courses/', include('apps.courses.urls')),
-    path('resource/', include('resource.urls')),
-    path('practice/', include('apps.practice.urls')),
+    path('course/', include('course.urls')),
+    path('account/', include('account.urls')),
+    path('accounts/', include('users.urls')),
 ]
 
 
 if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

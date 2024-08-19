@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}栏目：{{ colunm.name }}{% endblock %}
+{% block keywards %}{{ colunm.keywords }}{% endblock %}
+{% block description %}{{ column.abstract }}{% endblock %}
+{% block main %}
+    <div class="container" name="main">
+        <div class="page-header" id="banner"><div class="row col-md-12">
+        <h1>{{ column.name }} <small class="text-muted">{{ column.manager.username }}</small></h1></div>
+        <p class="lead">{{ column.intro | default_if_none:"&nbsp;" }}</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12" name="left">
+                <div class="card bg-primary border-secondary">
+                    <h5 class="card-header"><a class="text-white card-link" href="/">全部教程</a></h5>
+                    <ul class="list-group list-group-flush">
+                        {% for column in columns %}
+                        <a class="list-group-item list-group-item-action" href="{{ column.get_absolute_url }}" class="list-group-item">
+{#                            <span class="fa fa-angle-right pull-right"></span>#}
+                            {{ column.name }}
+                        </a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-12" name="right">
+                <div class="card"><div class="card-body">
+                    <div class="list-group" ><a href="#" class="list-group-item list-group-item-action border-top-0 border-right-0 border-left-0" style="padding: 10px 2px;">
+                        <span class="fa fa-list"></span>&nbsp;
+                        <strong>{{ column.name }}</strong>
+                    </a></div>
+                    <div class="row" style="padding: 10px 0;">
+                    {% for course in courses %}
+                        {% if course.column == column %}
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="list-group">
+                                  <a href="{{ course.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start active">
+                                    <div class="row">
+                                        {% if course.pic %}
+                                        <img src="{{ course.pic.url }}" width="40px" height="40px">
+                                        {% endif %}
+                                        <div style="padding-left: 10px;">
+                                            <div class="d-flex w-100 justify-content-between"><h6 class="mb-1">{{ course.name }}</h6></div>
+                                            <p class="mb-1">{{ course.author.username }}</p>
+                                        </div>
+                                    </div>
+                                  </a>
+                                  <a href="{{ course.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                    </div>
+                                    <p class="mb-1">{{ course.intro | default_if_none:"&nbsp;" }}</p>
+                                  </a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                </div>
+                </div></div></div>
+    </div>
+{% endblock %}

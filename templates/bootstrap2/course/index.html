@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}首页{% endblock %}
+{% block keywards %}测试教程, 性能测试, 自动化测试, 测试管理{% endblock %}
+{% block description %}QA学院,系统的软件测试文本教程，包含性能测试,自动化测试,测试管理等{% endblock %}
+{% block main %}
+{% load staticfiles %}
+<!--banner------------------------------------------------------------------------------------------------------------------------>
+<div class="jumbotron">
+    <div class="container">
+        <h1>QA学院<small class="text-muted"> | 软件测试专属教程</small></h1>
+        <p>学习，为了更好的生活</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">了解更多</a></p>
+    </div>
+</div>
+
+<!--全部课程主体------------------------------------------------------------------------------------------------------------------------>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-2 col-md-2 col-sm-3 sticky hidden-xs">
+            <div class="list-group">
+              <a href="{% url 'course_all' %}" class="list-group-item active active"><h4>全部教程</h4></a>
+              {% for column in columns %}
+              <a href="{{ column.get_absolute_url }}" class="list-group-item">{{ column.name }}</a>
+              {% endfor %}
+            </div>
+        </div>
+        <div class="col-xl-10 col-md-10 col-sm-9">
+          <div class="panel">
+            <div class="panel-body">
+              {% for column in columns %}
+              <h5><span class="glyphicon glyphicon-th"></span> <span>{{ column.name }}</span><span class="pull-right"><a href="{{ column.get_absolute_url }}">更多..</a></span></h5>
+                <div class="row">
+                {% for course in courses %}
+                   {% if course.column == column %}
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                          <div class="list-group">
+                            <a href="{{ course.get_absolute_url }}" class="list-group-item active">
+                              <div class="media">
+                                <div class="pull-left">
+                                    <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                                </div>
+                                <div class="media-body">
+                                  <strong><div class="media-heading">{{ course.name }}</div></strong>
+                                  <small>作者: {{ course.author.username }} - 共11章</small>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="{{ course.get_absolute_url }}" class="list-group-item">{{ course.intro | default_if_none:"&nbsp;" }}</a>
+                          </div>
+                        </div>
+                   {% endif %}
+                {% endfor %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

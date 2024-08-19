@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Log-in{% endblock %}
+{% block main %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 box-center">
+         <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1>Log-in</h1>
+      </div>
+      <div class="panel-body">
+
+        <form action="." method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Log-in"></p>
+    </form>
+      </div>
+      <div class="panel-footer">
+        <p>Please, use the following form to log-in:</p>
+      </div>
+    </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

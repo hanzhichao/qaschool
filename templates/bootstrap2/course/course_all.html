@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}栏目：{{ column.name }}{% endblock %}
+{% block keywards %}{{ column.keywords }}{% endblock %}
+{% block description %}{{ column.abstract }}{% endblock %}
+{% block main %}
+{% load staticfiles %}
+<!--面包屑------------------------------------------------------------------------------------------------------------------------>
+<div class="container">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">首页</a></li>
+    <li class="breadcrumb-item active">全部课程</li>
+  </ol>
+</div>
+
+<!--全部课程主体------------------------------------------------------------------------------------------------------------------------>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-2 col-md-2 col-sm-3 sticky hidden-xs">
+            <div class="list-group">
+              <a href="{% url 'course_all' %}" class="list-group-item active"><h4>全部教程</h4></a>
+              {% for clm in columns %}
+              <a href="{{ clm.get_absolute_url }}" class="list-group-item">{{ clm.name }}</a>
+              {% endfor %}
+            </div>
+        </div>
+        <div class="col-xl-10 col-md-10 col-sm-9">
+          <div class="panel">
+            <div class="panel-body">
+              {% for column in columns %}
+              <h5><span class="glyphicon glyphicon-th"></span> <span>{{ column.name }}</span></h5>
+                <div class="row">
+                {% for course in courses %}
+                   {% if course.column == column %}
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                          <div class="list-group">
+                            <a href="{{ course.get_absolute_url }}" class="list-group-item active">
+                              <div class="media">
+                                <div class="pull-left">
+                                    <img class="media-object" src="{% static 'img/QA_40_40.png' %}" alt="..." style="height:40px; width:40px">
+                                </div>
+                                <div class="media-body">
+                                  <strong><div class="media-heading">{{ course.name }}</div></strong>
+                                  <small>作者: {{ course.author.username }} - 共11章</small>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="{{ course.get_absolute_url }}" class="list-group-item">{{ course.intro | default_if_none:"&nbsp;" }}</a>
+                          </div>
+                        </div>
+                   {% endif %}
+                {% endfor %}
+                </div>
+
+          {% endfor %}
+          </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

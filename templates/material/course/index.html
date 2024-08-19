@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}首页{% endblock %}
+{% block keywards %}测试教程, 性能测试, 自动化测试, 测试管理{% endblock %}
+{% block description %}QA学院,系统的软件测试文本教程，包含性能测试,自动化测试,测试管理等{% endblock %}
+{% block main %}
+    <div class="container" name="main">
+        <div class="col-md-3" name="left">
+            <div class="bs-callout bs-callout-info" style="padding: 10px 10px;"><h4><a href="/">全部教程</a></h4></div>
+            <div class="list-group">
+                {% for column in columns %}
+                <a href="{{ column.get_absolute_url }}" class="list-group-item">{{ column.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-9" name="right">
+            {% for column in columns %}
+                <div class="bs-callout bs-callout-danger" style="padding: 10px 10px;"><h4>{{ column.name }}</h4></div>
+                <div class="row">
+                {% for course in courses %}
+                    {% if course.column == column %}
+                        <div class="col-md-4">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4><a href="{{ course.get_absolute_url }}">{{ course.name }}</a></h4>
+                                    <p>{{ course.intro }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

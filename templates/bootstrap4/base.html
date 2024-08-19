@@ -7,20 +7,38 @@
     <meta name="Keywords" Content="{% block keywords %}{% endblock %}">
     <meta name="Description" Content="{% block descprition %}{% endblock %}">
     {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'css/theme/yeti.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/github.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap4.css' %}">
     <link rel="stylesheet" href="{% static 'css/code.css' %}">
     <link rel="stylesheet" href="{% static 'css/toastr.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery.raty.css' %}">
+
     <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
-    <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
     <title>{% block title %}{% endblock %}-QA学院</title>
 </head>
 <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--导航----------------------------------------------------------------------------------------------------------->
 <header>
-  <nav class="navbar navbar-dark navbar-expand-lg bg-primary border-bottom shadow-sm " name="top">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-primary border-bottom shadow-sm" name="top">
     <div class="container">
       <a class="navbar-brand" href="/">QA 学院</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,98 +46,468 @@
       </button>
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"><a class="nav-link" href="/">首页</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">教程</a>
-            <ul class="dropdown-menu">
-              {% for category in categories %}
-                  {% if course.column == column %}
-                      <li><a class="dropdown-item" href="{{ category.get_absolute_url }}">{{category.title}}</a></li>
-                  {% endif %}
-              {% endfor %}
-            </ul>
-          </li>
-          <li class="nav-item "><a class="nav-link" href="{% url 'item_category_all' %}">面试题</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">资源</a>
-            <ul class="dropdown-menu">
-              {% for category in res_categories %}
-                  {% if course.column == column %}
-                      <li><a class="dropdown-item" href="{{ category.get_absolute_url }}">{{category.title}}</a></li>
-                  {% endif %}
-              {% endfor %}
-            </ul>
-          </li>
+          <li class="nav-item active"><a class="nav-link" href="/">首页<span class="sr-only">(current)</span></a></li>
+          {% for column in columns %}
+            {% if column.show_in_nav %}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ column.name }}</a>
+                  <ul class="dropdown-menu">
+                    {% for course in courses %}
+                        {% if course.column == column %}
+                            <li><a class="dropdown-item" href="{{ course.get_absolute_url }}">{{course.name}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                  </ul>
+                </li>
+            {% endif %}
+          {% endfor %}
         </ul>
         <form class="form-inline my-2 my-lg-0" id="search_form">
-          <input class="form-control border-primary mr-1" id='keyword' name="keyword" type="text">
-          <button class="btn btn-secondary border-primary" type="button" id="search_btn" onclick="searchAction()">搜索</button>
+          <input class="form-control mr-sm-2" id='keyword' name="keyword" type="text">
+          <button class="btn btn-secondary my-2 my-sm-0" type="button" id="search_btn" onclick="searchAction()">搜索</button>
         </form>
-        <ul class="navbar-nav pull-right ml-3">
-          {% if request.user.is_authenticated %}
-          <li class="nav-item dropdown">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            <img class="mr-1" src="{% static 'img/default.gif' %}" style="width: 25px; height: 25px;">
-            {{request.user}}<span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">资料</a></li>
-              <li><a class="dropdown-item" href="#">设置</a></li>
-              <li><a class="dropdown-item" href="{% url 'logout' %}">退出</a></li>
-            </ul>
-          </li>
-          {% else %}
-          <li class="nav-item pull-right"><a class="nav-link" href="#">注册</a></li>
-          <li class="nav-item pull-right"><a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">登录</a></li>
-          {% endif %}
-        </ul>
-
       </div>
     </div>
   </nav>
 </header>
 
-<!--登录对话框-->
-<div class="modal fade" id="loginModal" role="dialog">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">用户登录</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+<main role="main">
+
+  <section class="jumbotron text-center" style="background-color: #fff">
+    <div class="container">
+      <h1 class="jumbotron-heading">Album example</h1>
+      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+      <p>
+        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+      </p>
+    </div>
+  </section>
+  <!--推荐课程----------------------------------------------------------------------------------------------------------->
+  <div class="py-5 bg-light">
+    <div class="container">
+      <h4 class="pb-2">推荐教程</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="{% static 'img/1.svg' %}" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="{% static 'img/1.svg' %}" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="{% static 'img/1.svg' %}" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="{% static 'img/1.svg' %}" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-        <form id="login" action="{% url 'login' %}" method="post">
-        {% csrf_token %}
-        <div class="modal-body">
-          <div class="form-group">{{ login_form.username }}</div>
-          <div class="form-group">{{ login_form.password }}</div>
-          <button type="submit" class="btn btn-primary form-control">登录</button>
-      </div>
-      <div class="modal-footer">
-      </div></form>
     </div>
   </div>
-</div>
+  <!--职业方向----------------------------------------------------------------------------------------------------------->
+  <div class="py-5 bg-white">
+    <div class="container">
+      <h4 class="pb-2">职业方向</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
+  <!--资源分类----------------------------------------------------------------------------------------------------------->
+  <div class="py-5 bg-light">
+    <div class="container">
+      <h4 class="pb-2">资源分类</h4>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">软件</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">软件</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">软件</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+              <p class="card-text">软件</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--每日一题----------------------------------------------------------------------------------------------------------->
+  <div class="py-5 bg-white">
+    <div class="container">
+      <h4 class="pb-2">每日一题</h4>
+      <div class="row">
+        <div class="col-md-12">
+          <p>linux怎么样搜索路径中的200？</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!--热门问答----------------------------------------------------------------------------------------------------------->
+  <div class="py-5 bg-light">
+    <div class="container">
+      <h4 class="pb-2">热门问答</h4>
+      <div class="row">
+        <div class="col-md-12">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row mb-5">
+                <div class="col-md-3">
+                  <div class="card border-primary mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card border-primary mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card border-primary mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card border-primary mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row border-primary mb-5">
+                <div class="col-md-3">
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row mb-5">
+                <div class="col-md-3">
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                      <p class="card-text">软件</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+</main>
 
-
-
-
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div style="min-height: 600px;">
 {% block main %}
 {% endblock %}
-
-<div name="footer" class="p-3 mb-3">
+</div>
+<div name="footer" style="min-height: 80px;  padding-bottom: 10px;">
     <a href="#"  id="uptoTop" style="display: none">
         <span class="fa fa-chevron-circle-up fa-2x" style="position: fixed;right: 1%;bottom: 5%;"></span>
     </a>
+    <hr>
     <div class="container" >
-        <div class="text-center text-muted">Power By Django 2.1</div>
-        <div class="text-center text-muted"><small>Copyright © 2018-2028 qaschool.cn 京ICP备18056904号 - QA学院</small></div>
+        <div class="text-center">Power By Django 2.1</div>
+        <div class="text-center"><small>Copyright © 2013-2018 qaschool.com All Rights Reserved. 京ICP备11018033号 京公网安备11010802013057</small></div>
     </div>
 </div>
 </body>
@@ -127,6 +515,10 @@
 <script type="text/javascript" src="{% static 'js/bootstrap4.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/toastr.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/jquery.raty.js' %}"></script>
+{#<script type="text/javascript" src="{% static 'js/bootstrapValidator.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/star-rating.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>#}
+{#<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>#}
 <script type="text/javascript">
     //搜索
     function searchAction() {

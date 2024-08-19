@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}首页{% endblock %}
+{% block keywards %}测试教程, 性能测试, 自动化测试, 测试管理{% endblock %}
+{% block description %}QA学院,系统的软件测试文本教程，包含性能测试,自动化测试,测试管理等{% endblock %}
+{% block main %}
+    <div class="container" name="main">
+        <div class="bg-secondary">
+          <h1 class="display-3">QA学院 <small class="text-muted" style="font-size: 50%;">软件测试专属教程</small></h1>
+          <hr class="my-4">
+          <p class="lead">学习，为了更好的生活</p><p class="lead">&nbsp;</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12" name="left">
+                    <h5><a  href="/">全部教程</a></h5>
+                    <ul class="list-group">
+                        {% for column in columns %}
+                        <a class="list-group-item list-group-item-action" href="{{ column.get_absolute_url }}" class="list-group-item">
+                            {{ column.name }}</a>
+                        {% endfor %}
+                    </ul>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-12" name="right">
+            <div class="card"><div class="card-body">
+                {% for column in columns %}
+                    <div class="list-group" ><a href="#" class="list-group-item list-group-item-action border-top-0 border-right-0 border-left-0" style="padding: 10px 5px;">
+                        <span class="fa fa-list"></span>&nbsp;
+                        <strong>{{ column.name }}</strong>
+                    </a></div>
+                    <div class="row" style="padding-top: 10px;">
+                    {% for course in courses %}
+                        {% if course.column == column %}
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                                <div class="list-group">
+                                  <a href="{{ course.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start active">
+                                      <div class="row">
+                                          {% if course.pic %}
+                                             <img src="{{ course.pic.url }}" width="40px" height="40px">
+                                          {% endif %}
+                                          <div style="padding-left: 10px;">
+                                              <div class="d-flex w-100 justify-content-between"><h6 class="mb-1">{{ course.name }}</h6></div>
+                                                <p class="mb-1">{{ course.author.username }}</p>
+                                          </div>
+                                      </div>
+                                  </a>
+                                  <a href="{{ course.get_absolute_url }}" class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                    </div>
+                                    <p class="mb-1">{{ course.intro | default_if_none:"&nbsp;" }}</p>
+                                  </a>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                {% endfor %}
+            </div></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
